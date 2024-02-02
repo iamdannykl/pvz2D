@@ -1,0 +1,111 @@
+
+peashooter.png
+size: 226,171
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+duduzui
+  rotate: false
+  xy: 179, 17
+  size: 25, 38
+  orig: 27, 41
+  offset: 1, 2
+  index: -1
+gan
+  rotate: 180
+  xy: 102, 86
+  size: 60, 84
+  orig: 60, 84
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 55
+  size: 109, 114
+  orig: 109, 114
+  offset: 0, 0
+  index: -1
+hole
+  rotate: true
+  xy: 183, 143
+  size: 26, 34
+  orig: 28, 36
+  offset: 1, 1
+  index: -1
+ldie
+  rotate: true
+  xy: 195, 57
+  size: 31, 28
+  orig: 33, 30
+  offset: 1, 1
+  index: -1
+lei
+  rotate: false
+  xy: 206, 28
+  size: 18, 27
+  orig: 20, 29
+  offset: 1, 1
+  index: -1
+leye
+  rotate: false
+  xy: 111, 59
+  size: 12, 23
+  orig: 14, 25
+  offset: 1, 1
+  index: -1
+lmei
+  rotate: 180
+  xy: 190, 3
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+lye
+  rotate: true
+  xy: 128, 16
+  size: 70, 49
+  orig: 71, 49
+  offset: 0, 0
+  index: -1
+mouse
+  rotate: 180
+  xy: 151, 82
+  size: 45, 62
+  orig: 45, 62
+  offset: 0, 0
+  index: -1
+rdie
+  rotate: false
+  xy: 197, 90
+  size: 20, 28
+  orig: 22, 30
+  offset: 1, 1
+  index: -1
+reyr
+  rotate: false
+  xy: 2, 55
+  size: 11, 20
+  orig: 13, 22
+  offset: 1, 1
+  index: -1
+rmei
+  rotate: false
+  xy: 84, 155
+  size: 15, 15
+  orig: 16, 17
+  offset: 1, 1
+  index: -1
+rye
+  rotate: false
+  xy: 2, 6
+  size: 70, 50
+  orig: 70, 51
+  offset: 0, 1
+  index: -1
+yezi
+  rotate: false
+  xy: 74, 4
+  size: 52, 53
+  orig: 55, 55
+  offset: 1, 1
+  index: -1

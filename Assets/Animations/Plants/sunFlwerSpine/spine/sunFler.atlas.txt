@@ -1,0 +1,97 @@
+
+sunFler.png
+size: 377,141
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+diemouse
+  rotate: false
+  xy: 2, 129
+  size: 18, 10
+  orig: 20, 13
+  offset: 1, 1
+  index: -1
+gen
+  rotate: 180
+  xy: 348, 61
+  size: 27, 78
+  orig: 28, 78
+  offset: 0, 0
+  index: -1
+head
+  rotate: 270
+  xy: 144, 9
+  size: 99, 88
+  orig: 99, 88
+  offset: 0, 0
+  index: -1
+hoye
+  rotate: true
+  xy: 314, 11
+  size: 58, 32
+  orig: 61, 35
+  offset: 1, 1
+  index: -1
+ldie
+  rotate: false
+  xy: 130, 114
+  size: 22, 25
+  orig: 24, 28
+  offset: 1, 2
+  index: -1
+leye
+  rotate: false
+  xy: 2, 22
+  size: 13, 21
+  orig: 15, 23
+  offset: 1, 1
+  index: -1
+lye
+  rotate: true
+  xy: 275, 4
+  size: 65, 37
+  orig: 67, 39
+  offset: 1, 1
+  index: -1
+mouse
+  rotate: false
+  xy: 2, 11
+  size: 19, 11
+  orig: 20, 12
+  offset: 0, 0
+  index: -1
+petals
+  rotate: false
+  xy: 2, 3
+  size: 141, 137
+  orig: 141, 137
+  offset: 0, 0
+  index: -1
+qianye
+  rotate: true
+  xy: 234, 39
+  size: 73, 39
+  orig: 76, 43
+  offset: 1, 2
+  index: -1
+rdie
+  rotate: false
+  xy: 234, 13
+  size: 20, 24
+  orig: 22, 26
+  offset: 1, 1
+  index: -1
+reye
+  rotate: false
+  xy: 129, 4
+  size: 12, 21
+  orig: 15, 23
+  offset: 1, 1
+  index: -1
+rye
+  rotate: true
+  xy: 275, 71
+  size: 68, 40
+  orig: 70, 42
+  offset: 1, 1
+  index: -1

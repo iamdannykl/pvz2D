@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - pea
+  - zom
+  - kill
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: hsTiao
+    uniqueID: 463629773
+    locked: 0
+  - name: UI
+    uniqueID: 2422892663
+    locked: 0
+  - name: plants
+    uniqueID: 1501865617
+    locked: 0
+  - name: zombies
+    uniqueID: 476575035
+    locked: 0
+  - name: effectUI
+    uniqueID: 3878739297
+    locked: 0
+  - name: sun
+    uniqueID: 2763930971
+    locked: 0
+  - name: shovel
+    uniqueID: 1467951017
+    locked: 0
+  - name: gameover
+    uniqueID: 4279466375
+    locked: 0
