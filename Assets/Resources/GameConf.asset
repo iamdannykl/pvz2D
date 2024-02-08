@@ -29,3 +29,4 @@ MonoBehaviour:
   Shovel: {fileID: 6159265061382045981, guid: 764a2619f25a3394e9a90c9805a9133c, type: 3}
   Zombie: {fileID: 1783879414854449611, guid: 65d75ad2bc0ad0d49a7db15f27baee1b, type: 3}
   LzZombie: {fileID: 7340369881572823505, guid: a9dabd8c9263e6f49bbc638ca67d014e, type: 3}
+  tieTongZombie: {fileID: 7340369881572823505, guid: 7711adbce5a609e47b941910d368459b, type: 3}

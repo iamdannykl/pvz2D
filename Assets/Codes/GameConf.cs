@@ -28,4 +28,5 @@ public class GameConf :ScriptableObject//��Ϸ����
     [Header("Zombies")]
     public GameObject Zombie;
     public GameObject LzZombie;
+    public GameObject tieTongZombie;
 }

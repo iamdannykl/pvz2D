@@ -81,7 +81,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
                 {
                     hPmanager.NowJieDuan = hPmanager.JieDuanJianCe(value);
                     hPmanager.anim.SetInteger("hurtLevel", hPmanager.NowJieDuan);
-                    Debug.Log(hPmanager.NowJieDuan);
+//                    Debug.Log(hPmanager.NowJieDuan);
                 }
 
             }

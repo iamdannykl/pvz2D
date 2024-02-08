@@ -4,7 +4,8 @@ using UnityEngine;
 public enum ZombieType
 {
     normal,
-    luZhang
+    luZhang,
+    tieTong
 }
 
 public class ZombieTypeManager : MonoBehaviour
@@ -22,6 +23,8 @@ public class ZombieTypeManager : MonoBehaviour
                 return BossManager.Instance.GameConf.Zombie;
             case ZombieType.luZhang:
                 return BossManager.Instance.GameConf.LzZombie;
+            case ZombieType.tieTong:
+                return BossManager.Instance.GameConf.tieTongZombie;
         }
         return null;
         

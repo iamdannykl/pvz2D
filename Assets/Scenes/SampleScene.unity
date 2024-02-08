@@ -10544,9 +10544,9 @@ MonoBehaviour:
       ztp:
       - name: 
         number: 1
-        delayTime: 10
+        delayTime: 0
         crtSpeed: 5
-        zType: 1
+        zType: 2
     - name: "\u7B2C\u4E09\u884C"
       ztp:
       - name: 
