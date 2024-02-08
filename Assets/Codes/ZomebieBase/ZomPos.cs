@@ -31,6 +31,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     protected State currentState;
     protected BoxCollider2D coll2d;
     protected bool isUpdate = true;
+    protected HPmanager hPmanager;
     protected State CurrentState
     {
         get => currentState;
@@ -74,6 +75,16 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         get => Hp;
         set
         {
+            if (value < Hp)
+            {
+                if (hPmanager.jieDuanShu > 0)
+                {
+                    hPmanager.NowJieDuan = hPmanager.JieDuanJianCe(value);
+                    hPmanager.anim.SetInteger("hurtLevel", hPmanager.NowJieDuan);
+                    Debug.Log(hPmanager.NowJieDuan);
+                }
+
+            }
             Hp = value;
             if (Hp <= 0)
             {
@@ -91,6 +102,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     }
     public void Find(int line)
     {
+        hPmanager = GetComponent<HPmanager>();
         isBoom = false;
         Hp = HpOrigin;
         i = 100;

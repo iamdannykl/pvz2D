@@ -92,6 +92,18 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.29210663
       objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2775049912064738310, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
     m_RemovedGameObjects: []

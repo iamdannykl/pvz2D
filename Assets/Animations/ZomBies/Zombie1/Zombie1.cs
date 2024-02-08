@@ -15,11 +15,6 @@ public class Zombie1 : ZomPos
     // Update is called once per frame
     void Update()
     {
-        if (Hp1 <= 5)
-        {
-            anim.SetBool("isDuanbi", true);
-        }
-
         if (downGrid != null)
             if (downGrid.NowCTM == null)
             {

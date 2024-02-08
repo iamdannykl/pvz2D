@@ -35,12 +35,12 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: isDuanbi
-    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: isEating
     m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: hurtLevel
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7815586601143085895}
   m_Solo: 0
@@ -144,8 +144,8 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isEating
     m_EventTreshold: 1
-  - m_ConditionMode: 2
-    m_ConditionEvent: isDuanbi
+  - m_ConditionMode: 6
+    m_ConditionEvent: hurtLevel
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2617550524639879130}
@@ -252,11 +252,11 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isDuanbi
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: isEating
     m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: hurtLevel
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6478384141138974273}
   m_Solo: 0
@@ -305,14 +305,14 @@ AnimatorController:
   m_Name: Zombie_Walk1 (1)
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: isDuanbi
+  - m_Name: isEating
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: isEating
-    m_Type: 4
+  - m_Name: hurtLevel
+    m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -410,8 +410,8 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isEating
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: isDuanbi
+  - m_ConditionMode: 6
+    m_ConditionEvent: hurtLevel
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5021669691792835023}

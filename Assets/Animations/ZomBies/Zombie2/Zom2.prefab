@@ -15,11 +15,11 @@ PrefabInstance:
     - target: {fileID: 1308191342963901529, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 80e1cc327f5480c44946513beb057bd1, type: 3}
+      objectReference: {fileID: 1789979247, guid: 4bfd52147285d8d4a886f427de262551, type: 3}
     - target: {fileID: 2775049912064738310, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1330aba8928d8d24e87967c3dd354237, type: 2}
+      objectReference: {fileID: 9100000, guid: 24948f5f0d098bb4f9a630d2b9b789a7, type: 2}
     - target: {fileID: 2822045709932608604, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Name
       value: Zom2
@@ -80,6 +80,34 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.24641806
       objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.data[0]
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.data[1]
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.data[2]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.data[3]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: hpJieDuan.Array.data[5]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6095472078401583699, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
     m_RemovedGameObjects: []
@@ -111,6 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950b94330c667e54baefefa79311cec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HpOrigin: 20
+  HpOrigin: 28
   speed: 5
   eat: {fileID: 4572194433412085402}

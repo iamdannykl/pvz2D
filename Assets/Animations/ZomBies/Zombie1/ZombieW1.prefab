@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5449305127703628461}
   - component: {fileID: 9044462287534349079}
   - component: {fileID: 6095472078401583699}
+  - component: {fileID: 8245805502821165800}
   m_Layer: 0
   m_Name: ZombieW1
   m_TagString: zom
@@ -219,6 +220,19 @@ MonoBehaviour:
   HpOrigin: 0
   speed: 30
   eat: {fileID: 9044462287534349079}
+--- !u!114 &8245805502821165800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822045709932608604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d66cd5fbd432ed41bad4f355eba1b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpJieDuan: 
 --- !u!1 &6854540544177471402
 GameObject:
   m_ObjectHideFlags: 0

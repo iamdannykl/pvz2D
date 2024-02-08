@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "2Dpvz.sln"
+    "dotnet.defaultSolution": "2Dpvz.sln",
+    "dotnet.preferCSharpExtension": true
 }
