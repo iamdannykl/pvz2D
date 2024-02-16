@@ -8,7 +8,7 @@ using Spine;
 using Event = Spine.Event;
 public abstract class CardTM : MonoBehaviour
 {
-    protected bool isUpdt=false;
+    protected bool isUpdt = false;
     protected GridS jiaoxiaG;//脚下的格子
     protected GridS FrontGrids;//前面的格子
     protected Animator anim;
@@ -17,12 +17,12 @@ public abstract class CardTM : MonoBehaviour
     public float hp;
     protected int sunCost;
     protected Vector2 grdPos;
-    public float pianYiX,pianYiY;
-    public AudioSource hurt1,attackEn;
+    public float pianYiX, pianYiY;
+    public AudioSource hurt1, attackEn;
     protected bool canJiao;
     protected SkeletonAnimation sa;
     public MeshRenderer mr;
-    
+
     protected virtual GridS isZombieFront(Vector2 jiaoxiaPos, int geShu)
     {
         jiaoxiaG = GridManager.Instance.jiaoxiaGrid(jiaoxiaPos);//返回植物脚下的Grid
@@ -60,7 +60,7 @@ public abstract class CardTM : MonoBehaviour
         anim = GetComponent<Animator>();
         sR = GetComponent<SpriteRenderer>();
     }
-    public void sortZom(int sameLineSort,int lineNum)
+    public void sortZom(int sameLineSort, int lineNum)
     {
         int LayerNum = 0;
         switch (lineNum)
@@ -83,37 +83,37 @@ public abstract class CardTM : MonoBehaviour
             default:
                 break;
         }
-        if(sR!=null)
-        sR.sortingOrder = LayerNum + sameLineSort;
-        else if(sa!=null)
+        if (sR != null)
+            sR.sortingOrder = LayerNum + sameLineSort;
+        else if (sa != null)
         {
-            mr.sortingOrder= LayerNum + sameLineSort;
+            mr.sortingOrder = LayerNum + sameLineSort;
         }
-//        Debug.Log(sR.sortingOrder);
+        //        Debug.Log(sR.sortingOrder);
     }
-    public void placing(bool isTouMing,GridS grd)//placing
+    public void placing(bool isTouMing, GridS grd)//placing
     {
         isUpdt = false;
         Find();
-        if(anim!=null)
-        anim.speed = 0;
+        if (anim != null)
+            anim.speed = 0;
         if (sa != null)
             sa.timeScale = 0;
         if (isTouMing)
         {
-            if(sR!=null)
-            sR.color = new Color(1, 1, 1, 0.6f);
+            if (sR != null)
+                sR.color = new Color(1, 1, 1, 0.6f);
             if (sa != null)
             {
                 sa.skeleton.A = 0.5f;
             }
-            sortZom(50,(int)grd.Point.y);
+            sortZom(50, (int)grd.Point.y);
         }
         else
         {
-            if(sR!=null)
-            sR.sortingOrder = 500;
-            else if(sa!=null)
+            if (sR != null)
+                sR.sortingOrder = 500;
+            else if (sa != null)
             {
                 mr.sortingOrder = 500;
             }
@@ -123,7 +123,7 @@ public abstract class CardTM : MonoBehaviour
     {
         isUpdt = true;
         grdPos = grid.Position;
-        //sortLayer((int)GridManager.Instance.jiaoxiaGrid(grdPos).Point.y);
+        //sortLayer((int)GridManager.Instance.hpjiaoxiaGrid(grdPos).Point.y);
         //Debug.Log(sR.sortingOrder);
         nowGrid = grid;
         nowGrid.NowCTM = this;
@@ -136,9 +136,9 @@ public abstract class CardTM : MonoBehaviour
             }
         }
         sortPlt(LvManager.Instance.plantSort);
-        transform.position = grid.Position+new Vector2(pianYiX,pianYiY);
-        if(anim!=null)
-        anim.speed = 1;
+        transform.position = grid.Position + new Vector2(pianYiX, pianYiY);
+        if (anim != null)
+            anim.speed = 1;
         if (sa != null)
             sa.timeScale = 1;
         //sR.sortingOrder = 0;
@@ -168,11 +168,11 @@ public abstract class CardTM : MonoBehaviour
             default:
                 break;
         }
-        if(sR!=null)
-        sR.sortingOrder = LayerNum + sameLineSort;
+        if (sR != null)
+            sR.sortingOrder = LayerNum + sameLineSort;
         else
         {
-            mr.sortingOrder= LayerNum + sameLineSort;
+            mr.sortingOrder = LayerNum + sameLineSort;
         }
     }
     protected virtual void XingWei()
@@ -185,10 +185,10 @@ public abstract class CardTM : MonoBehaviour
         hp -= atkValue;
         //发光
         canJiao = !canJiao;
-        if(canJiao&&hurt1!=null)
-        hurt1.Play();
-        if(sR!=null)
-        StartCoroutine(ColorSwitch(0.2f, new Color(0.5f, 0.5f, 0.5f), 0.05f, null));
+        if (canJiao && hurt1 != null)
+            hurt1.Play();
+        if (sR != null)
+            StartCoroutine(ColorSwitch(0.2f, new Color(0.5f, 0.5f, 0.5f), 0.05f, null));
         if (hp <= 0)
         {
             //啊我死了，我趋势了
@@ -215,7 +215,8 @@ public abstract class CardTM : MonoBehaviour
     protected void awsl()
     {
         isUpdt = false;
-        GridManager.Instance.jiaoxiaGrid(grdPos).setPlant(false);
+        /*GridManager.Instance.jiaoxiaGrid(grdPos)*/
+        nowGrid.setPlant(false);
         Destroy(gameObject);
     }
 }

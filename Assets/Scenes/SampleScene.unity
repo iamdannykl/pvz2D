@@ -11501,7 +11501,7 @@ GameObject:
   - component: {fileID: 1298152992}
   - component: {fileID: 1298152991}
   m_Layer: 5
-  m_Name: daPenGuCard
+  m_Name: PotatoDL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11543,7 +11543,7 @@ MonoBehaviour:
   CDTime: 7.5
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
-  cardType: 8
+  cardType: 10
   sunCost: 0
 --- !u!114 &1298152992
 MonoBehaviour:

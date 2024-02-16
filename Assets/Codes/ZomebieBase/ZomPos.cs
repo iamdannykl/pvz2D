@@ -22,7 +22,8 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     public float speed;
     protected int i, xb;
     protected Animator anim;
-    protected bool isAttack, isBoom;//是否在攻击状态
+    protected bool isAttack;//是否在攻击状态
+    public bool isBoom;
     protected float atkValue = 100f;//僵尸の攻击力(hp/s)
     protected int hang;
     protected int lineNum;

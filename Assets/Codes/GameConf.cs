@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="GameConf",menuName ="GameConf")]
-public class GameConf :ScriptableObject//��Ϸ����
+[CreateAssetMenu(fileName = "GameConf", menuName = "GameConf")]
+public class GameConf : ScriptableObject//��Ϸ����
 {
     [Header("Objects")]
     public GameObject pea;
     public GameObject Sun;
     public GameObject penDan;
-    
+
     [Header("Plants")]
     public GameObject SunFlower;
     public GameObject PeaShooter;
@@ -20,7 +20,9 @@ public class GameConf :ScriptableObject//��Ϸ����
     public GameObject spinePea;
     public GameObject spineSunFler;
     public GameObject DSpea;
-    
+    public GameObject PotatoDL;
+    public GameObject snowPea;
+
     [Header("UI")]
     public GameObject ShuTiao;
     public GameObject HengTiao;

@@ -12,7 +12,9 @@ public enum PlantType
     swordWoman,
     spinePea,
     spineSunFler,
-    DSpea
+    DSpea,
+    PotatoDL,
+    snowPea
 }
 
 public class PlantManager : MonoBehaviour
@@ -46,8 +48,12 @@ public class PlantManager : MonoBehaviour
                 return BossManager.Instance.GameConf.spineSunFler;
             case PlantType.DSpea:
                 return BossManager.Instance.GameConf.DSpea;
+            case PlantType.PotatoDL:
+                return BossManager.Instance.GameConf.PotatoDL;
+            case PlantType.snowPea:
+                return BossManager.Instance.GameConf.snowPea;
         }
-        
+
         return null;
     }
 }

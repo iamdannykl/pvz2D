@@ -1,0 +1,503 @@
+fileFormatVersion: 2
+guid: b6eac91c1b974c14bbd4e152af68ed1a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 43
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5654206, y: 0.07414348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d507e5bb3d5a0f4e99c622a140bea50
+      internalID: 1180755341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 43
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.540606, y: 0.07632408}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447e99b76e3a2204d9e5944274ea7fa3
+      internalID: -455006132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 43
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.076226205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592066266e0c03a469a563e732306598
+      internalID: -1211133350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 43
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5442602, y: 0.076062396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd72e50b0d71cf6409463572069b056d
+      internalID: -1454557492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_4
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 43
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5639317, y: 0.073685326}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f798b33b3a213b4c9e45ff385d787c4
+      internalID: -384344924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_5
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 43
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.6081922, y: 0.0688495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de239fbfcfcdbad4fa37b14ff97769eb
+      internalID: 1839501017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_6
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 43
+        width: 29
+        height: 28
+      alignment: 9
+      pivot: {x: 0.63669086, y: 0.069398336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f12552c4d82f9409ad851443a39e04
+      internalID: 1348567405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 43
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5991674, y: 0.07772617}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91f8e421c37719459108990b0bb0381
+      internalID: -1856185999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 12
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.58507216, y: 0.06380433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0ef154883b6524da5a0f0f98670e1c
+      internalID: -1813358558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_9
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 12
+        width: 26
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5593052, y: 0.07452694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadb02a7f7ea8f54cac9a6de21211a71
+      internalID: -754320649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_10
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 12
+        width: 32
+        height: 30
+      alignment: 9
+      pivot: {x: 0.55541325, y: 0.08223667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c393abd6917674aa0d252844585379
+      internalID: 1030095070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_11
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 12
+        width: 21
+        height: 11
+      alignment: 9
+      pivot: {x: 0.741022, y: 0.4129403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ede026cde431e4fa745e84f8f387f6
+      internalID: 1937222539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_12
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 12
+        width: 13
+        height: 12
+      alignment: 9
+      pivot: {x: 0.62454104, y: 0.4561553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2628b6ad83259a42947280bf6271ffe
+      internalID: -144809113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 12
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.55300426, y: 0.41921306}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f537abcfef8214d95907e899968792
+      internalID: -1927212519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 12
+        width: 24
+        height: 18
+      alignment: 9
+      pivot: {x: 0.38114294, y: 0.5225439}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d82c2f0edfff948911e6fe54096448
+      internalID: 459990047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_17
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 12
+        width: 27
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2247bf006f43294e9a8c4f46dfe0844
+      internalID: 1140296499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Snow Pea_18
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 12
+        width: 27
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91416097f1c4454fb51b415d042d2d2
+      internalID: 2115830904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DS DSi - Plants vs Zombies - Snow Pea_0: 1180755341
+      DS DSi - Plants vs Zombies - Snow Pea_1: -455006132
+      DS DSi - Plants vs Zombies - Snow Pea_10: 1030095070
+      DS DSi - Plants vs Zombies - Snow Pea_11: 1937222539
+      DS DSi - Plants vs Zombies - Snow Pea_12: -144809113
+      DS DSi - Plants vs Zombies - Snow Pea_13: -1927212519
+      DS DSi - Plants vs Zombies - Snow Pea_14: 1488345302
+      DS DSi - Plants vs Zombies - Snow Pea_15: 459990047
+      DS DSi - Plants vs Zombies - Snow Pea_16: 122758173
+      DS DSi - Plants vs Zombies - Snow Pea_17: 1140296499
+      DS DSi - Plants vs Zombies - Snow Pea_18: 2115830904
+      DS DSi - Plants vs Zombies - Snow Pea_2: -1211133350
+      DS DSi - Plants vs Zombies - Snow Pea_3: -1454557492
+      DS DSi - Plants vs Zombies - Snow Pea_4: -384344924
+      DS DSi - Plants vs Zombies - Snow Pea_5: 1839501017
+      DS DSi - Plants vs Zombies - Snow Pea_6: 1348567405
+      DS DSi - Plants vs Zombies - Snow Pea_7: -1856185999
+      DS DSi - Plants vs Zombies - Snow Pea_8: -1813358558
+      DS DSi - Plants vs Zombies - Snow Pea_9: -754320649
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

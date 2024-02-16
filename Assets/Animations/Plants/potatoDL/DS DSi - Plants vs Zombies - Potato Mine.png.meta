@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: 836adc19f8c2df04982db07dbb51f9fc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 61
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818d6694493e7ca428793c5ebde6c3f6
+      internalID: 1399813629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 61
+        width: 20
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d2f7c3157cc7f4aaba3a4f5063a8b0
+      internalID: -600735460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 61
+        width: 28
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5839327a83302064faf2bc23f17b5397
+      internalID: 1564347037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 61
+        width: 27
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4943853da694bd7418ab368d303e56bf
+      internalID: 1001626152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 61
+        width: 27
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f292e1e6b0dbf64cabc52f209bc18aa
+      internalID: -2021652958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_5
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 61
+        width: 27
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e4ffe9456311947933208d307bbfb2
+      internalID: 31045493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_6
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 61
+        width: 27
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1e39c4551c9584bb85374ce625f1a7
+      internalID: 2040850969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_7
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 61
+        width: 27
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7511d8b052e452d498ae443e98fd2817
+      internalID: 1871600378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_8
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 61
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5106ace2ed12d439ccba5247a96fbc
+      internalID: -553791770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_9
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 61
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a26c389692f85742a1d4c9406d71620
+      internalID: 1233527029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1
+        width: 57
+        height: 58
+      alignment: 9
+      pivot: {x: 0.47213638, y: 0.014409232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aaaf1520ded41845b5c24598e11b40f
+      internalID: 1151061761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 45
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7e59ee2959f734d950ef381f0ebb0b
+      internalID: 814446037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_15
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1
+        width: 67
+        height: 58
+      alignment: 9
+      pivot: {x: 0.5079013, y: 0.0107582295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297d2305f0a133f4795eecf12c7795ea
+      internalID: -1691796868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 51
+        height: 58
+      alignment: 9
+      pivot: {x: 0.50207597, y: 0.016919067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0a07729df2e5346bf03970fb3c01c6
+      internalID: -965954020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_17
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1
+        width: 51
+        height: 58
+      alignment: 9
+      pivot: {x: 0.52076066, y: 0.00809598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95bededbef751444397c36c741e2dc6a
+      internalID: -254814040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_19
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1
+        width: 63
+        height: 58
+      alignment: 9
+      pivot: {x: 0.48823524, y: 0.01075809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b224476484c26418d87878ef1fa1a1
+      internalID: 501026865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_21
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1
+        width: 71
+        height: 58
+      alignment: 9
+      pivot: {x: 0.5205216, y: 0.01263407}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8a62f6d70f0974193671764d26fe34
+      internalID: 1243877209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_22
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1
+        width: 74
+        height: 58
+      alignment: 9
+      pivot: {x: 0.5328163, y: 0.017658386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1827747c09a3434abcc63a5d8e51ea5
+      internalID: 1138925781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_23
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1
+        width: 76
+        height: 58
+      alignment: 9
+      pivot: {x: 0.53067416, y: 0.019333284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459c09af7154aa942951a94c514f5c1a
+      internalID: -409634700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_36
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1
+        width: 51
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5380919, y: 0.018934557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16768f5e18a84f4784fca024eaf85b5
+      internalID: -1434463950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Potato Mine_37
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1
+        width: 32
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5121403, y: 0.027555335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220077ce8998d1c4b8b77b410ba75781
+      internalID: -582126771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DS DSi - Plants vs Zombies - Potato Mine_0: 1399813629
+      DS DSi - Plants vs Zombies - Potato Mine_1: -600735460
+      DS DSi - Plants vs Zombies - Potato Mine_10: 1151061761
+      DS DSi - Plants vs Zombies - Potato Mine_11: 814446037
+      DS DSi - Plants vs Zombies - Potato Mine_12: -942460113
+      DS DSi - Plants vs Zombies - Potato Mine_13: 1086497036
+      DS DSi - Plants vs Zombies - Potato Mine_14: 1177847614
+      DS DSi - Plants vs Zombies - Potato Mine_15: -1691796868
+      DS DSi - Plants vs Zombies - Potato Mine_16: -965954020
+      DS DSi - Plants vs Zombies - Potato Mine_17: -254814040
+      DS DSi - Plants vs Zombies - Potato Mine_18: -1258037676
+      DS DSi - Plants vs Zombies - Potato Mine_19: 501026865
+      DS DSi - Plants vs Zombies - Potato Mine_2: 1564347037
+      DS DSi - Plants vs Zombies - Potato Mine_20: 206132879
+      DS DSi - Plants vs Zombies - Potato Mine_21: 1243877209
+      DS DSi - Plants vs Zombies - Potato Mine_22: 1138925781
+      DS DSi - Plants vs Zombies - Potato Mine_23: -409634700
+      DS DSi - Plants vs Zombies - Potato Mine_24: -829109836
+      DS DSi - Plants vs Zombies - Potato Mine_25: -514957662
+      DS DSi - Plants vs Zombies - Potato Mine_26: -1836488213
+      DS DSi - Plants vs Zombies - Potato Mine_27: 549553150
+      DS DSi - Plants vs Zombies - Potato Mine_28: 870641183
+      DS DSi - Plants vs Zombies - Potato Mine_29: 1858473602
+      DS DSi - Plants vs Zombies - Potato Mine_3: 1001626152
+      DS DSi - Plants vs Zombies - Potato Mine_30: -1700999750
+      DS DSi - Plants vs Zombies - Potato Mine_31: -832427197
+      DS DSi - Plants vs Zombies - Potato Mine_32: 1955886192
+      DS DSi - Plants vs Zombies - Potato Mine_33: 234223954
+      DS DSi - Plants vs Zombies - Potato Mine_34: 2003039559
+      DS DSi - Plants vs Zombies - Potato Mine_35: 2133530355
+      DS DSi - Plants vs Zombies - Potato Mine_36: -1434463950
+      DS DSi - Plants vs Zombies - Potato Mine_37: -582126771
+      DS DSi - Plants vs Zombies - Potato Mine_38: 1564146627
+      DS DSi - Plants vs Zombies - Potato Mine_39: 626688429
+      DS DSi - Plants vs Zombies - Potato Mine_4: -2021652958
+      DS DSi - Plants vs Zombies - Potato Mine_40: -864917221
+      DS DSi - Plants vs Zombies - Potato Mine_41: -634043048
+      DS DSi - Plants vs Zombies - Potato Mine_42: -1919938948
+      DS DSi - Plants vs Zombies - Potato Mine_43: -70116267
+      DS DSi - Plants vs Zombies - Potato Mine_5: 31045493
+      DS DSi - Plants vs Zombies - Potato Mine_6: 2040850969
+      DS DSi - Plants vs Zombies - Potato Mine_7: 1871600378
+      DS DSi - Plants vs Zombies - Potato Mine_8: -553791770
+      DS DSi - Plants vs Zombies - Potato Mine_9: 1233527029
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
