@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3094358796437460314}
@@ -120,8 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb82ef7d224165949902086013b14e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   pianYiX: 0
-  pianYiY: -0.22
+  pianYiY: -0.28
   hurt1: {fileID: 0}
   attackEn: {fileID: 0}
   mr: {fileID: 0}

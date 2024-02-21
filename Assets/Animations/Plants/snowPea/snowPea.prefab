@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5272693584661385105}
   - component: {fileID: 4793078322889864826}
   - component: {fileID: 3101075524854738101}
+  - component: {fileID: 5400292690084500536}
   m_Layer: 0
   m_Name: snowPea
   m_TagString: Untagged
@@ -107,6 +108,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5400292690084500536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773373437667440147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0366ea07c7acc9542981268a9d14514d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  pianYiX: 0
+  pianYiY: -0.43
+  hurt1: {fileID: 0}
+  attackEn: {fileID: 0}
+  mr: {fileID: 0}
+  shootPoint: {fileID: 4195101939104811240}
 --- !u!1 &5292783425410668588
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,17 +32,17 @@ public class peaShooter : CardTM
         {
             if (base.isZombieFront(grdPos, 9).Zombie)
             {
-                anim.SetBool("isAtk",true);
+                anim.SetBool("isAtk", true);
                 //Instantiate(BossManager.Instance.GameConf.pea, transform.position+new Vector3(0.2f,0.2f,0), quaternion.identity);
             }
             else
             {
-                anim.SetBool("isAtk",false);
+                anim.SetBool("isAtk", false);
             }
         }
         else
         {
-            anim.SetBool("isAtk",false);
+            anim.SetBool("isAtk", false);
         }
     }
 }

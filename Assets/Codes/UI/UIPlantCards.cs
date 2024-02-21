@@ -119,7 +119,6 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
                     Destroy(plant.gameObject);
                     plant = null;
                 }
-
             }
         }
     }
