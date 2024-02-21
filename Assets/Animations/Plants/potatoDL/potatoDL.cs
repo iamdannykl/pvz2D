@@ -17,14 +17,14 @@ public class potatoDL : CardTM
     {
         Invoke("enterZt1", waitTime);
     }
-    void enterZt1()
+    void enterZt1()//maochu
     {
         anim.SetInteger("potatoInt", 1);
+        isMaoChu = true;
     }
-    public void enterZt2()
+    public void enterZt2()//dishang
     {
         anim.SetInteger("potatoInt", 2);
-        isMaoChu = true;
     }
 
     private void OnTriggerStay2D(Collider2D other)

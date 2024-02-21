@@ -7,9 +7,8 @@ public class BossManager : MonoBehaviour
 {
     public static BossManager Instance;
     private int sunNum;
-    
     public GameConf GameConf { get; private set; }
-
+    
     public GameObject yi,er,san,si,wu;
 
     public int SunNum
@@ -19,7 +18,6 @@ public class BossManager : MonoBehaviour
         {
            sunNum=value;
            UImanager.Instance.UpdateSunNum(sunNum);
-           
         }
     }
     private void Awake() 
