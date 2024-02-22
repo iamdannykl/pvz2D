@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -11,26 +12,27 @@ public class AudioManager : MonoBehaviour
     public AudioSource plant2;
     public AudioSource bg;
     public AudioSource plant;
-    
+    public AudioSource additionalSd;
+
     void Start()
     {
         BG();
     }
-
     private void Awake()
     {
         Instance = this;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void PlantIt()
     {
-        int a=Random.Range(0,2);
+        int a = Random.Range(0, 2);
         switch (a)
         {
             case 0:
@@ -46,5 +48,5 @@ public class AudioManager : MonoBehaviour
     {
         bg.Play();
     }
-    
+
 }

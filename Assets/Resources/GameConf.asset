@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GameConf
   m_EditorClassIdentifier: 
   pea: {fileID: 702435104618320427, guid: 4c5c1500a0b18454aad4da56d06504f0, type: 3}
+  snowPeaBlt: {fileID: 702435104618320427, guid: 9c35018cd785310438e799b797cc71bd, type: 3}
   Sun: {fileID: 3540838837876446211, guid: 0da122cd34184644abea2d7977afdda0, type: 3}
   penDan: {fileID: 9048724943009664362, guid: 9caf9b911bb746144a41302e006bb826, type: 3}
   SunFlower: {fileID: 1632018244110585777, guid: f9746edda653fa2459e4644f30d4a018, type: 3}

@@ -20,7 +20,7 @@ public class snowPea : CardTM
 
     public void shootIt()
     {
-        pea pea = PoolManager.Instance.GetObject(BossManager.Instance.GameConf.pea).GetComponent<pea>();
+        snowPeaBullet pea = PoolManager.Instance.GetObject(BossManager.Instance.GameConf.snowPeaBlt).GetComponent<snowPeaBullet>();
         pea.transform.position = shootPoint.position;
         pea.Find();
     }

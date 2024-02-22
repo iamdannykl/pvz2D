@@ -6,5 +6,8 @@ using UnityEngine;
 
 public class pea : BulletBase
 {
-    
+    public void wspea()
+    {
+
+    }
 }

@@ -16,6 +16,11 @@ public enum PlantType
     PotatoDL,
     snowPea
 }
+public enum bulletType
+{
+    pea,
+    snowPeaBullet
+}
 
 public class PlantManager : MonoBehaviour
 {
@@ -23,6 +28,17 @@ public class PlantManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+    public static GameObject GetBulletFromType(bulletType type)
+    {
+        switch (type)
+        {
+            case bulletType.pea:
+                return BossManager.Instance.GameConf.pea;
+            case bulletType.snowPeaBullet:
+                return BossManager.Instance.GameConf.snowPeaBlt;
+        }
+        return null;
     }
     public GameObject GetPlantFromType(PlantType type)
     {

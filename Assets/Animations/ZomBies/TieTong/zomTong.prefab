@@ -16,6 +16,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2134863496, guid: 0eb56e5bb4c3bcb49b5b5c6bc13adbe8, type: 3}
+    - target: {fileID: 1308191342963901529, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308191342963901529, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308191342963901529, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2775049912064738310, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Controller
       value: 
@@ -141,4 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HpOrigin: 65
   speed: 5
+  isBoom: 0
+  sR: {fileID: 0}
   eat: {fileID: 4572194433412085402}

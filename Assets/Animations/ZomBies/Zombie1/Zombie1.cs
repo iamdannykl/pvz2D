@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
-
 public class Zombie1 : ZomPos
 {
     // Start is called before the first frame update
@@ -28,7 +23,5 @@ public class Zombie1 : ZomPos
         if (i >= 18 && i < 27) { Xb = i - 18; hang = 2; }
         if (i >= 27 && i < 36) { Xb = i - 27; hang = 3; }
         if (i >= 36 && i < 45) { Xb = i - 36; hang = 4; }
-
-
     }
 }

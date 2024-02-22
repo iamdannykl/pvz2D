@@ -7,6 +7,7 @@ public class GameConf : ScriptableObject//��Ϸ����
 {
     [Header("Objects")]
     public GameObject pea;
+    public GameObject snowPeaBlt;
     public GameObject Sun;
     public GameObject penDan;
 

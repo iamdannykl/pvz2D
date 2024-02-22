@@ -15,6 +15,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
         NotSun,
         NotAll
     }
+    public Vector2 bili;
     private Image maskIt, self;//遮罩组件
     public float CDTime;//CD时间
     private float currentTimeInCD;//当前冷却时间
@@ -126,7 +127,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
     // Start is called before the first frame update
     void Start()
     {
-
+        bili = transform.localScale;
         maskIt = transform.Find("masking").GetComponent<Image>();
         self = GetComponent<Image>();
         CanPlace = true;
@@ -176,13 +177,13 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
         if (cardState != PlantState.CanPlace)
             return;
         else
-            transform.localScale = new Vector2(1.2f, 1.2f);
+            transform.localScale = /*new Vector2(1.2f, 1.2f);*/bili * 1.2f;
     }
     //鼠标移出效果
     public void OnPointerExit(PointerEventData evenData)
     {
         isOn = false;
-        transform.localScale = new Vector2(1f, 1f);
+        transform.localScale = /*new Vector2(1f, 1f);*/bili;
         isSelected = false;
     }
 

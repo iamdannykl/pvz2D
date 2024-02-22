@@ -15,19 +15,21 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         death,
         boomDie
     }
+    public float reSpd = -1.38f;
+    public float oriSpd = -1.38f;
     protected GridS currentGrid;
     public GridS downGrid;
     public int HpOrigin;
     protected int Hp;
     public float speed;
     protected int i, xb;
-    protected Animator anim;
+    public Animator anim;
     protected bool isAttack;//是否在攻击状态
     public bool isBoom;
     protected float atkValue = 100f;//僵尸の攻击力(hp/s)
     protected int hang;
     protected int lineNum;
-    protected SpriteRenderer sR;
+    public SpriteRenderer sR;
     public AudioSource eat;
     protected State currentState;
     protected BoxCollider2D coll2d;
@@ -82,7 +84,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
                 {
                     hPmanager.NowJieDuan = hPmanager.JieDuanJianCe(value);
                     hPmanager.anim.SetInteger("hurtLevel", hPmanager.NowJieDuan);
-//                    Debug.Log(hPmanager.NowJieDuan);
+                    //                    Debug.Log(hPmanager.NowJieDuan);
                 }
 
             }
@@ -198,11 +200,11 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         if (!isUpdate)
         {
             if (!isBoom && !isAttack)
-                transform.Translate(new Vector2(-1.38f, 0) * (Time.deltaTime / 1) / speed);
+                transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
         }
         else if (downGrid == null)
         {
-            transform.Translate(new Vector2(-1.38f, 0) * (Time.deltaTime / 1) / speed);
+            transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
         }
 
         else
@@ -216,7 +218,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
             {
                 isAttack = false;
                 anim.SetBool("isEating", false);
-                transform.Translate(new Vector2(-1.38f, 0) * (Time.deltaTime / 1) / speed);
+                transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
             }
             //}
         }
