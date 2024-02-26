@@ -11,6 +11,7 @@ public class TimeJS : MonoBehaviour
     // Start is called before the first frame update
     public void InitTime()
     {
+        isFns = false;
         timeNow = 0f;
         isBegin = true;
     }
