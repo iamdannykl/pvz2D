@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 40757939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4268614, y: 0.4268614, z: 0.4268614}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 255444394}
@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.333374, y: 0}
+  m_AnchoredPosition: {x: 11.700012, y: 0.4000244}
   m_SizeDelta: {x: 1205.9346, y: 145}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &40757941
@@ -253,6 +253,18 @@ PrefabInstance:
       value: 134
       objectReference: {fileID: 0}
     - target: {fileID: 7229083800341505133, guid: 7b80d0a26f5223f4bb67e9c25b1f77b0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.40860966
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229083800341505133, guid: 7b80d0a26f5223f4bb67e9c25b1f77b0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.40860966
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229083800341505133, guid: 7b80d0a26f5223f4bb67e9c25b1f77b0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.40860966
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229083800341505133, guid: 7b80d0a26f5223f4bb67e9c25b1f77b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -282,11 +294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229083800341505133, guid: 7b80d0a26f5223f4bb67e9c25b1f77b0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -356
+      value: -188.70001
       objectReference: {fileID: 0}
     - target: {fileID: 7229083800341505133, guid: 7b80d0a26f5223f4bb67e9c25b1f77b0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -69
+      value: -30.200012
       objectReference: {fileID: 0}
     - target: {fileID: 7229083800341505133, guid: 7b80d0a26f5223f4bb67e9c25b1f77b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1674,7 +1686,7 @@ Transform:
   m_GameObject: {fileID: 364297365}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.29, y: -0.26, z: 0}
+  m_LocalPosition: {x: -1.29, y: -0.17, z: 0}
   m_LocalScale: {x: 0.95, y: 0.95, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2439,7 +2451,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.57, y: -0.04, z: -10}
+  m_LocalPosition: {x: -2.2, y: -0.04, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5143,16 +5155,16 @@ RectTransform:
   m_GameObject: {fileID: 812613811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.495, y: 1.495, z: 1.495}
+  m_LocalScale: {x: 0.5963161, y: 0.5963161, z: 0.5963161}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1621044999}
   - {fileID: 1683538420}
   m_Father: {fileID: 1423515200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -861.73, y: 287}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 94, y: -106.78}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812613813
@@ -5172,7 +5184,7 @@ MonoBehaviour:
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
   cardType: 11
-  sunCost: 0
+  sunCost: 175
 --- !u!114 &812613814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10714,20 +10726,13 @@ MonoBehaviour:
   waves:
   - name: "\u7B2C\u4E00\u6CE2"
     hang:
-    - name: "\u7B2C\u4E00\u884C"
-      ztp:
-      - name: 
-        number: 2
-        delayTime: 0
-        crtSpeed: 0
-        zType: 0
     - name: "\u7B2C\u4E8C\u884C"
       ztp:
       - name: 
         number: 1
         delayTime: 0
         crtSpeed: 5
-        zType: 2
+        zType: 0
     - name: "\u7B2C\u4E09\u884C"
       ztp:
       - name: 
@@ -10790,7 +10795,12 @@ MonoBehaviour:
         crtSpeed: 6
         zType: 0
     - name: "\u7B2C\u56DB\u884C"
-      ztp: []
+      ztp:
+      - name: 
+        number: 1
+        delayTime: 3
+        crtSpeed: 0
+        zType: 2
     - name: "\u7B2C\u4E94\u884C"
       ztp: []
   zero: {fileID: 106856200}
@@ -11313,7 +11323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -107, y: -59}
+  m_AnchoredPosition: {x: -208, y: -119}
   m_SizeDelta: {x: 172.14, y: 96.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194703694
@@ -11950,7 +11960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -12049,16 +12059,16 @@ RectTransform:
   m_GameObject: {fileID: 1505683855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.495, y: 1.495, z: 1.495}
+  m_LocalScale: {x: 0.5963161, y: 0.5963161, z: 0.5963161}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 517478677}
   - {fileID: 1350400629}
   m_Father: {fileID: 1423515200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -861.73, y: 131}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 94, y: -171.79999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505683857
@@ -12078,7 +12088,7 @@ MonoBehaviour:
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
   cardType: 10
-  sunCost: 0
+  sunCost: 25
 --- !u!114 &1505683858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12428,7 +12438,7 @@ MonoBehaviour:
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
   cardType: 9
-  sunCost: 0
+  sunCost: 100
 --- !u!1 &1667807536
 GameObject:
   m_ObjectHideFlags: 0
@@ -13180,7 +13190,7 @@ MonoBehaviour:
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
   cardType: 2
-  sunCost: 0
+  sunCost: 150
 --- !u!114 &1828835182
 MonoBehaviour:
   m_ObjectHideFlags: 0
