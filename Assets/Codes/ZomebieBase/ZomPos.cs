@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,6 +16,23 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         death,
         boomDie
     }
+    //private CardTM plant;
+    bool isFrozen;
+    public bool IsFrozen
+    {
+        get => isFrozen;
+        set
+        {
+            isFrozen = value;
+            if (isFrozen)
+            {
+
+            }
+        }
+    }
+    float oriTime;
+    float nowTime;
+    public float 抗冻指数;
     public float reSpd = -1.38f;
     public float oriSpd = -1.38f;
     protected GridS currentGrid;
@@ -35,7 +53,31 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     protected BoxCollider2D coll2d;
     protected bool isUpdate = true;
     protected HPmanager hPmanager;
-    protected State CurrentState
+    IEnumerator freezeIt()
+    {
+        sR.material.color = new Color(0.6f, 0.7f, 0.95f);
+        anim.speed = 0.5f;
+        reSpd = oriSpd / 2;
+        Debug.Log(抗冻指数);
+        yield return new WaitForSeconds(5f);
+        Debug.Log("amsnsdsd");
+        sR.material.color = new Color(1f, 1f, 1f);
+        anim.speed = 1f;
+        reSpd = oriSpd;
+    }
+    void beFrozened()
+    {
+        sR.material.color = new Color(0.6f, 0.7f, 0.95f);
+        anim.speed = 0.5f;
+        reSpd = oriSpd / 2;
+    }
+    void jieDong()
+    {
+        sR.material.color = new Color(1f, 1f, 1f);
+        anim.speed = 1f;
+        reSpd = oriSpd;
+    }
+    public State CurrentState
     {
         get => currentState;
         set
@@ -68,6 +110,11 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
                     isUpdate = false;
                     anim.Play("hui");
                     break;
+                    /*case State.frozen:
+                        sR.material.color = new Color(0.6f, 0.7f, 0.95f);
+                        anim.speed = 0.5f;
+                        reSpd = oriSpd / 2;
+                        break;*/
             }
         }
     }
@@ -105,6 +152,12 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     }
     public void Find(int line)
     {
+        oriTime = Time.time;
+        isFrozen = false;
+        anim = transform.GetChild(0).GetComponent<Animator>();
+        sR = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        sR.material.color = new Color(1f, 1f, 1f);
+        anim.speed = 1f;
         hPmanager = GetComponent<HPmanager>();
         isBoom = false;
         Hp = HpOrigin;
@@ -112,8 +165,8 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         isUpdate = true;
         coll2d = GetComponent<BoxCollider2D>();
         coll2d.enabled = true;
-        anim = transform.GetChild(0).GetComponent<Animator>();
-        sR = transform.GetChild(0).GetComponent<SpriteRenderer>();
+
+        reSpd = oriSpd;
         lineNum = line;
     }
     protected virtual void XingWei()
@@ -216,6 +269,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
             }
             else
             {
+                //StopAllCoroutines();
                 isAttack = false;
                 anim.SetBool("isEating", false);
                 transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
@@ -233,9 +287,14 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     {
         if (coll.tag == "kill")
         {
-            StartCoroutine(ColorSwitch(0.2f, new Color(0.5f, 0.5f, 0.5f), 0.05f, null));
             isBoom = true;
             Hp1 = 0;
+            if (Hp1 <= 0)
+            {
+                sR.material.color = new Color(1f, 1f, 1f);
+                anim.speed = 1f;
+            }
+            StartCoroutine(ColorSwitch(0.2f, new Color(0.5f, 0.5f, 0.5f), 0.05f, null));
         }
     }
 
@@ -248,9 +307,17 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         isAttack = true;
         Debug.Log("chi");
         anim.SetBool("isEating", true);//播放吃植物动画 
-        StartCoroutine(hurtPlant(plant));
+        //StartCoroutine(hurtPlant(plant));
     }
-    IEnumerator hurtPlant(CardTM plant)
+    public void eatPlt()
+    {
+        if (downGrid.NowCTM != null)
+        {
+            downGrid.NowCTM.attacked(atkValue * 0.65f);
+            eat.Play();
+        }
+    }
+    /*IEnumerator hurtPlant(CardTM plant)
     {
         if (downGrid.NowCTM != null)
         {
@@ -261,7 +328,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
                 yield return new WaitForSeconds(0.65f);
             }
         }
-    }
+    }*/
     IEnumerator ColorSwitch(float wTime, Color targetColor, float switchTime, UnityAction fun)
     {
         float currentTime = 0;

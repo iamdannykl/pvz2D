@@ -54,9 +54,8 @@ public class BulletBase : MonoBehaviour
                         zomtgt.Hp1 -= 1; break;
                     case bulletType.snowPeaBullet:
                         zomtgt.Hp1 -= 1;
-                        zomtgt.sR.material.color = new Color(0.6f, 0.7f, 0.95f);
-                        zomtgt.anim.speed = 0.5f;
-                        zomtgt.reSpd = zomtgt.oriSpd / 2; break;
+                        zomtgt.IsFrozen = true;
+                        break;
                 }
                 zomtgt.ShanLiang();
                 bulletSd.Play();

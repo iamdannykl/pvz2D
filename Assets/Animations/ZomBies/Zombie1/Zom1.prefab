@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: HpOrigin
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6095472078401583699, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: "\u6297\u51BB\u6307\u6570"
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Size.x
       value: 0.8675442

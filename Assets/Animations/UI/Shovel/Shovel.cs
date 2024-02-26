@@ -7,14 +7,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Shovel : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPointerClickHandler
+public class Shovel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public static Shovel Instance;
     // Start is called before the first frame update
     public bool wantShovel;
+    public Vector2 pianyi;
     public PlantType toolType;
     private GameObject chanZi;
-    private GameObject ShuTiao,HengTiao;
+    private GameObject ShuTiao, HengTiao;
     public AudioSource chanzi;
 
     private void Awake()
@@ -25,18 +26,18 @@ public class Shovel : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPo
     public bool WantShovel
     {
         get => wantShovel;
-        set  
+        set
         {
             wantShovel = value;
             if (wantShovel == true)
             {
                 GameObject prefab = PlantManager.Instance.GetPlantFromType(toolType);
-                chanZi = Instantiate <GameObject>(prefab,Vector3.zero,Quaternion.identity,PlantManager.Instance.transform);
-            
+                chanZi = Instantiate<GameObject>(prefab, Vector3.zero, Quaternion.identity, PlantManager.Instance.transform);
+
             }
             else
             {
-                if(chanZi!=null)
+                if (chanZi != null)
                 {
                     Destroy(chanZi.gameObject);
                     chanZi = null;
@@ -44,23 +45,23 @@ public class Shovel : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPo
             }
         }
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        GridS grid=GridManager.Instance.GetPosByMouse();
+        GridS grid = GridManager.Instance.GetPosByMouse();
         if (wantShovel)
         {
             Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             GridS jiaoXia = GridManager.Instance.jiaoxiaGrid(mousePoint);
-            chanZi.transform.position = new Vector3(mousePoint.x, mousePoint.y, 0);
+            chanZi.transform.position = new Vector3(mousePoint.x + pianyi.x, mousePoint.y + pianyi.y, 0);
             if (Vector2.Distance(mousePoint, jiaoXia.Position) < 0.9f)
             {
-                Vector2 shu=new Vector2(/*-8.7418f*/GridManager.Instance.shuFirst.x+grid.Point.x*GridManager.Instance.XjianGe,GridManager.Instance.shuFirst.y);
-                Vector2 heng=new Vector2(GridManager.Instance.hengFirst.x+0.3f,GridManager.Instance.hengFirst.y+grid.Point.y*GridManager.Instance.YjianGe);
+                Vector2 shu = new Vector2(/*-8.7418f*/GridManager.Instance.shuFirst.x + grid.Point.x * GridManager.Instance.XjianGe, GridManager.Instance.shuFirst.y);
+                Vector2 heng = new Vector2(GridManager.Instance.hengFirst.x + 0.3f, GridManager.Instance.hengFirst.y + grid.Point.y * GridManager.Instance.YjianGe);
                 if (ShuTiao == null)
                 {
-                    ShuTiao=Instantiate(BossManager.Instance.GameConf.ShuTiao,shu, quaternion.identity);
+                    ShuTiao = Instantiate(BossManager.Instance.GameConf.ShuTiao, shu, quaternion.identity);
                 }
                 else
                 {
@@ -69,19 +70,19 @@ public class Shovel : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPo
 
                 if (HengTiao == null)
                 {
-                    HengTiao=Instantiate(BossManager.Instance.GameConf.HengTiao,heng, quaternion.identity);
+                    HengTiao = Instantiate(BossManager.Instance.GameConf.HengTiao, heng, quaternion.identity);
                 }
                 else
                 {
                     HengTiao.transform.position = heng;
                 }
-                if(Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0))
                 {
-                    if(jiaoXia.Plant)
+                    if (jiaoXia.Plant)
                     {
                         Destroy(jiaoXia.NowCTM.gameObject);
-                    jiaoXia.NowCTM=null;
-                    jiaoXia.setPlant(false);
+                        jiaoXia.NowCTM = null;
+                        jiaoXia.setPlant(false);
                     }
                     else
                     {
@@ -113,17 +114,17 @@ public class Shovel : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPo
                 }
             }
         }
-        
-    } 
-//鼠标移入效果
+
+    }
+    //鼠标移入效果
     public void OnPointerEnter(PointerEventData evenData)
     {
-        transform.localScale=new Vector2(2.8f,2.8f);
+        transform.localScale = new Vector2(2.8f, 2.8f);
     }
-//鼠标移出效果
+    //鼠标移出效果
     public void OnPointerExit(PointerEventData evenData)
     {
-        transform.localScale=new Vector2(2.32309f,2.32309f);
+        transform.localScale = new Vector2(2.32309f, 2.32309f);
     }
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -139,7 +140,7 @@ public class Shovel : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPo
                     Destroy(currentCard.ShuTiao);
                 }
             }
-            
+
             chanzi.Play();
             WantShovel = true;
             //maskIt.fillAmount = 1;
@@ -160,7 +161,7 @@ public class Shovel : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPo
             }
             //maskIt.fillAmount = 0;
         }
-        
+
     }
 
     public void desTiao()

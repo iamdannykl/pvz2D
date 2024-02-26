@@ -9,10 +9,11 @@ public class startSc : MonoBehaviour
     public void startGame()
     {
         SceneManager.LoadScene("SampleScene");
-        Time.timeScale=1;
+        Time.timeScale = 1;
     }
     public void backStartGame()
     {
+        PoolManager.Instance.CleanAllData();
         SceneManager.LoadScene("startSc");
     }
     public void quitGame()

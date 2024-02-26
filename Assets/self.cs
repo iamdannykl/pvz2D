@@ -11,7 +11,10 @@ public class self : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-
+    public void atk()
+    {
+        transform.parent.GetComponent<ZomPos>().eatPlt();
+    }
     public void padi()
     {
         anim.Play("padi");
@@ -20,6 +23,6 @@ public class self : MonoBehaviour
     public void desz()
     {
         //Destroy(transform.parent);
-        PoolManager.Instance.SetInPool(ZombieTypeManager.Instance.GetZombieFromType(zomTyp),gameObject.transform.parent.gameObject);
+        PoolManager.Instance.SetInPool(ZombieTypeManager.Instance.GetZombieFromType(zomTyp), gameObject.transform.parent.gameObject);
     }
 }
