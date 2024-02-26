@@ -8,8 +8,9 @@ public class Zombie1 : ZomPos
     }*/
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         if (downGrid != null)
             if (downGrid.NowCTM == null)
             {

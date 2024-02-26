@@ -26,10 +26,16 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
             isFrozen = value;
             if (isFrozen)
             {
-
+                timeJS.InitTime();
+                beFrozened();
+            }
+            else
+            {
+                jieDong();
             }
         }
     }
+    TimeJS timeJS;
     float oriTime;
     float nowTime;
     public float 抗冻指数;
@@ -53,6 +59,14 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     protected BoxCollider2D coll2d;
     protected bool isUpdate = true;
     protected HPmanager hPmanager;
+    protected virtual void Update()
+    {
+        //Debug.Log("wwwwwwwwww");
+        if (timeJS.isFns)
+        {
+            IsFrozen = false;
+        }
+    }
     IEnumerator freezeIt()
     {
         sR.material.color = new Color(0.6f, 0.7f, 0.95f);
@@ -152,8 +166,9 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     }
     public void Find(int line)
     {
-        oriTime = Time.time;
         isFrozen = false;
+        timeJS = GetComponent<TimeJS>();
+        timeJS.timeChiXu = 抗冻指数;
         anim = transform.GetChild(0).GetComponent<Animator>();
         sR = transform.GetChild(0).GetComponent<SpriteRenderer>();
         sR.material.color = new Color(1f, 1f, 1f);

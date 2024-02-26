@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 150}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 1
-  controlID: 48
+  controlID: 133
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 150}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 0
-  controlID: 49
+  controlID: 134
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 06faffff
+      m_SelectedIDs: 96670000
+      m_LastClickedID: 26518
+      m_ExpandedIDs: fef9ffff06faffff96670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -961,9 +961,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.7941685, y: 1.3883111, z: 0.046932504}
+    m_Target: {x: -9.264124, y: 0.27968875, z: 0.053050704}
     speed: 2
-    m_Value: {x: -5.7941685, y: 1.3883111, z: 0.046932504}
+    m_Value: {x: -9.264124, y: 0.27968875, z: 0.053050704}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1013,9 +1013,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.30673
+    m_Target: 4.6949234
     speed: 2
-    m_Value: 5.30673
+    m_Value: 4.6949234
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1076,7 +1076,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 26502
+  m_LastSelectedObjectID: 26518
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1481,7 +1481,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations/ZomBies/Zombie2
+    - Assets/Animations/ZomBies/TieTong
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1489,16 +1489,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Animations/ZomBies/Zombie2
+  - Assets/Animations/ZomBies/TieTong
   m_LastFoldersGridSize: 96
   m_LastProjectPath: D:\Datas\unityProjects\pvz2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 208.6}
-    m_SelectedIDs: c0850000
-    m_LastClickedID: 34240
-    m_ExpandedIDs: 00000000786d0000
+    scrollPos: {x: 0, y: 256.6}
+    m_SelectedIDs: 0a6f0000
+    m_LastClickedID: 28426
+    m_ExpandedIDs: 00000000786d0000ae6e0000b46e0000c66e0000006f0000026f0000066f00007a71000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1551,10 +1551,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ce6e0000
-    m_LastClickedInstanceID: 28366
+    m_SelectedInstanceIDs: ba6f0000
+    m_LastClickedInstanceID: 28602
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000000000007c6a0000c8680000b66900009867000010770000e0760000588200003c820000a6930000a4680000988e0000da9b0000ccab00003880000082800000967300006ac0ffff626f0000e0710000f8710000886e00003a790000a46d0000186f00007c7e00007c91000072700000ac6800008c720000ae680000b068000054700000
+    m_ExpandedInstanceIDs: c6230000000000007c6a0000c8680000b66900009867000010770000e0760000588200003c820000a6930000a4680000988e0000da9b0000ccab00003880000082800000967300006ac0ffff626f0000e0710000f8710000886e00003a790000a46d0000186f00007c7e00007c91000072700000ac6800008c720000ae680000b068000054700000f6680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1578,7 +1578,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 106.600006}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9044462287534349079}
   - component: {fileID: 6095472078401583699}
   - component: {fileID: 8245805502821165800}
+  - component: {fileID: 2675307964270598844}
   m_Layer: 0
   m_Name: ZombieW1
   m_TagString: zom
@@ -217,8 +218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2061a21ccaa93c640bd53930609491bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "\u6297\u51BB\u6307\u6570": 0
+  reSpd: -1.38
+  oriSpd: -1.38
   HpOrigin: 0
   speed: 30
+  anim: {fileID: 0}
+  isBoom: 0
+  sR: {fileID: 0}
   eat: {fileID: 9044462287534349079}
 --- !u!114 &8245805502821165800
 MonoBehaviour:
@@ -233,6 +240,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpJieDuan: 
+  jieDuanShu: 0
+  NowJieDuan: 0
+  anim: {fileID: 0}
+--- !u!114 &2675307964270598844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822045709932608604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab439fe2d3bd87d42a671b7b956cf02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeNow: 0
+  timeChiXu: 0
+  isBegin: 0
+  isFns: 0
 --- !u!1 &6854540544177471402
 GameObject:
   m_ObjectHideFlags: 0

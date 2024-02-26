@@ -12,7 +12,7 @@ public class TimeJS : MonoBehaviour
     public void InitTime()
     {
         timeNow = 0f;
-        isBegin = !isBegin;
+        isBegin = true;
     }
 
     // Update is called once per frame
@@ -25,7 +25,8 @@ public class TimeJS : MonoBehaviour
         if (timeNow >= timeChiXu)
         {
             isFns = true;
-            InitTime();
+            timeNow = 0f;
+            isBegin = false;
         }
     }
 }
