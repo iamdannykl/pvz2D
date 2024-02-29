@@ -7,6 +7,7 @@ public class UImanager : MonoBehaviour
 {
     public static UImanager Instance;
     public Text SunNums;
+    bool isDbspd;
     private UIPlantCards currentCard;
     public UIPlantCards CurrentCard
     {
@@ -30,11 +31,11 @@ public class UImanager : MonoBehaviour
             currentCard = value;
         }
     }
-    private void Awake() 
+    private void Awake()
     {
-        Instance=this;
+        Instance = this;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -43,7 +44,7 @@ public class UImanager : MonoBehaviour
 
     public void UpdateSunNum(int num)
     {
-        SunNums.text=num.ToString();
+        SunNums.text = num.ToString();
     }
 
     //return the position of the Sum Number;

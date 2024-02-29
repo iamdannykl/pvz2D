@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Shovel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class Shovel : MonoBehaviour, IPointerClickHandler
 {
     public static Shovel Instance;
     // Start is called before the first frame update
@@ -17,6 +17,7 @@ public class Shovel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     private GameObject chanZi;
     private GameObject ShuTiao, HengTiao;
     public AudioSource chanzi;
+    private bool isOn, isSelected;
 
     private void Awake()
     {
@@ -115,7 +116,7 @@ public class Shovel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
             }
         }
 
-    }
+    }/*
     //鼠标移入效果
     public void OnPointerEnter(PointerEventData evenData)
     {
@@ -125,7 +126,25 @@ public class Shovel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public void OnPointerExit(PointerEventData evenData)
     {
         transform.localScale = new Vector2(2.32309f, 2.32309f);
+    }*/
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="evenData"></param>
+    public void OnPointerEnter(PointerEventData evenData)
+    {
+        isOn = true;
+        transform.localScale = new Vector2(2.8f, 2.8f);
     }
+    //鼠标移出效果
+    public void OnPointerExit(PointerEventData evenData)
+    {
+        isOn = false;
+        transform.localScale = new Vector2(2.32309f, 2.32309f);
+        isSelected = false;
+    }
+    //按下
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!wantShovel)
@@ -140,7 +159,6 @@ public class Shovel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
                     Destroy(currentCard.ShuTiao);
                 }
             }
-
             chanzi.Play();
             WantShovel = true;
             //maskIt.fillAmount = 1;
@@ -161,7 +179,6 @@ public class Shovel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
             }
             //maskIt.fillAmount = 0;
         }
-
     }
 
     public void desTiao()

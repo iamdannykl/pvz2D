@@ -1,0 +1,567 @@
+fileFormatVersion: 2
+guid: 19cb4c02008b6004e983069de68dcd6e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 121
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4435506, y: 0.045747254}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39076d891427a540ab90479b5f65005
+      internalID: -1093816020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 118
+        width: 35
+        height: 41
+      alignment: 9
+      pivot: {x: 0.41293117, y: 0.053210933}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38963c42cefc5b04f99a841f7d6b11c2
+      internalID: -1072474425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 117
+        width: 39
+        height: 42
+      alignment: 9
+      pivot: {x: 0.36577216, y: 0.05683481}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cb5afe21484ab4c8b4384e85f166ae
+      internalID: -2091704747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 117
+        width: 40
+        height: 39
+      alignment: 9
+      pivot: {x: 0.36549225, y: 0.033931047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db904866652aa224483192551e54bb3f
+      internalID: 1257312826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_4
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 118
+        width: 43
+        height: 36
+      alignment: 9
+      pivot: {x: 0.33670646, y: 0.043814976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe441f679511094f8a0133fe69a0716
+      internalID: 324980432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 117
+        width: 40
+        height: 39
+      alignment: 9
+      pivot: {x: 0.36104012, y: 0.04534912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346123fc022625f41966fa09341c17ac
+      internalID: -554056255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_6
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 115
+        width: 39
+        height: 42
+      alignment: 9
+      pivot: {x: 0.3705452, y: 0.058267865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c909ad08e85b5e4ca18c7d760341117
+      internalID: -1458922729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_7
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 115
+        width: 35
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42639685, y: 0.06485674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f28d99ec72d435479b22f24170b3ab7
+      internalID: -194226403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_8
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 115
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4458046, y: 0.05414019}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a92cd8494497345be579d168c4716e
+      internalID: -276299077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 73
+        width: 31
+        height: 41
+      alignment: 9
+      pivot: {x: 0.49139306, y: 0.04446411}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ca19a37ede8034ea56204caf1b9124
+      internalID: 845138215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_10
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 64
+        width: 45
+        height: 50
+      alignment: 9
+      pivot: {x: 0.31323048, y: 0.035743866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16966f360fcbda042b8a0c81c5892901
+      internalID: 1622286483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 72
+        width: 48
+        height: 33
+      alignment: 9
+      pivot: {x: 0.29538456, y: 0.07343801}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a21b4f0bd6446f47950f43d06e9ec97
+      internalID: -474901835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_12
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 69
+        width: 40
+        height: 38
+      alignment: 9
+      pivot: {x: 0.36578673, y: 0.0735052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad923b2f6e257b34794c9cc889992e1f
+      internalID: 141132367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_13
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 68
+        width: 34
+        height: 42
+      alignment: 9
+      pivot: {x: 0.4254496, y: 0.06801587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5487a3233a9f35b42846b06ef01c4c2c
+      internalID: -1918856361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_14
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 68
+        width: 35
+        height: 39
+      alignment: 9
+      pivot: {x: 0.44282576, y: 0.05873088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41b50c60aaa11448a97a2a8b4b2d438
+      internalID: -1584598460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_15
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 68
+        width: 35
+        height: 36
+      alignment: 9
+      pivot: {x: 0.41233346, y: 0.066427656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4207957bc7d8df40b39422809eb85c1
+      internalID: -193685870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_16
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 66
+        width: 34
+        height: 36
+      alignment: 9
+      pivot: {x: 0.43694618, y: 0.06822925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc438876bee331418d372e608c246d0
+      internalID: 1429135486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 27
+        width: 35
+        height: 34
+      alignment: 9
+      pivot: {x: 0.41182247, y: 0.06492621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a378e9404a76648b8f8b47efe20730
+      internalID: 2027147943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa4f58df70ec874b9ba52eae4a31b6a
+      internalID: -1241232765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Chomper_19
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2cc6217961385c49a3c821d92a7cca5
+      internalID: -98614905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DS DSi - Plants vs Zombies - Chomper_0: -1093816020
+      DS DSi - Plants vs Zombies - Chomper_1: -1072474425
+      DS DSi - Plants vs Zombies - Chomper_10: 1622286483
+      DS DSi - Plants vs Zombies - Chomper_11: -474901835
+      DS DSi - Plants vs Zombies - Chomper_12: 141132367
+      DS DSi - Plants vs Zombies - Chomper_13: -1918856361
+      DS DSi - Plants vs Zombies - Chomper_14: -1584598460
+      DS DSi - Plants vs Zombies - Chomper_15: -193685870
+      DS DSi - Plants vs Zombies - Chomper_16: 1429135486
+      DS DSi - Plants vs Zombies - Chomper_17: 2027147943
+      DS DSi - Plants vs Zombies - Chomper_18: -1241232765
+      DS DSi - Plants vs Zombies - Chomper_19: -98614905
+      DS DSi - Plants vs Zombies - Chomper_2: -2091704747
+      DS DSi - Plants vs Zombies - Chomper_3: 1257312826
+      DS DSi - Plants vs Zombies - Chomper_4: 324980432
+      DS DSi - Plants vs Zombies - Chomper_5: -554056255
+      DS DSi - Plants vs Zombies - Chomper_6: -1458922729
+      DS DSi - Plants vs Zombies - Chomper_7: -194226403
+      DS DSi - Plants vs Zombies - Chomper_8: -276299077
+      DS DSi - Plants vs Zombies - Chomper_9: 845138215
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

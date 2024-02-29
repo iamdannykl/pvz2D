@@ -10,10 +10,11 @@ public class HomeEnter : MonoBehaviour//其实这才是UI管理器
     public GameObject gameover;
     public GameObject Menu;
     public AudioSource overSd;
-    private bool isMenuOn=false;
+    bool isDbspd;
+    private bool isMenuOn = false;
     private bool isOver = false;
 
-    public bool isZanTing=false;
+    public bool isZanTing = false;
 
     public bool IsZanTing
     {
@@ -40,7 +41,7 @@ public class HomeEnter : MonoBehaviour//其实这才是UI管理器
             isMenuOn = value;
             if (isMenuOn)
             {
-                Menu.SetActive(true); 
+                Menu.SetActive(true);
             }
             else
             {
@@ -80,6 +81,14 @@ public class HomeEnter : MonoBehaviour//其实这才是UI管理器
     {
         IsMenuOn = false;
         IsZanTing = false;
+    }
+    public void doubleSpd()
+    {
+        if (!isDbspd)
+        {
+            isDbspd = !isDbspd;
+            Time.timeScale = 2f;
+        }
     }
     void Awake()
     {

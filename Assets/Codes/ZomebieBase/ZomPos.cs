@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Spine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,7 +15,8 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         idle,
         walk,
         death,
-        boomDie
+        boomDie,
+        disAppear
     }
     //private CardTM plant;
     bool isFrozen;
@@ -49,7 +51,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     protected int i, xb;
     public Animator anim;
     protected bool isAttack;//是否在攻击状态
-    public bool isBoom;
+    public bool isBoom, isEat;
     protected float atkValue = 100f;//僵尸の攻击力(hp/s)
     protected int hang;
     protected int lineNum;
@@ -124,11 +126,14 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
                     isUpdate = false;
                     anim.Play("hui");
                     break;
-                    /*case State.frozen:
-                        sR.material.color = new Color(0.6f, 0.7f, 0.95f);
-                        anim.speed = 0.5f;
-                        reSpd = oriSpd / 2;
-                        break;*/
+                case State.disAppear:
+                    StopAllCoroutines();
+                    coll2d.enabled = false;
+                    isUpdate = false;
+                    Debug.Log(GetComponentInChildren<self>().zomTyp);
+                    Hp1 = 0;
+                    PoolManager.Instance.SetInPool(ZombieTypeManager.Instance.GetZombieFromType(GetComponentInChildren<self>().zomTyp), gameObject);
+                    break;
             }
         }
     }
@@ -154,11 +159,15 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
             {
                 GridManager.Instance.jiaoxiaGrid(transform.position).setBianliang(false);//当前网格变为false
                 LvManager.Instance.AllZomNum++;
-                if (!isBoom)
+                if (!isBoom && !isEat)
                     CurrentState = State.death;
-                else
+                else if (isBoom)
                 {
                     CurrentState = State.boomDie;
+                }
+                else if (isEat)
+                {
+                    CurrentState = State.disAppear;
                 }
 
             }

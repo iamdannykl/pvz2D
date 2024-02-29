@@ -186,7 +186,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
         transform.localScale = /*new Vector2(1f, 1f);*/bili;
         isSelected = false;
     }
-
+    //按下
     public void OnPointerDown(PointerEventData evenData)
     {
         isSelected = true;
@@ -204,6 +204,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
             //maskIt.fillAmount = 0;
         }
     }
+    //松手
     public void OnPointerUp(PointerEventData evenData)
     {
         if (isOn && !isSelected)
@@ -222,7 +223,6 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
                 //maskIt.fillAmount = 0;
             }
         }
-
     }
     // Update is called once per frame
     void Update()

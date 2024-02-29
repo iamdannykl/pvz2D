@@ -10,6 +10,7 @@ public class GameConf : ScriptableObject//��Ϸ����
     public GameObject snowPeaBlt;
     public GameObject Sun;
     public GameObject penDan;
+    public GameObject SRH;
 
     [Header("Plants")]
     public GameObject SunFlower;

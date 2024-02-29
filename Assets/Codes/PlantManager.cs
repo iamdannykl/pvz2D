@@ -14,7 +14,8 @@ public enum PlantType
     spineSunFler,
     DSpea,
     PotatoDL,
-    snowPea
+    snowPea,
+    SRH
 }
 public enum bulletType
 {
@@ -68,6 +69,8 @@ public class PlantManager : MonoBehaviour
                 return BossManager.Instance.GameConf.PotatoDL;
             case PlantType.snowPea:
                 return BossManager.Instance.GameConf.snowPea;
+            case PlantType.SRH:
+                return BossManager.Instance.GameConf.SRH;
         }
 
         return null;
