@@ -84,10 +84,14 @@ public class HomeEnter : MonoBehaviour//其实这才是UI管理器
     }
     public void doubleSpd()
     {
-        if (!isDbspd)
+        isDbspd = !isDbspd;
+        if (isDbspd)
         {
-            isDbspd = !isDbspd;
             Time.timeScale = 2f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
     void Awake()

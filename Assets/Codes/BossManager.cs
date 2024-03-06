@@ -14,6 +14,19 @@ public class BossManager : MonoBehaviour
     public GameObject cameraM;
     public GameObject editorUI;
     public GameObject ZhongZhiUI;
+    private ZomCardBase currentZCard;
+    public ZomCardBase CurrentZCard
+    {
+        get => currentZCard;
+        set
+        {
+            if (currentZCard != null)
+            {
+                currentZCard.WantPlace = false;
+            }
+            currentZCard = value;
+        }
+    }
     public enum GameMode
     {
         editor,

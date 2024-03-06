@@ -81,6 +81,14 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         anim.speed = 1f;
         reSpd = oriSpd;
     }
+    public void placing()
+    {
+        anim.speed = 0;
+    }
+    public void placed()
+    {
+        //Find();
+    }
     void beFrozened()
     {
         sR.material.color = new Color(0.6f, 0.7f, 0.95f);

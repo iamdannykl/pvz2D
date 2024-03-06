@@ -127,6 +127,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
     // Start is called before the first frame update
     void Start()
     {
+        //        Debug.Log(UImanager.Instance.CurrentZCard);
         bili = transform.localScale;
         maskIt = transform.Find("masking").GetComponent<Image>();
         self = GetComponent<Image>();
