@@ -51,6 +51,7 @@ public class ShiRenHua : CardTM
     }
     void yaoSui()
     {
+        attackEn.Play();
         target.GetComponent<ZomPos>().CurrentState = ZomPos.State.disAppear;
     }
     public void enterJiao()
@@ -66,7 +67,6 @@ public class ShiRenHua : CardTM
     }
     public void EatIt()
     {
-        attackEn.Play();
         if (target != null)
             target.GetComponent<ZomPos>().Hp1 = 0;
     }

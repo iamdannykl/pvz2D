@@ -1,38 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class createSun : MonoBehaviour
 {
     public static createSun Instance;
-    public GameObject ze,one,two,three,four,five,six;
+    public GameObject ze, one, two, three, four, five, six;
     float suijishu;
     public float jianGe;
-    
+
 
     private void Awake()
     {
         Instance = this;
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-        
-    }
-    void Start() 
-    {
-        dingShi();
-    }
 
-    void dingShi()
+
+
+    public void dingShi()
     {
-        InvokeRepeating("createIt",5f,jianGe);
+        InvokeRepeating("createIt", 5f, jianGe);
     }
 
     void createSunByPoolManager(GameObject pos)
     {
-        sun sun=PoolManager.Instance.GetObject(BossManager.Instance.GameConf.Sun).GetComponent<sun>();
+        sun sun = PoolManager.Instance.GetObject(BossManager.Instance.GameConf.Sun).GetComponent<sun>();
         sun.Find();
         sun.isSunFlowerCrt = false;
         sun.transform.position = pos.transform.position;
@@ -42,8 +36,8 @@ public class createSun : MonoBehaviour
     //生成suns
     void createIt()
     {
-        suijishu=Random.Range(0,7);
-        switch(suijishu)
+        suijishu = Random.Range(0, 7);
+        switch (suijishu)
         {
             case 0:
                 createSunByPoolManager(ze);
@@ -69,7 +63,7 @@ public class createSun : MonoBehaviour
             default:
                 Debug.Log("ERROR");
                 break;
-            
+
         }
     }
 }

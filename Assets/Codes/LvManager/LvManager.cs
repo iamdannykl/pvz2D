@@ -9,10 +9,10 @@ public class LvManager : MonoBehaviour
     public static LvManager Instance;
     public Waves[] waves;
     //[SerializeField] string[] strings;
-    public GameObject zero,one,two,three,four,five;
+    public GameObject zero, one, two, three, four, five;
 
     public int waveNow;
-    private int sameLineSortNum=0;
+    private int sameLineSortNum = 0;
     public int allZomNum, allCrtZom;
     int hangShu, geShu;
     public float timePerWave;
@@ -27,10 +27,10 @@ public class LvManager : MonoBehaviour
             allZomNum = value;
             if (allZomNum >= allCrtZom)
             {
-                if (waveNow < waves.Length-1)
+                if (waveNow < waves.Length - 1)
                 {
                     waveNow++;
-                    Invoke("BoShuCrt",3f);
+                    Invoke("BoShuCrt", 3f);
                 }
                 else
                 {
@@ -39,7 +39,7 @@ public class LvManager : MonoBehaviour
             }
         }
     }
-    
+
     private void Awake()
     {
         Instance = this;
@@ -74,7 +74,7 @@ public class LvManager : MonoBehaviour
     {
         if (Time.time - nowTime >= timePerWave)
         {
-            if (waveNow < waves.Length-1)
+            if (waveNow < waves.Length - 1)
             {
                 ifChaoShi();
             }
@@ -90,7 +90,7 @@ public class LvManager : MonoBehaviour
         BoShuCrt();
         allCrtZom += shangBoCrtLeft;
     }
-    
+
     // Start is called before the first frame update
     void BoShuCrt()//开始新的一波刷新
     {
@@ -104,26 +104,26 @@ public class LvManager : MonoBehaviour
             {
                 allCrtZom += waves[waveNow].hang[i].ztp[j].number;
                 createZombie(waves[waveNow].hang[i].ztp[j].number,
-                    trsf(i,j),
+                    trsf(i, j),
                     waves[waveNow].hang[i].ztp[j].delayTime,
                     waves[waveNow].hang[i].ztp[j].crtSpeed);
             }
         }
     }
 
-    Vector2 trsf(int hang,int ge)
+    Vector2 trsf(int hang, int ge)
     {
         return new Vector2(hang, ge);
     }
-    void createZombie(int num,Vector2 zom,float delay,float crtSpeed)
+    void createZombie(int num, Vector2 zom, float delay, float crtSpeed)
     {
-        StartCoroutine(shengCheng(waveNow,num,zom,delay,crtSpeed));
+        StartCoroutine(shengCheng(waveNow, num, zom, delay, crtSpeed));
     }
 
-    private IEnumerator shengCheng(int wave,int num, Vector2 zom,float delay,float crtSpeed)
+    private IEnumerator shengCheng(int wave, int num, Vector2 zom, float delay, float crtSpeed)
     {
         yield return new WaitForSeconds(delay);
-        for (int i=num; i > 0; i--)
+        for (int i = num; i > 0; i--)
         {
             ZomPos zombieType = /*Instantiate(ZombieTypeManager.Instance.GetZombieFromType(waves[wave].hang[(int)zom.x].ztp[(int)zom.y].zType),
                 getV3ByLine((int)zom.x),
@@ -138,7 +138,7 @@ public class LvManager : MonoBehaviour
     }
     private Vector3 getV3ByLine(int line)
     {
-        switch(line)
+        switch (line)
         {
             case 0:
                 return zero.transform.position;
@@ -151,11 +151,11 @@ public class LvManager : MonoBehaviour
             case 4:
                 return four.transform.position;
             default:
-                return new Vector3(0,0,0);  
+                return new Vector3(0, 0, 0);
         }
     }
 
-    private void Start()
+    public void gameStart()
     {
         waveNow = 0;
         BoShuCrt();
