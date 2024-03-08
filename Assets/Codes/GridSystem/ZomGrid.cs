@@ -25,7 +25,7 @@ public class ZomGrid : MonoBehaviour
         for (int i = 0; i <= 4; i++)
         {
             //Gizmos.DrawLine(i * YJJ + transform.position, YS.position - YJJ * (5 - i));
-            lineList.Add(new ZomLine((i) * YJJ + bottomRedLine));
+            lineList.Add(new ZomLine((i) * YJJ + bottomRedLine, 5 - i));
             //Gizmos.DrawLine((i - 1) * YJJ + bottomRedLine, upRedLine - (i - 1) * YJJ);
         }
     }

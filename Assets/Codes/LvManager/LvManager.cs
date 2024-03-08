@@ -11,6 +11,8 @@ public class LvManager : MonoBehaviour
     //[SerializeField] string[] strings;
     public GameObject zero, one, two, three, four, five;
 
+    public bool isBegin;
+
     public int waveNow;
     private int sameLineSortNum = 0;
     public int allZomNum, allCrtZom;
@@ -72,7 +74,7 @@ public class LvManager : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time - nowTime >= timePerWave)
+        if (isBegin && Time.time - nowTime >= timePerWave)
         {
             if (waveNow < waves.Length - 1)
             {
@@ -157,6 +159,8 @@ public class LvManager : MonoBehaviour
 
     public void gameStart()
     {
+        isBegin = true;
+        nowTime = Time.time;
         waveNow = 0;
         BoShuCrt();
     }

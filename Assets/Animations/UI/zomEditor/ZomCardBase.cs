@@ -11,6 +11,7 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private bool canPlace;
     private bool wantPlace;
     private ZomLine currentLine;
+    bool canPlc = true;
     public bool CanPlace
     {
         get => canPlace;
@@ -27,17 +28,13 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             wantPlace = value;
             if (wantPlace)
             {
+                canPlace = true;
                 GameObject prefab = ZombieTypeManager.Instance.GetZombieFromType(zombieType);
                 zomNow = Instantiate<GameObject>(prefab, Vector3.zero, Quaternion.identity, ZombieTypeManager.Instance.transform).GetComponent<ZomPos>();
                 //zomNow.placing(false, grid);
             }
             else
             {
-                if (zomNow != null)
-                {
-                    Destroy(zomNow.gameObject);
-                    zomNow = null;
-                }
                 if (zomNowInGrid != null)
                 {
                     Destroy(zomNowInGrid.gameObject);
@@ -59,12 +56,25 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             currentLine = ZomGrid.Instanse.getLineFromMouse();
             zomNow.transform.position = mousePoint;
-            if (Mathf.Abs(mousePoint.y - currentLine.ZomLineLeftPoint.y) < 0.9f)
+            if (canPlace && Mathf.Abs(mousePoint.y - currentLine.ZomLineLeftPoint.y) < 0.9f)
             {
                 if (zomNowInGrid == null)
+                {
                     zomNowInGrid = Instantiate(zomNow, new Vector2(mousePoint.x, currentLine.ZomLineLeftPoint.y), Quaternion.identity);
+                    zomNowInGrid.placing();
+                }
+
                 else
+                {
                     zomNowInGrid.transform.position = new Vector2(mousePoint.x, currentLine.ZomLineLeftPoint.y);
+                }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    canPlace = false;
+                    WantPlace = false;
+                    zomNow.sR.sortingOrder = currentLine.Hang;
+                    zomNow.placed(currentLine, mousePoint);
+                }
             }
             else
             {

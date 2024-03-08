@@ -5,8 +5,10 @@ using UnityEngine;
 public class ZomLine
 {
     public Vector2 ZomLineLeftPoint;
-    public ZomLine(Vector2 zomlinepoint)
+    public int Hang;
+    public ZomLine(Vector2 zomlinepoint, int hang)
     {
         ZomLineLeftPoint = zomlinepoint;
+        Hang = hang;
     }
 }

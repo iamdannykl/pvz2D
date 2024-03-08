@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,8 +9,17 @@ public class startSc : MonoBehaviour
     // Start is called before the first frame update
     public void startGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        //BossManager.Instance.GameModeCurrent = BossManager.GameMode.gamer;
+        PlayerPrefs.SetString("gameMode", "gamer");
         Time.timeScale = 1;
+        SceneManager.LoadScene("SampleScene");
+    }
+    public void editModeStart()
+    {
+        //BossManager.Instance.GameModeCurrent = BossManager.GameMode.editor;
+        PlayerPrefs.SetString("gameMode", "editor");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("SampleScene");
     }
     public void backStartGame()
     {
@@ -20,4 +30,5 @@ public class startSc : MonoBehaviour
     {
         Application.Quit();
     }
+    //    void Start() => Debug.Log(BossManager.Instance.amns);
 }

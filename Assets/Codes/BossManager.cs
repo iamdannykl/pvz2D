@@ -7,6 +7,7 @@ using UnityEngine;
 public class BossManager : MonoBehaviour
 {
     public static BossManager Instance;
+    public int amns = 3;
     private int sunNum;
     public GameConf GameConf { get; private set; }
 
@@ -57,6 +58,7 @@ public class BossManager : MonoBehaviour
         switch (gameModeCurrent)
         {
             case GameMode.editor:
+                LvManager.Instance.isBegin = false;
                 ZhongZhiUI.SetActive(false);
                 editorUI.SetActive(true);
                 cameraM.GetComponent<Animator>().Play("youyi");
@@ -70,6 +72,7 @@ public class BossManager : MonoBehaviour
                 LvManager.Instance.gameStart();
                 break;
             case GameMode.beforeStart:
+                LvManager.Instance.isBegin = false;
                 editorUI.SetActive(false);
                 ZhongZhiUI.SetActive(false);
                 cameraM.GetComponent<Animator>().Play("youyi");
@@ -86,10 +89,30 @@ public class BossManager : MonoBehaviour
             UImanager.Instance.UpdateSunNum(sunNum);
         }
     }
+    GameMode stringToGmd(string str)
+    {
+        if (str == "editor")
+        {
+            return GameMode.editor;
+        }
+        else if (str == "gamer")
+        {
+            return GameMode.gamer;
+        }
+        else if (str == "beforeStart")
+        {
+            return GameMode.beforeStart;
+        }
+        else
+        {
+            return GameMode.nullMode;
+        }
+    }
     private void Awake()
     {
         Instance = this;
         gmc = GameMode.nullMode;
+        gameModeCurrent = stringToGmd(PlayerPrefs.GetString("gameMode", gameModeCurrent.ToString()));
         GameModeCurrent = gameModeCurrent;
         GameConf = Resources.Load<GameConf>("GameConf");
     }

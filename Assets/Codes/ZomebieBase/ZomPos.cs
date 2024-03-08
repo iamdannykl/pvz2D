@@ -20,6 +20,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     }
     //private CardTM plant;
     bool isFrozen;
+    public bool canMv = true;
     public bool IsFrozen
     {
         get => isFrozen;
@@ -85,9 +86,11 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     {
         anim.speed = 0;
     }
-    public void placed()
+    public void placed(ZomLine zl, Vector2 ms)
     {
-        //Find();
+        Find(zl.Hang);
+        canMv = false;
+        transform.position = new Vector2(ms.x, zl.ZomLineLeftPoint.y);
     }
     void beFrozened()
     {
@@ -194,6 +197,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         isBoom = false;
         Hp = HpOrigin;
         i = 100;
+        canMv = true;//<===============================================
         isUpdate = true;
         coll2d = GetComponent<BoxCollider2D>();
         coll2d.enabled = true;
@@ -278,6 +282,11 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
 
         }
     }
+    void zuoYi()
+    {
+        if (canMv)
+            transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
+    }
     protected void moveZom()
     {
         //if(currentGrid==null)return;
@@ -285,11 +294,11 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         if (!isUpdate)
         {
             if (!isBoom && !isAttack)
-                transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
+                zuoYi();
         }
         else if (downGrid == null)
         {
-            transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
+            zuoYi();
         }
 
         else
@@ -304,7 +313,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
                 //StopAllCoroutines();
                 isAttack = false;
                 anim.SetBool("isEating", false);
-                transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
+                zuoYi();
             }
             //}
         }
