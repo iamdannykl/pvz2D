@@ -61,4 +61,21 @@ public class ZomGrid : MonoBehaviour
         }
         Gizmos.DrawLine((4) * YJJ + bottomRedLine, upRedLine);
     }
+    public void saveZomLine()
+    {
+
+    }
+    public void loadZomLine()
+    {
+        for (int w = 0; w < LvManager.Instance.waves.Count; w++)
+        {
+            for (int h = 0; h <= 4; h++)
+            {
+                foreach (ZomPos zom in lineList[h].zomList)
+                {
+
+                }
+            }
+        }
+    }
 }

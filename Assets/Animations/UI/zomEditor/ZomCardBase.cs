@@ -70,10 +70,12 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 }
                 if (Input.GetMouseButtonUp(0))
                 {
+                    //                    currentLine.zomList.Add(zomNow);
                     canPlace = false;
                     WantPlace = false;
                     zomNow.sR.sortingOrder = currentLine.Hang;
                     zomNow.placed(currentLine, mousePoint);
+                    LvManager.Instance.waves[LvManager.Instance.WaveNowInEdit].hang[currentLine.Hang - 1].ztp.Add(new Ztype(zomNow.nameZ, 1, 2, 1, zombieType));
                 }
             }
             else

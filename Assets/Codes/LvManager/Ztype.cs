@@ -11,6 +11,14 @@ public class Ztype
     public float delayTime;
 
     public float crtSpeed;
-    
+
     public ZombieType zType;
+    public Ztype(string na, int nu, float dela, float crt, ZombieType zt)
+    {
+        name = na;
+        number = nu;
+        delayTime = dela;
+        crtSpeed = crt;
+        zType = zt;
+    }
 }

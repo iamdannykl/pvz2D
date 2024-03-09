@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hang
 {
     public string name;
-    public Ztype[] ztp;
+    public List<Ztype> ztp = new List<Ztype>();
+    //public Ztype[] ztp;
     //[SerializeField] string[] strings;
 }

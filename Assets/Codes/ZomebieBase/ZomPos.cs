@@ -62,6 +62,9 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     protected BoxCollider2D coll2d;
     protected bool isUpdate = true;
     protected HPmanager hPmanager;
+    public float realSpd;
+    public float delayTime;
+    public string nameZ;
     protected virtual void Update()
     {
         //Debug.Log("wwwwwwwwww");
@@ -184,7 +187,8 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
             }
         }
     }
-    public void Find(int line)
+    public void
+    Find(int line)
     {
         isFrozen = false;
         timeJS = GetComponent<TimeJS>();

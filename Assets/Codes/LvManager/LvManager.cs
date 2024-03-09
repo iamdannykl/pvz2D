@@ -3,23 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LvManager : MonoBehaviour
 {
     public static LvManager Instance;
-    public Waves[] waves;
+    public List<Waves> waves = new List<Waves>();
     //[SerializeField] string[] strings;
     public GameObject zero, one, two, three, four, five;
 
     public bool isBegin;
+    public int EditHangShu;
 
     public int waveNow;
+    public int waveNowInEdit;
+    public Text text;
     private int sameLineSortNum = 0;
     public int allZomNum, allCrtZom;
     int hangShu, geShu;
     public float timePerWave;
     private float nowTime;
     public int plantSort;
+    public int WaveNowInEdit
+    {
+        get => waveNowInEdit;
+        set
+        {
+            text.text = "第" + (value + 1) + "波";
+            waveNowInEdit = value;
+        }
+    }
 
     public int AllZomNum
     {
@@ -29,7 +42,7 @@ public class LvManager : MonoBehaviour
             allZomNum = value;
             if (allZomNum >= allCrtZom)
             {
-                if (waveNow < waves.Length - 1)
+                if (waveNow < waves.Count - 1)
                 {
                     waveNow++;
                     Invoke("BoShuCrt", 3f);
@@ -41,10 +54,17 @@ public class LvManager : MonoBehaviour
             }
         }
     }
+    public void nextBo()//波数显示在窗口
+    {
+        WaveNowInEdit++;
+        waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
+    }
 
     private void Awake()
     {
         Instance = this;
+        waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
+        WaveNowInEdit = waveNowInEdit;
     }
     public int SameLineSortNum
     {
@@ -76,7 +96,7 @@ public class LvManager : MonoBehaviour
     {
         if (isBegin && Time.time - nowTime >= timePerWave)
         {
-            if (waveNow < waves.Length - 1)
+            if (waveNow < waves.Count - 1)
             {
                 ifChaoShi();
             }
@@ -98,10 +118,10 @@ public class LvManager : MonoBehaviour
     {
         allCrtZom = 0;
         allZomNum = 0;
-        hangShu = waves[waveNow].hang.Length;
+        hangShu = waves[waveNow].hang.Count;
         for (int i = 0; i < hangShu; i++)//i为第几行zombie
         {
-            geShu = waves[waveNow].hang[i].ztp.Length;
+            geShu = waves[waveNow].hang[i].ztp.Count;
             for (int j = 0; j < geShu; j++)//j为第几种zombie
             {
                 allCrtZom += waves[waveNow].hang[i].ztp[j].number;
