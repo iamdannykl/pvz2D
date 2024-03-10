@@ -10,7 +10,7 @@ public class ZomGrid : MonoBehaviour
     public Transform YS;
     float YjianJu;
     // Start is called before the first frame update
-    List<ZomLine> lineList = new List<ZomLine>();
+    public List<ZomLine> lineList = new List<ZomLine>();
     private void Awake()
     {
         Instanse = this;
@@ -39,7 +39,7 @@ public class ZomGrid : MonoBehaviour
         clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         for (int i = 0; i <= 4; i++)
         {
-            if (Mathf.Abs(clickPos.y - lineList[i].ZomLineLeftPoint.y) < dis)
+            if (clickPos.x >= lineList[1].ZomLineLeftPoint.x && Mathf.Abs(clickPos.y - lineList[i].ZomLineLeftPoint.y) < dis)
             {
                 dis = Mathf.Abs(clickPos.y - lineList[i].ZomLineLeftPoint.y);
                 TargetLine = lineList[i];

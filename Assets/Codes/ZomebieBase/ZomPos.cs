@@ -289,7 +289,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     void zuoYi()
     {
         if (canMv)
-            transform.Translate(new Vector2(reSpd, 0) * (Time.deltaTime / 1) / speed);
+            transform.Translate(new Vector2(reSpd, 0) * Time.deltaTime / speed);
     }
     protected void moveZom()
     {

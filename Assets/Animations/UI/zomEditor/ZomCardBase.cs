@@ -57,7 +57,7 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             currentLine = ZomGrid.Instanse.getLineFromMouse();
             zomNow.transform.position = mousePoint;
-            if (canPlace && Mathf.Abs(mousePoint.y - currentLine.ZomLineLeftPoint.y) < 0.9f)
+            if (canPlace && mousePoint.x >= ZomGrid.Instanse.lineList[1].ZomLineLeftPoint.x && Mathf.Abs(mousePoint.y - currentLine.ZomLineLeftPoint.y) < 0.9f)
             {
                 if (zomNowInGrid == null)
                 {
@@ -76,7 +76,7 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                     WantPlace = false;
                     zomNow.sR.sortingOrder = currentLine.Hang;
                     zomNow.placed(currentLine, mousePoint);
-                    LvManager.Instance.waves[LvManager.Instance.WaveNowInEdit].hang[currentLine.Hang - 1].ztp.Add(new Ztype(zomNow.nameZ, 1, 2, 1, zombieType));
+                    LvManager.Instance.waves[LvManager.Instance.WaveNowInEdit].hang[5 - currentLine.Hang].ztp.Add(new Ztype(zomNow.nameZ, 1, Mathf.Abs(zomNow.transform.position.x - currentLine.ZomLineLeftPoint.x) / 0.2760316f, 1, zombieType));
                 }
             }
             else
@@ -111,6 +111,11 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         else
         {
             WantPlace = false;
+            if (zomNow != null)
+            {
+                Destroy(zomNow.gameObject);
+                zomNow = null;
+            }
             //maskIt.fillAmount = 0;
         }
     }
