@@ -24,6 +24,7 @@ public class LvManager : MonoBehaviour
     public float timePerWave;
     private float nowTime;
     public int plantSort;
+    public Transform fatherOb;
     public int WaveNowInEdit
     {
         get => waveNowInEdit;
@@ -56,8 +57,12 @@ public class LvManager : MonoBehaviour
     }
     public void nextBo()//波数显示在窗口
     {
+        fatherOb.GetChild(waveNowInEdit).gameObject.SetActive(false);
         WaveNowInEdit++;
         waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
+        GameObject waveEdit = new GameObject();
+        waveEdit.name = "wave" + (waveNowInEdit + 1);
+        waveEdit.transform.SetParent(fatherOb);
     }
 
     private void Awake()

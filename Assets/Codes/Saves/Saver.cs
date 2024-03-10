@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,14 +37,14 @@ public class Saver : MonoBehaviour
         sw.Close();
         //把流关了
     }
-    public void SaveByJSON<T>(T save)
+    public void SaveByJSON(List<Waves> save)
     {
         //SaveContent save = CreateSave();
         //创建一个Save实例存储游戏数据(CreateSave函数在上面)
-        string JsonString = JsonUtility.ToJson(save);
+        string JsonString = SerializeTools.ListToJson<Waves>(save);
         //将对象save转化为json字符串
         //上面说了Json是string类型，所以命名string
-        StreamWriter sw = new StreamWriter(Application.dataPath + "/Data.yj");
+        StreamWriter sw = new StreamWriter(Application.dataPath + "/Data.json");
         //persistentDataPath是隐藏文件的，所以你找不到Data.yj的所在地，
         //而dataPath就不会隐藏，同时文件后缀也可以乱取
         sw.Write(JsonString);
@@ -51,47 +52,23 @@ public class Saver : MonoBehaviour
         sw.Close();
         //把流关了
     }
-    public void LoadByJSON<T>()
-    {
-        if (File.Exists(Application.dataPath + "/Data.yj"))
-        //判断文件是否创建
-        {
-            StreamReader sr = new StreamReader(Application.dataPath + "/Data.yj");
-            //从流中读取字符串
-            string JsonString = sr.ReadToEnd();
-            //ReadToEnd()方法可以读取从流当前位置到结尾的所有字符
-            //还有Read()方法，但是只读了一个字符，还有更多方法捏懒得打了
-            sr.Close();
-            //把流关了
-            T save = JsonUtility.FromJson<T>(JsonString);
-            //该方法属于泛型方法T，需要给出明确的类型定义，所以要写<Save>
 
-            /*GameManager.Instance.coins = save.coins;
-            player.transform.position = new Vector2(save.playerPosition.x, save.playerPositionY);
-            */
-            //属于是常规方式了
-        }
-        else
-        {
-            Debug.LogError("File Not Found.");
-        }
-    }
     public void LoadByJSON()
     {
-        if (File.Exists(Application.dataPath + "/Data.yj"))
+        if (File.Exists(Application.dataPath + "/Data.json"))
         //判断文件是否创建
         {
-            StreamReader sr = new StreamReader(Application.dataPath + "/Data.yj");
+            StreamReader sr = new StreamReader(Application.dataPath + "/Data.json");
             //从流中读取字符串
             string JsonString = sr.ReadToEnd();
             //ReadToEnd()方法可以读取从流当前位置到结尾的所有字符
             //还有Read()方法，但是只读了一个字符，还有更多方法捏懒得打了
             sr.Close();
             //把流关了
-            SaveContent save = JsonUtility.FromJson<SaveContent>(JsonString);
+            List<Waves> save = SerializeTools.ListFromJson<Waves>(JsonString);
             //该方法属于泛型方法T，需要给出明确的类型定义，所以要写<Save>
-            otpt = save.a;
-            text.text = otpt.ToString() + Application.dataPath;
+            LvManager.Instance.waves = save;
+            Debug.Log(save);
             /*GameManager.Instance.coins = save.coins;
             player.transform.position = new Vector2(save.playerPosition.x, save.playerPositionY);
             */

@@ -10,6 +10,7 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public float scaleIndex;
     private bool canPlace;
     private bool wantPlace;
+    public GameObject zomIsHere;
     private ZomLine currentLine;
     bool canPlc = true;
     public bool CanPlace
@@ -31,7 +32,7 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 canPlace = true;
                 GameObject prefab = ZombieTypeManager.Instance.GetZombieFromType(zombieType);
                 zomNow = Instantiate<GameObject>(prefab, Vector3.zero, Quaternion.identity, ZombieTypeManager.Instance.transform).GetComponent<ZomPos>();
-                //zomNow.placing(false, grid);
+                zomNow.transform.SetParent(zomIsHere.transform.GetChild(LvManager.Instance.waveNowInEdit));
             }
             else
             {

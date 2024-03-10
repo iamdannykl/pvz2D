@@ -63,7 +63,7 @@ public class ZomGrid : MonoBehaviour
     }
     public void saveZomLine()
     {
-
+        Saver.Instance.SaveByJSON(LvManager.Instance.waves);
     }
     public void loadZomLine()
     {
