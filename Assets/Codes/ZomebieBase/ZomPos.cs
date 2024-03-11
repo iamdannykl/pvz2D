@@ -20,6 +20,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     }
     //private CardTM plant;
     bool isFrozen;
+    public bool isDong;
     public bool canMv = true;
     public bool IsFrozen
     {
@@ -31,10 +32,12 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
             {
                 timeJS.InitTime();
                 beFrozened();
+                //isDong = true;
             }
             else
             {
                 jieDong();
+                isDong = false;
             }
         }
     }

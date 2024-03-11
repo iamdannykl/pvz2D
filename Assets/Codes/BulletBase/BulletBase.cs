@@ -55,6 +55,12 @@ public class BulletBase : MonoBehaviour
                     case bulletType.snowPeaBullet:
                         zomtgt.Hp1 -= 1;
                         zomtgt.IsFrozen = true;
+                        if (!zomtgt.isDong)
+                        {
+                            additionalSd.Play();
+                            zomtgt.isDong = true;
+                            Debug.Log("sddsdsdsdsdsdsd");
+                        }
                         break;
                 }
                 zomtgt.ShanLiang();
@@ -62,10 +68,10 @@ public class BulletBase : MonoBehaviour
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 rb.velocity = new Vector2(coll.gameObject.GetComponent<Rigidbody2D>().velocity.x, -1f);
                 anim.SetBool("isbao", true);
-                if (additionalSd != null)
+                /*if (additionalSd != null)
                 {
                     additionalSd.Play();
-                }
+                }*/
 
                 //Invoke("huimie",0.35f);
             }

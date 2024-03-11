@@ -7,12 +7,21 @@ using UnityEngine.SceneManagement;
 public class startSc : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject guanQia;
+    bool isGq;
     public void startGame()
     {
+        isGq = !isGq;
+        guanQia.SetActive(isGq);
         //BossManager.Instance.GameModeCurrent = BossManager.GameMode.gamer;
         PlayerPrefs.SetString("gameMode", "gamer");
         Time.timeScale = 1;
-        SceneManager.LoadScene("SampleScene");
+        //SceneManager.LoadScene("SampleScene");
+    }
+    public void shutGq()
+    {
+        isGq = false;
+        guanQia.SetActive(false);
     }
     public void editModeStart()
     {
