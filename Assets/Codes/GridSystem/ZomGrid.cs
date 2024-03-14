@@ -102,18 +102,4 @@ public class ZomGrid : MonoBehaviour
         }
         Saver.Instance.SaveByJSON(LvManager.Instance.gq[LvManager.Instance.gqs].waves, LvManager.Instance.gqs);
     }
-
-    public void loadZomLine()
-    {
-        for (int w = 0; w < LvManager.Instance.gq[LvManager.Instance.gqs].waves.Count; w++)
-        {
-            for (int h = 0; h <= 4; h++)
-            {
-                foreach (ZomPos zom in lineList[h].zomList)
-                {
-
-                }
-            }
-        }
-    }
 }

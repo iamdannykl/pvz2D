@@ -8579,7 +8579,7 @@ MonoBehaviour:
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
   cardType: 11
-  sunCost: 0
+  sunCost: 175
 --- !u!114 &812613814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13652,7 +13652,7 @@ GameObject:
   - component: {fileID: 958502474}
   - component: {fileID: 958502477}
   m_Layer: 5
-  m_Name: Gqn1 (13)
+  m_Name: Gqn11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13722,7 +13722,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 25867783}
+      - m_Target: {fileID: 958502477}
         m_TargetAssemblyTypeName: GqKuang, Assembly-CSharp
         m_MethodName: setGqs
         m_Mode: 1
@@ -17565,7 +17565,7 @@ MonoBehaviour:
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
   cardType: 12
-  sunCost: 0
+  sunCost: 150
 --- !u!114 &1298152992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22232,7 +22232,7 @@ MonoBehaviour:
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
   cardType: 2
-  sunCost: 0
+  sunCost: 150
 --- !u!114 &1828835182
 MonoBehaviour:
   m_ObjectHideFlags: 0
