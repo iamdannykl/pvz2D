@@ -8,6 +8,7 @@ public class ZomGrid : MonoBehaviour
 {
     public static ZomGrid Instanse;
     public Transform YS;
+    public GameObject dadie;
     float YjianJu;
     // Start is called before the first frame update
     public List<ZomLine> lineList = new List<ZomLine>();
@@ -63,11 +64,48 @@ public class ZomGrid : MonoBehaviour
     }
     public void saveZomLine()
     {
-        Saver.Instance.SaveByJSON(LvManager.Instance.waves);
+        for (int i = 0; i < dadie.transform.childCount; i++)
+        {
+            LvManager.Instance.wlist.Add(dadie.transform.GetChild(i).gameObject);
+        }
+        Debug.Log(LvManager.Instance.wlist.Count);
+        foreach (GameObject gm in LvManager.Instance.wlist)
+        {
+            //Debug.Log(gm.transform.childCount);
+            for (int i = 0; i < gm.transform.childCount; i++)
+            {
+                int djgg, djbb, djhh;
+                ZomPos zm = gm.transform.GetChild(i).gameObject.GetComponent<ZomPos>();
+                djgg = zm.djg;
+                djbb = zm.djb;
+                djhh = zm.djh;
+                LvManager.Instance.gq[LvManager.Instance.gqs].waves[djbb].hang[djhh].ztp.Clear();
+                //                Debug.Log(LvManager.Instance.gq[LvManager.Instance.gqs].waves[djbb].hang[djhh].ztp[0].name);
+            }
+        }
+        foreach (GameObject gm in LvManager.Instance.wlist)
+        {
+            Debug.Log(gm.transform.childCount);
+            for (int i = 0; i < gm.transform.childCount; i++)
+            {
+                int djgg, djbb, djhh;
+                ZomPos zm = gm.transform.GetChild(i).gameObject.GetComponent<ZomPos>();
+                djgg = zm.djg;
+                djbb = zm.djb;
+                djhh = zm.djh;
+                //if(zm.willDlt)
+                //LvManager.Instance.gq[LvManager.Instance.gqs].waves[djbb].hang[djhh].ztp.Clear();
+                //                Debug.Log(LvManager.Instance.gq[LvManager.Instance.gqs].waves[djbb].hang[djhh].ztp[0].name);
+                if (!zm.willDlt)
+                    LvManager.Instance.gq[djgg].waves[djbb].hang[djhh].ztp.Add(new Ztype(zm.nameZ, 1, Mathf.Abs(zm.transform.position.x - transform.position.x) / 0.2760316f, 1, zm.ztpp, Mathf.Abs(zm.transform.position.x - transform.position.x)));
+            }
+        }
+        Saver.Instance.SaveByJSON(LvManager.Instance.gq[LvManager.Instance.gqs].waves, LvManager.Instance.gqs);
     }
+
     public void loadZomLine()
     {
-        for (int w = 0; w < LvManager.Instance.waves.Count; w++)
+        for (int w = 0; w < LvManager.Instance.gq[LvManager.Instance.gqs].waves.Count; w++)
         {
             for (int h = 0; h <= 4; h++)
             {

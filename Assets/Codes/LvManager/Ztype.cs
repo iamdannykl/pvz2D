@@ -13,12 +13,14 @@ public class Ztype
     public float crtSpeed;
 
     public ZombieType zType;
-    public Ztype(string na, int nu, float dela, float crt, ZombieType zt)
+    public float distanceZ;
+    public Ztype(string na, int nu, float dela, float crt, ZombieType zt, float dis)
     {
         name = na;
         number = nu;
         delayTime = dela;
         crtSpeed = crt;
         zType = zt;
+        distanceZ = dis;
     }
 }

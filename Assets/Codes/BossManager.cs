@@ -51,7 +51,20 @@ public class BossManager : MonoBehaviour
     private void Update()
     {
         GameModeCurrent = gameModeCurrent;
+        if (Input.GetMouseButtonUp(1))
+        {
+            Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(new Vector2(myRay.origin.x, myRay.origin.y), Vector2.down);
+            GameObject gameObj = hit.collider.gameObject;
+            if (hit.collider.tag == "zom" && gameModeCurrent == GameMode.editor)
+            {
+                //PoolManager.Instance.SetInPool(ZombieTypeManager.Instance.GetZombieFromType(gameObj.GetComponent<ZomPos>().ztpp), gameObj);
+                gameObj.GetComponent<ZomPos>().willDlt = true;
+                gameObj.SetActive(false);
+            }
+        }
     }
+
     IEnumerator switchGameMode(GameMode gameModeCurrent)
     {
         yield return new WaitForSeconds(0.2f);

@@ -12,7 +12,7 @@ public class Waves
         for (int i = 0; i < hangShu; i++)
         {
             hang.Add(new Hang());
-            Debug.Log(hang);
+            //            Debug.Log(hang);
         }
         //        hang.Add(new Hang());
     }

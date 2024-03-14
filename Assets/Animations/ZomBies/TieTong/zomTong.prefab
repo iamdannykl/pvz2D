@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950b94330c667e54baefefa79311cec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDong: 0
+  canMv: 1
   "\u6297\u51BB\u6307\u6570": 6
   reSpd: -1.38
   oriSpd: -1.38
@@ -158,5 +160,13 @@ MonoBehaviour:
   speed: 5
   anim: {fileID: 0}
   isBoom: 0
+  isEat: 0
   sR: {fileID: 0}
   eat: {fileID: 4572194433412085402}
+  realSpd: 0
+  delayTime: 0
+  nameZ: 
+  djg: 0
+  djb: 0
+  djh: 0
+  ztpp: 2

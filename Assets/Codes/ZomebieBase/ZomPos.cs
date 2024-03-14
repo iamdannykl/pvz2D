@@ -5,8 +5,9 @@ using Spine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public abstract class ZomPos : MonoBehaviour//zombieの基类
+public abstract class ZomPos : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -19,6 +20,7 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
         disAppear
     }
     //private CardTM plant;
+    public bool willDlt;
     bool isFrozen;
     public bool isDong;
     public bool canMv = true;
@@ -68,6 +70,8 @@ public abstract class ZomPos : MonoBehaviour//zombieの基类
     public float realSpd;
     public float delayTime;
     public string nameZ;
+    public int djg, djb, djh;
+    public ZombieType ztpp;
     protected virtual void Update()
     {
         //Debug.Log("wwwwwwwwww");

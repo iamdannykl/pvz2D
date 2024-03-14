@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class SaveContent
 {
-    public int a;
+    public int gq;
 }

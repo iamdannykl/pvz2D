@@ -1,16 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Zom2 : ZomPos
 {
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        Hp = 20;
-    }*/
-
-    // Update is called once per frame
     protected override void Update()
     {
         base.Update();
@@ -27,7 +21,5 @@ public class Zom2 : ZomPos
         if (i >= 18 && i < 27) { Xb = i - 18; hang = 2; }
         if (i >= 27 && i < 36) { Xb = i - 27; hang = 3; }
         if (i >= 36 && i < 45) { Xb = i - 36; hang = 4; }
-
-
     }
 }
