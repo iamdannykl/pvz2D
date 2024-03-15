@@ -28,6 +28,7 @@ MonoBehaviour:
   DSpea: {fileID: 555556852027594510, guid: 3b315385cf9030b40940956b1e1adc77, type: 3}
   PotatoDL: {fileID: 1508912081709581629, guid: 3346aa85c399aea45970ad7f5fd45b09, type: 3}
   snowPea: {fileID: 3773373437667440147, guid: 0046a0b377401204984c0472961f6a38, type: 3}
+  rePeater: {fileID: 555556852027594510, guid: 6fb9aaa978c965f4fbd82c4e71c33e81, type: 3}
   ShuTiao: {fileID: 6622202687371277553, guid: 233dc3839e317f24f9cb8c3c160c1099, type: 3}
   HengTiao: {fileID: 1853747703726671904, guid: 60b6b6e69becbcf4295e3dbedb242982, type: 3}
   Shovel: {fileID: 6159265061382045981, guid: 764a2619f25a3394e9a90c9805a9133c, type: 3}

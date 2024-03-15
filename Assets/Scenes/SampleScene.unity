@@ -16277,8 +16277,8 @@ MonoBehaviour:
   CDTime: 7.5
   ShuTiao: {fileID: 0}
   HengTiao: {fileID: 0}
-  cardType: 6
-  sunCost: 100
+  cardType: 12
+  sunCost: 0
 --- !u!114 &1163782416
 MonoBehaviour:
   m_ObjectHideFlags: 0

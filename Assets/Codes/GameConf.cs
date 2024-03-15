@@ -24,6 +24,7 @@ public class GameConf : ScriptableObject//��Ϸ����
     public GameObject DSpea;
     public GameObject PotatoDL;
     public GameObject snowPea;
+    public GameObject rePeater;
 
     [Header("UI")]
     public GameObject ShuTiao;
