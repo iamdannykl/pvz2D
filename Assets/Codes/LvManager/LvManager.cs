@@ -84,8 +84,12 @@ public class LvManager : MonoBehaviour
 
     private void Awake()
     {
-        Zgs = 1;
-        gq.Add(new GuanQia("第1关"));
+        Zgs = PlayerPrefs.GetInt("zongGQ", 1);
+        for (int i = 0; i < Zgs; i++)
+        {
+            gq.Add(new GuanQia("第" + (i + 1) + "关"));
+        }
+
         //wlist.Add(tou);
         Instance = this;
         gq[gqs].waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
@@ -154,7 +158,8 @@ public class LvManager : MonoBehaviour
                 ifChaoShi();
             }
         }
-        wavess = gq[gqs].waves;
+        Debug.Log(gqs);
+        //wavess = gq[gqs].waves;
     }
 
     void ifChaoShi()
@@ -233,11 +238,13 @@ public class LvManager : MonoBehaviour
 
     public void gameStart()
     {
-        isBegin = true;
         nowTime = Time.time;
         waveNow = 0;
         gqs = PlayerPrefs.GetInt("gq", 0);
+        Debug.Log(gqs);
+
         Saver.LoadByJSON(gqs);
         BoShuCrt();
+        isBegin = true;
     }
 }

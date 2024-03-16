@@ -101,5 +101,7 @@ public class ZomGrid : MonoBehaviour
             }
         }
         Saver.Instance.SaveByJSON(LvManager.Instance.gq[LvManager.Instance.gqs].waves, LvManager.Instance.gqs);
+        Debug.Log(LvManager.Zgs);
+        PlayerPrefs.SetInt("zongGQ", LvManager.Zgs);
     }
 }

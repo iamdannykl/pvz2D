@@ -88,7 +88,8 @@ public class Saver : MonoBehaviour
             //把流关了
             List<Waves> save = SerializeTools.ListFromJson<Waves>(JsonString);
             //该方法属于泛型方法T，需要给出明确的类型定义，所以要写<Save>
-            LvManager.Instance.gq[LvManager.Instance.gqs].waves = save;
+            Debug.Log(gqs);
+            LvManager.Instance.gq[gqs].waves = save;
             Debug.Log(save);
             /*GameManager.Instance.coins = save.coins;
             player.transform.position = new Vector2(save.playerPosition.x, save.playerPositionY);
