@@ -79,6 +79,12 @@ public abstract class ZomPos : MonoBehaviour
         {
             IsFrozen = false;
         }
+        if (i >= 0 && i < 9) { Xb = i; hang = 0; }
+        if (i >= 9 && i < 18) { Xb = i - 9; hang = 1; }
+        if (i >= 18 && i < 27) { Xb = i - 18; hang = 2; }
+        if (i >= 27 && i < 36) { Xb = i - 27; hang = 3; }
+        if (i >= 36 && i < 45) { Xb = i - 36; hang = 4; }
+        if (i >= 45 && i < 54) { Xb = i - 45; hang = 5; }
     }
     IEnumerator freezeIt()
     {
@@ -231,20 +237,23 @@ public abstract class ZomPos : MonoBehaviour
         int LayerNum = 0;
         switch (lineNum)
         {
-            case 4:
+            case 5:
                 LayerNum = 0;
                 break;
-            case 3:
+            case 4:
                 LayerNum = 100;
                 break;
-            case 2:
+            case 3:
                 LayerNum = 200;
                 break;
-            case 1:
+            case 2:
                 LayerNum = 300;
                 break;
-            case 0:
+            case 1:
                 LayerNum = 400;
+                break;
+            case 0:
+                LayerNum = 500;
                 break;
             default:
                 break;

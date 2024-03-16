@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GridManager : MonoBehaviour
 {
     public static GridManager Instance;
+    public Vector2 hangLie;
     private List<Vector2> pointList = new List<Vector2>();
     public List<GridS> gridList = new List<GridS>();
 
@@ -20,11 +21,11 @@ public class GridManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        XjianGe = (youshang.position.x - zuoxia.position.x) / 8f;
-        YjianGe = (youshang.position.y - zuoxia.position.y) / 4f;
+        XjianGe = (youshang.position.x - zuoxia.position.x) / (hangLie.y - 1);
+        YjianGe = (youshang.position.y - zuoxia.position.y) / (hangLie.x - 1);
         shuFirst = new Vector2(zuoxia.position.x, (zuoxia.position.y + youshang.position.y) / 2);
         hengFirst = new Vector2((zuoxia.position.x + youshang.position.y) / 2, zuoxia.position.y);
-        for (int ax = 0; ax < 5; ax++)
+        for (int ax = 0; ax < hangLie.x; ax++)
         {
             tr[ax].position = new Vector2(tr[0].position.x, zuoxia.position.y + ax * YjianGe - pianYi);
         }
@@ -39,9 +40,9 @@ public class GridManager : MonoBehaviour
     private void CreateGridBaseGrid()
     {
         int num = 0;
-        for (int j = 0; j < 5; j++)
+        for (int j = 0; j < hangLie.x; j++)
         {
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < hangLie.y; i++)
             {
                 //网格体的保存
                 //gridList.Add(new GridS(new Vector2(i,j),transform.position+new Vector3(1.48f*i,1.75f*j,0),false,false,num));
@@ -51,6 +52,7 @@ public class GridManager : MonoBehaviour
                 num++;
             }
         }
+        Debug.Log(num);
     }
     public Vector2 GetPosPointByMouse()
     {

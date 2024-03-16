@@ -84,6 +84,7 @@ public class LvManager : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         Zgs = PlayerPrefs.GetInt("zongGQ", 1);
         for (int i = 0; i < Zgs; i++)
         {
@@ -91,7 +92,7 @@ public class LvManager : MonoBehaviour
         }
 
         //wlist.Add(tou);
-        Instance = this;
+
         gq[gqs].waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
         WaveNowInEdit = waveNowInEdit;
     }
@@ -158,7 +159,7 @@ public class LvManager : MonoBehaviour
                 ifChaoShi();
             }
         }
-        Debug.Log(gqs);
+        //        Debug.Log(gqs);
         //wavess = gq[gqs].waves;
     }
 

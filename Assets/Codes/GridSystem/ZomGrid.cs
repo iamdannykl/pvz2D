@@ -10,6 +10,7 @@ public class ZomGrid : MonoBehaviour
     public Transform YS;
     public GameObject dadie;
     float YjianJu;
+    public Vector2 hanglie;
     // Start is called before the first frame update
     public List<ZomLine> lineList = new List<ZomLine>();
     private void Awake()
@@ -19,14 +20,14 @@ public class ZomGrid : MonoBehaviour
     }
     private void intiLines()
     {
-        YjianJu = (YS.position.y - transform.position.y) / 5;
+        YjianJu = (YS.position.y - transform.position.y) / hanglie.x;
         Vector3 YJJ = new Vector3(0, YjianJu, 0);
         Vector3 bottomRedLine = transform.position + YJJ * 0.35f;
         Vector3 upRedLine = YS.transform.position - YJJ * (1 - 0.35f);
-        for (int i = 0; i <= 4; i++)
+        for (int i = 0; i <= hanglie.x - 1; i++)
         {
             //Gizmos.DrawLine(i * YJJ + transform.position, YS.position - YJJ * (5 - i));
-            lineList.Add(new ZomLine((i) * YJJ + bottomRedLine, 5 - i));
+            lineList.Add(new ZomLine((i) * YJJ + bottomRedLine, (int)(hanglie.x - i)));
             //Gizmos.DrawLine((i - 1) * YJJ + bottomRedLine, upRedLine - (i - 1) * YJJ);
         }
     }
@@ -38,7 +39,7 @@ public class ZomGrid : MonoBehaviour
         ZomLine TargetLine = null;
         Vector2 clickPos = new Vector2();
         clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        for (int i = 0; i <= 4; i++)
+        for (int i = 0; i <= hanglie.x - 1; i++)
         {
             if (clickPos.x >= lineList[1].ZomLineLeftPoint.x && Mathf.Abs(clickPos.y - lineList[i].ZomLineLeftPoint.y) < dis)
             {
@@ -50,17 +51,17 @@ public class ZomGrid : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        YjianJu = (YS.position.y - transform.position.y) / 5;
+        YjianJu = (YS.position.y - transform.position.y) / hanglie.x;
         Vector3 YJJ = new Vector3(0, YjianJu, 0);
         Gizmos.DrawWireCube((transform.position + YS.position) / 2, YS.position - transform.position);
         Vector3 bottomRedLine = transform.position + YJJ * 0.35f;
         Vector3 upRedLine = YS.transform.position - YJJ * (1 - 0.35f);
-        for (int i = 1; i <= 4; i++)
+        for (int i = 1; i <= hanglie.x - 1; i++)
         {
-            Gizmos.DrawLine(i * YJJ + transform.position, YS.position - YJJ * (5 - i));
-            Gizmos.DrawLine((i - 1) * YJJ + bottomRedLine, upRedLine - (5 - i) * YJJ);
+            Gizmos.DrawLine(i * YJJ + transform.position, YS.position - YJJ * (hanglie.x - i));
+            Gizmos.DrawLine((i - 1) * YJJ + bottomRedLine, upRedLine - (hanglie.x - i) * YJJ);
         }
-        Gizmos.DrawLine((4) * YJJ + bottomRedLine, upRedLine);
+        Gizmos.DrawLine((hanglie.x - 1) * YJJ + bottomRedLine, upRedLine);
     }
     public void saveZomLine()
     {

@@ -65,20 +65,23 @@ public abstract class CardTM : MonoBehaviour
         int LayerNum = 0;
         switch (lineNum)
         {
-            case 4:
+            case 5:
                 LayerNum = 0;
                 break;
-            case 3:
+            case 4:
                 LayerNum = 100;
                 break;
-            case 2:
+            case 3:
                 LayerNum = 200;
                 break;
-            case 1:
+            case 2:
                 LayerNum = 300;
                 break;
-            case 0:
+            case 1:
                 LayerNum = 400;
+                break;
+            case 0:
+                LayerNum = 500;
                 break;
             default:
                 break;
@@ -150,20 +153,23 @@ public abstract class CardTM : MonoBehaviour
         int LayerNum = 0;
         switch (nowGrid.Point.y)
         {
-            case 4:
+            case 5:
                 LayerNum = 0;
                 break;
-            case 3:
+            case 4:
                 LayerNum = 100;
                 break;
-            case 2:
+            case 3:
                 LayerNum = 200;
                 break;
-            case 1:
+            case 2:
                 LayerNum = 300;
                 break;
-            case 0:
+            case 1:
                 LayerNum = 400;
+                break;
+            case 0:
+                LayerNum = 500;
                 break;
             default:
                 break;
