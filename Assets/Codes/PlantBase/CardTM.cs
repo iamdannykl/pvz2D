@@ -129,7 +129,8 @@ public abstract class CardTM : MonoBehaviour
         //sortLayer((int)GridManager.Instance.hpjiaoxiaGrid(grdPos).Point.y);
         //Debug.Log(sR.sortingOrder);
         nowGrid = grid;
-        nowGrid.NowCTM = this;
+        nowGrid.nowCTM.Add(this);
+        nowGrid.Plant = true;
         for (int i = 0; i < 9; i++)
         {
             if (i == nowGrid.Point.x)
@@ -220,9 +221,12 @@ public abstract class CardTM : MonoBehaviour
 
     protected void awsl()
     {
-        isUpdt = false;
-        /*GridManager.Instance.jiaoxiaGrid(grdPos)*/
+        /*isUpdt = false;
         nowGrid.setPlant(false);
+        Destroy(gameObject);*/
         Destroy(gameObject);
+        jiaoxiaG.nowCTM.Remove(jiaoxiaG.nowCTM[jiaoxiaG.nowCTM.Count - 1]);
+        if (jiaoxiaG.nowCTM.Count <= 0)
+            jiaoxiaG.setPlant(false);
     }
 }

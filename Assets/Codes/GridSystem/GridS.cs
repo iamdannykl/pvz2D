@@ -12,35 +12,37 @@ public class GridS
     public bool Plant;
     public bool Zombie;
     public int Num;
+    public bool isHeYe;
+    public bool isPlantOnHeYe;
 
-    private CardTM nowCTM;//自动判断能不能种
-    public CardTM NowCTM
+    public List<CardTM> nowCTM = new List<CardTM>();//自动判断能不能种
+    /*public CardTM NowCTM
     {
         get => nowCTM;
         set
         {
-            nowCTM=value;
-            if(nowCTM==null)
-            Plant=false;
+            nowCTM = value;
+            if (nowCTM == null)
+                Plant = false;
             else
-            Plant=true;
+                Plant = true;
         }
-    }
+    }*/
     public void setBianliang(bool zombie)
     {
-        Zombie=zombie;
+        Zombie = zombie;
     }
     public void setPlant(bool plant)
     {
-        Plant=plant;
+        Plant = plant;
     }
 
-    public GridS(Vector2 point,Vector2 position,bool plant,bool zombie,int num)
+    public GridS(Vector2 point, Vector2 position, bool plant, bool zombie, int num)
     {
-        Point=point;
-        Position=position;
-        Plant=plant;
-        Zombie=zombie;
+        Point = point;
+        Position = position;
+        Plant = plant;
+        Zombie = zombie;
         Num = num;
     }
 }

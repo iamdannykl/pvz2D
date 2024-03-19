@@ -77,13 +77,14 @@ public class Shovel : MonoBehaviour, IPointerClickHandler
                 {
                     HengTiao.transform.position = heng;
                 }
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButtonUp(0))
                 {
                     if (jiaoXia.Plant)
                     {
-                        Destroy(jiaoXia.NowCTM.gameObject);
-                        jiaoXia.NowCTM = null;
-                        jiaoXia.setPlant(false);
+                        Destroy(jiaoXia.nowCTM[jiaoXia.nowCTM.Count - 1].gameObject);
+                        jiaoXia.nowCTM.Remove(jiaoXia.nowCTM[jiaoXia.nowCTM.Count - 1]);
+                        if (jiaoXia.nowCTM.Count <= 0)
+                            jiaoXia.setPlant(false);
                     }
                     else
                     {

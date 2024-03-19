@@ -9,7 +9,7 @@ public class Zom2 : ZomPos
     {
         base.Update();
         if (downGrid != null)
-            if (downGrid.NowCTM == null)
+            if (downGrid.nowCTM[0] == null)
             {
                 eat.Stop();
             }

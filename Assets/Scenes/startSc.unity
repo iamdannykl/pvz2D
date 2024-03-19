@@ -431,6 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &223717331
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &344349096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &494819577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &521070602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &615904404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,7 +1524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &648488776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,6 +1732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &690470835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,8 +1765,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1651822448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.000000059604645, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1950,6 +1956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &713006078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,6 +2184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &749377264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,6 +2701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &833837840
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,6 +3098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &938708968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,6 +3326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1106457555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3464,6 +3475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1138062771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,6 +3757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1205319093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,8 +3869,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1262533175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.16480917}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4162,6 +4175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1317202306
 GameObject:
   m_ObjectHideFlags: 0
@@ -4389,6 +4403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1449650439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,6 +4789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1587875481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,6 +5283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1651822447
 GameObject:
   m_ObjectHideFlags: 0
@@ -5530,6 +5547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1772169567
 GameObject:
   m_ObjectHideFlags: 0
@@ -6078,6 +6096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &1935566084
 GameObject:
   m_ObjectHideFlags: 0
@@ -6705,6 +6724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfGqs: 0
   pn: {fileID: 648488775}
+  guanTP: 0
 --- !u!1 &2007659469
 GameObject:
   m_ObjectHideFlags: 0

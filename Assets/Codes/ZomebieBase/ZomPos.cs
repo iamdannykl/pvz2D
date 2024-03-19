@@ -326,7 +326,7 @@ public abstract class ZomPos : MonoBehaviour
             if (downGrid.Plant && transform.position.x - downGrid.Position.x < 0.35f)
             {
                 if (!isAttack)
-                    attackP(downGrid.NowCTM);
+                    attackP(downGrid.nowCTM[downGrid.nowCTM.Count - 1]);
             }
             else
             {
@@ -372,9 +372,9 @@ public abstract class ZomPos : MonoBehaviour
     }
     public void eatPlt()
     {
-        if (downGrid.NowCTM != null)
+        if (downGrid.nowCTM[downGrid.nowCTM.Count - 1] != null)
         {
-            downGrid.NowCTM.attacked(atkValue * 0.65f);
+            downGrid.nowCTM[downGrid.nowCTM.Count - 1].attacked(atkValue * 0.65f);
             eat.Play();
         }
     }

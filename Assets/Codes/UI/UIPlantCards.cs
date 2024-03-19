@@ -240,7 +240,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
             //Debug.Log(grid.Plant==false&&Vector2.Distance(mousePoint,grid.Position)<0.9f);
             //Debug.Log(grid.Plant);
             //在鼠标最近的格子上生成一个半透明的炮台
-            if (grid.Plant == false && Vector2.Distance(mousePoint, grid.Position) < 0.9f)
+            if ((grid.Plant == false || (grid.isHeYe && !grid.isPlantOnHeYe && PlantType.heYe != cardType)) && Vector2.Distance(mousePoint, grid.Position) < 0.9f)
             {
                 if (plantInGrid == null)
                 {
@@ -280,6 +280,15 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
                     }
                     //                    Debug.Log("sdsdsd");
                     AudioManager.Instance.PlantIt();
+                    if (cardType != PlantType.heYe)
+                        grid.isPlantOnHeYe = true;
+                    else
+                    {
+                        grid.isPlantOnHeYe = false;
+                        grid.isHeYe = true;
+                        Debug.Log(grid.isHeYe);
+                        Debug.Log(grid.isPlantOnHeYe);
+                    }
                     plant.placed(grid);
                     BossManager.Instance.SunNum -= sunCost;
                     if (plant != null) { plant = null; }
