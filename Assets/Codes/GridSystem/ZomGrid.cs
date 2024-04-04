@@ -80,7 +80,9 @@ public class ZomGrid : MonoBehaviour
                 djgg = zm.djg;
                 djbb = zm.djb;
                 djhh = zm.djh;
-                LvManager.Instance.gq[LvManager.Instance.gqs].waves[djbb].hang[djhh].ztp.Clear();
+                Debug.Log(djbb + "," + djhh);
+                Debug.Log(LvManager.Instance.waves.Count);
+                LvManager.Instance.waves[djbb].hang[djhh].ztp.Clear();
                 //                Debug.Log(LvManager.Instance.gq[LvManager.Instance.gqs].waves[djbb].hang[djhh].ztp[0].name);
             }
         }
@@ -89,20 +91,18 @@ public class ZomGrid : MonoBehaviour
             Debug.Log(gm.transform.childCount);
             for (int i = 0; i < gm.transform.childCount; i++)
             {
-                int djgg, djbb, djhh;
+                int djbb, djhh;
                 ZomPos zm = gm.transform.GetChild(i).gameObject.GetComponent<ZomPos>();
-                djgg = zm.djg;
+                //djgg = zm.djg;
                 djbb = zm.djb;
                 djhh = zm.djh;
                 //if(zm.willDlt)
                 //LvManager.Instance.gq[LvManager.Instance.gqs].waves[djbb].hang[djhh].ztp.Clear();
                 //                Debug.Log(LvManager.Instance.gq[LvManager.Instance.gqs].waves[djbb].hang[djhh].ztp[0].name);
                 if (!zm.willDlt)
-                    LvManager.Instance.gq[djgg].waves[djbb].hang[djhh].ztp.Add(new Ztype(zm.nameZ, 1, Mathf.Abs(zm.transform.position.x - transform.position.x) / 0.2760316f, 1, zm.ztpp, Mathf.Abs(zm.transform.position.x - transform.position.x)));
+                    LvManager.Instance.waves[djbb].hang[djhh].ztp.Add(new Ztype(zm.nameZ, 1, Mathf.Abs(zm.transform.position.x - transform.position.x) / 0.2760316f, 1, zm.ztpp, Mathf.Abs(zm.transform.position.x - transform.position.x)));
             }
         }
-        Saver.Instance.SaveByJSON(LvManager.Instance.gq[LvManager.Instance.gqs].waves, LvManager.Instance.gqs);
-        Debug.Log(LvManager.Zgs);
-        PlayerPrefs.SetInt("zongGQ", LvManager.Zgs);
+        Saver.Instance.SaveByJSON(LvManager.Instance.waves, LvManager.Instance.gqs.text.ToString());
     }
 }

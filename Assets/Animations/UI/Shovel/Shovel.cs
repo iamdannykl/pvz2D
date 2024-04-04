@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Shovel : MonoBehaviour, IPointerClickHandler
+public class Shovel : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public static Shovel Instance;
     // Start is called before the first frame update
@@ -81,6 +81,10 @@ public class Shovel : MonoBehaviour, IPointerClickHandler
                 {
                     if (jiaoXia.Plant)
                     {
+                        if (jiaoXia.nowCTM[0].isHY && jiaoXia.nowCTM.Count == 2)
+                        {
+                            jiaoXia.isPlantOnHeYe = false;
+                        }
                         Destroy(jiaoXia.nowCTM[jiaoXia.nowCTM.Count - 1].gameObject);
                         jiaoXia.nowCTM.Remove(jiaoXia.nowCTM[jiaoXia.nowCTM.Count - 1]);
                         if (jiaoXia.nowCTM.Count <= 0)

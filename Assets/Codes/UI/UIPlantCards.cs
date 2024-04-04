@@ -240,7 +240,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
             //Debug.Log(grid.Plant==false&&Vector2.Distance(mousePoint,grid.Position)<0.9f);
             //Debug.Log(grid.Plant);
             //在鼠标最近的格子上生成一个半透明的炮台
-            if ((grid.Plant == false || (grid.isHeYe && !grid.isPlantOnHeYe && PlantType.heYe != cardType)) && Vector2.Distance(mousePoint, grid.Position) < 0.9f)
+            if (((grid.Plant == false && grid.gt == gridType.grass && cardType != PlantType.heYe) || (grid.isHeYe && !grid.isPlantOnHeYe && PlantType.heYe != cardType) || (grid.Plant == false && grid.gt == gridType.water && cardType == PlantType.heYe)) && Vector2.Distance(mousePoint, grid.Position) < 0.9f)
             {
                 if (plantInGrid == null)
                 {
@@ -279,7 +279,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
                         ShuTiao = null;
                     }
                     //                    Debug.Log("sdsdsd");
-                    AudioManager.Instance.PlantIt();
+                    AudioManager.Instance.PlantIt(cardType);
                     if (cardType != PlantType.heYe)
                         grid.isPlantOnHeYe = true;
                     else
@@ -290,6 +290,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
                         Debug.Log(grid.isPlantOnHeYe);
                     }
                     plant.placed(grid);
+                    plant.jiaoxiaG = grid;
                     BossManager.Instance.SunNum -= sunCost;
                     if (plant != null) { plant = null; }
                     Destroy(plantInGrid.gameObject);

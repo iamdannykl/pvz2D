@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 public abstract class ZomPos : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Vector3 py;
 
     public enum State
     {
@@ -65,7 +66,7 @@ public abstract class ZomPos : MonoBehaviour
     public AudioSource eat;
     protected State currentState;
     protected BoxCollider2D coll2d;
-    protected bool isUpdate = true;
+    public bool isUpdate = true;
     protected HPmanager hPmanager;
     public float realSpd;
     public float delayTime;
@@ -85,6 +86,7 @@ public abstract class ZomPos : MonoBehaviour
         if (i >= 27 && i < 36) { Xb = i - 27; hang = 3; }
         if (i >= 36 && i < 45) { Xb = i - 36; hang = 4; }
         if (i >= 45 && i < 54) { Xb = i - 45; hang = 5; }
+        //moveZom();
     }
     IEnumerator freezeIt()
     {
@@ -203,6 +205,7 @@ public abstract class ZomPos : MonoBehaviour
     public void
     Find(int line)
     {
+        transform.position += py;
         isFrozen = false;
         timeJS = GetComponent<TimeJS>();
         timeJS.timeChiXu = 抗冻指数;
@@ -276,6 +279,7 @@ public abstract class ZomPos : MonoBehaviour
             if (hang == 2) a = xb + 18;
             if (hang == 3) a = xb + 27;
             if (hang == 4) a = xb + 36;
+            if (hang == 5) a = xb + 45;
             if (xb < 8)
             {
                 GridManager.Instance.gridList[a + 1].setBianliang(false);
@@ -304,13 +308,17 @@ public abstract class ZomPos : MonoBehaviour
     }
     void zuoYi()
     {
+        //        Debug.Log("iammoving");
         if (canMv)
+        {
+            //            Debug.Log("iammoving");
             transform.Translate(new Vector2(reSpd, 0) * Time.deltaTime / speed);
+        }
     }
     protected void moveZom()
     {
         //if(currentGrid==null)return;
-
+        //        Debug.Log("updt");
         if (!isUpdate)
         {
             if (!isBoom && !isAttack)

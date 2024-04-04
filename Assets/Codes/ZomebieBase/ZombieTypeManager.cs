@@ -5,7 +5,8 @@ public enum ZombieType
 {
     normal,
     luZhang,
-    tieTong
+    tieTong,
+    allStar
 }
 
 public class ZombieTypeManager : MonoBehaviour
@@ -25,8 +26,10 @@ public class ZombieTypeManager : MonoBehaviour
                 return BossManager.Instance.GameConf.LzZombie;
             case ZombieType.tieTong:
                 return BossManager.Instance.GameConf.tieTongZombie;
+            case ZombieType.allStar:
+                return BossManager.Instance.GameConf.allStar;
         }
         return null;
-        
+
     }
 }

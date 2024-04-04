@@ -2565,6 +2565,7 @@ MonoBehaviour:
   plant2: {fileID: 253851010}
   bg: {fileID: 253851013}
   plant: {fileID: 253851014}
+  shui: {fileID: 0}
   additionalSd: {fileID: 0}
 --- !u!82 &253851013
 AudioSource:
@@ -3878,7 +3879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 282.99997, y: 629}
+  m_AnchoredPosition: {x: 283, y: 629}
   m_SizeDelta: {x: 119.52002, y: 85.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &430581368
@@ -6042,7 +6043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &695045472
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13973,6 +13974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guanQia: {fileID: 0}
+  MapType: {fileID: 0}
 --- !u!1 &958502472
 GameObject:
   m_ObjectHideFlags: 0
@@ -22811,7 +22813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 56.045, y: -46.92383}
+  m_AnchoredPosition: {x: 56.045, y: -46.923817}
   m_SizeDelta: {x: 112.09, y: 93.84763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922026496

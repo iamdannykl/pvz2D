@@ -1,8 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+
+public enum gridType
+{
+    grass,
+    water,
+    roof
+}
 public class GridManager : MonoBehaviour
 {
     public static GridManager Instance;
@@ -35,6 +43,11 @@ public class GridManager : MonoBehaviour
     {
         CreateGridBaseGrid();
     }
+    void Update()
+    {
+        if (Input.GetMouseButtonUp(1))
+            Debug.Log(GetPosByMouse().Zombie);
+    }
 
     //基于脚本的形式创建网格
     private void CreateGridBaseGrid()
@@ -46,13 +59,19 @@ public class GridManager : MonoBehaviour
             {
                 //网格体的保存
                 //gridList.Add(new GridS(new Vector2(i,j),transform.position+new Vector3(1.48f*i,1.75f*j,0),false,false,num));
-                gridList.Add(new GridS(new Vector2(i, j), zuoxia.position + new Vector3(XjianGe * i, YjianGe * j, 0), false, false, num));
+                if (j > 1 && j < 4)
+                {
+                    gridList.Add(new GridS(new Vector2(i, j), zuoxia.position + new Vector3(XjianGe * i, YjianGe * j, 0), false, false, num, gridType.water));
+                    //if(num%2==0)
+                }
+                else
+                    gridList.Add(new GridS(new Vector2(i, j), zuoxia.position + new Vector3(XjianGe * i, YjianGe * j, 0), false, false, num, gridType.grass));
                 //if(num%2==0)
                 //Instantiate(shadow, zuoxia.position + new Vector3(XjianGe * i, YjianGe * j, 0), quaternion.identity);
                 num++;
             }
         }
-        Debug.Log(num);
+        //        Debug.Log(num);
     }
     public Vector2 GetPosPointByMouse()
     {

@@ -12,10 +12,12 @@ public class Zombie1 : ZomPos
     {
         base.Update();
         if (downGrid != null)
-            if (downGrid.nowCTM[0] == null)
+        {
+            if (!downGrid.Plant)
             {
                 eat.Stop();
             }
+        }
         moveZom();
         jiaoxia();
         //Debug.Log(GridManager.Instance.returnGridByPoint(new Vector2(8,0)).Zombie);

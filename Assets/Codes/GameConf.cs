@@ -35,4 +35,5 @@ public class GameConf : ScriptableObject//��Ϸ����
     public GameObject Zombie;
     public GameObject LzZombie;
     public GameObject tieTongZombie;
+    public GameObject allStar;
 }

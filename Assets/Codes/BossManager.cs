@@ -51,7 +51,7 @@ public class BossManager : MonoBehaviour
     private void Update()
     {
         GameModeCurrent = gameModeCurrent;
-        if (Input.GetMouseButtonUp(1))
+        /*if (Input.GetMouseButtonUp(1))
         {
             Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(new Vector2(myRay.origin.x, myRay.origin.y), Vector2.down);
@@ -62,7 +62,7 @@ public class BossManager : MonoBehaviour
                 gameObj.GetComponent<ZomPos>().willDlt = true;
                 gameObj.SetActive(false);
             }
-        }
+        }*/
     }
 
     IEnumerator switchGameMode(GameMode gameModeCurrent)
@@ -72,6 +72,7 @@ public class BossManager : MonoBehaviour
         {
             case GameMode.editor:
                 LvManager.Instance.isBegin = false;
+                LvManager.Instance.foreachZ();
                 ZhongZhiUI.SetActive(false);
                 editorUI.SetActive(true);
                 cameraM.GetComponent<Animator>().Play("youyi");

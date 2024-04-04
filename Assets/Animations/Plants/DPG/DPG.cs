@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class DPG : CardTM
 {
-    GridS jiaoxiaG;
-    GridS FrontGrids;
+    //GridS jiaoxiaG;
+    //GridS FrontGrids;
     public Vector3 pyzd;
     void Start()
     {

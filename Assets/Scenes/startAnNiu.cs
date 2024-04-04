@@ -6,15 +6,20 @@ using UnityEngine.UI;
 using System.IO;
 public class startAnNiu : MonoBehaviour
 {
+    public static startAnNiu Instance;
     public List<GameObject> gridList = new List<GameObject>();
     public Text tx;
     //public GameObject shadow;
     public Vector2 shuFirst, hengFirst;
     public GameObject anNiu;
     public GameObject die;
-
-    private void Awake()
+    void Awake()
     {
+        Instance = this;
+    }
+    public void loadIt()
+    {
+        gridList.Clear();
         Saver.LoadByJSON();
         LvManager.Zgs = Saver.zgs;
         for (int i = 0; i < 20; i++)
@@ -50,7 +55,7 @@ public class startAnNiu : MonoBehaviour
             gridList[LvManager.Zgs].name = "第" + (LvManager.Zgs + 1) + "关";
             gridList[LvManager.Zgs].transform.GetChild(0).GetComponent<Text>().text = "第" + (LvManager.Zgs + 1) + "关";
             LvManager.Zgs++;
-            LvManager.Instance.gq.Add(new GuanQia("第" + LvManager.Zgs + "关"));
+            LvManager.Instance.glx[PlayerPrefs.GetInt("Gtype", 0)].gq.Add(new GuanQia("第" + LvManager.Zgs + "关"));
         }
         else
         {
@@ -60,6 +65,6 @@ public class startAnNiu : MonoBehaviour
 
     public void setGqs()
     {
-        LvManager.Instance.gqs = LvManager.Zgs - 1;
+        //LvManager.Instance.gqs = LvManager.Zgs - 1;
     }
 }

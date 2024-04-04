@@ -9,7 +9,7 @@ using Event = Spine.Event;
 public abstract class CardTM : MonoBehaviour
 {
     protected bool isUpdt = false;
-    protected GridS jiaoxiaG;//脚下的格子
+    public GridS jiaoxiaG;//脚下的格子
     protected GridS FrontGrids;//前面的格子
     protected Animator anim;
     protected SpriteRenderer sR;
@@ -22,10 +22,11 @@ public abstract class CardTM : MonoBehaviour
     protected bool canJiao;
     protected SkeletonAnimation sa;
     public MeshRenderer mr;
+    public bool isHY;
 
     protected virtual GridS isZombieFront(Vector2 jiaoxiaPos, int geShu)
     {
-        jiaoxiaG = GridManager.Instance.jiaoxiaGrid(jiaoxiaPos);//返回植物脚下的Grid
+        //jiaoxiaG = GridManager.Instance.jiaoxiaGrid(jiaoxiaPos);//返回植物脚下的Grid
         int a = (int)(jiaoxiaG.Point.x);
         for (int leftzpoint = a; leftzpoint < geShu; leftzpoint++)
         {
@@ -224,6 +225,18 @@ public abstract class CardTM : MonoBehaviour
         /*isUpdt = false;
         nowGrid.setPlant(false);
         Destroy(gameObject);*/
+        if (jiaoxiaG != null)
+        {
+            Debug.Log("cunzai");
+        }
+        else
+        {
+            Debug.Log("no");
+        }
+        if (jiaoxiaG.nowCTM.Count == 2 && jiaoxiaG.nowCTM[0].isHY)
+        {
+            jiaoxiaG.isPlantOnHeYe = false;
+        }
         Destroy(gameObject);
         jiaoxiaG.nowCTM.Remove(jiaoxiaG.nowCTM[jiaoxiaG.nowCTM.Count - 1]);
         if (jiaoxiaG.nowCTM.Count <= 0)

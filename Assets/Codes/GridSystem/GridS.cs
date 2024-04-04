@@ -14,8 +14,9 @@ public class GridS
     public int Num;
     public bool isHeYe;
     public bool isPlantOnHeYe;
+    public gridType gt;
 
-    public List<CardTM> nowCTM = new List<CardTM>();//自动判断能不能种
+    public List<CardTM> nowCTM = new List<CardTM>();
     /*public CardTM NowCTM
     {
         get => nowCTM;
@@ -37,12 +38,13 @@ public class GridS
         Plant = plant;
     }
 
-    public GridS(Vector2 point, Vector2 position, bool plant, bool zombie, int num)
+    public GridS(Vector2 point, Vector2 position, bool plant, bool zombie, int num, gridType grt)
     {
         Point = point;
         Position = position;
         Plant = plant;
         Zombie = zombie;
         Num = num;
+        gt = grt;
     }
 }

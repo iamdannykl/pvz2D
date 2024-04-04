@@ -1,0 +1,97 @@
+{
+    "target": [
+        {
+            "name": "第1波",
+            "hang": [
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 9.780962944030762,
+                            "crtSpeed": 1.0,
+                            "zType": 0,
+                            "distanceZ": 2.699854850769043
+                        },
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 9.780962944030762,
+                            "crtSpeed": 1.0,
+                            "zType": 0,
+                            "distanceZ": 2.699854850769043
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                }
+            ]
+        },
+        {
+            "name": "第2波",
+            "hang": [
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 9.433174133300782,
+                            "crtSpeed": 1.0,
+                            "zType": 2,
+                            "distanceZ": 2.603854179382324
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 8.737603187561036,
+                            "crtSpeed": 1.0,
+                            "zType": 3,
+                            "distanceZ": 2.4118547439575197
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                }
+            ]
+        }
+    ]
+}

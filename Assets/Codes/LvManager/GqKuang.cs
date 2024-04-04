@@ -8,11 +8,11 @@ public class GqKuang : MonoBehaviour
     public GameObject pn;
     public void setGqs()
     {
-        Debug.Log(LvManager.Instance.gq.Count);
-        LvManager.Instance.gqs = selfGqs;
-        LvManager.Instance.gq[LvManager.Instance.gqs].waves.Add(new Waves("第" + (LvManager.Instance.waveNowInEdit + 1) + "波", LvManager.Instance.EditHangShu));
+        Debug.Log(LvManager.Instance.glx[PlayerPrefs.GetInt("Gtype", 0)].gq.Count);
+        //LvManager.Instance.gqs = selfGqs;
+        //LvManager.Instance.glx[PlayerPrefs.GetInt("Gtype", 0)].gq[LvManager.Instance.gqs].waves.Add(new Waves("第" + (LvManager.Instance.waveNowInEdit + 1) + "波", LvManager.Instance.EditHangShu));
         pn.SetActive(false);
-        Saver.LoadByJSON(selfGqs);
+        //Saver.LoadByJSON(selfGqs);
         LvManager.Instance.foreachZ();
         LvManager.Instance.WaveNowInEdit = 0;
     }

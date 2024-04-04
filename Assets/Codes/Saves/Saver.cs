@@ -8,6 +8,7 @@ public class Saver : MonoBehaviour
 {
     public static Saver Instance;
     int otpt;
+    //public List<GuanLeiXing> lst = new List<GuanLeiXing>();
     public static int zgs;
     public Text text;
     // Start is called before the first frame update
@@ -18,7 +19,13 @@ public class Saver : MonoBehaviour
     public SaveContent CreateSave()
     { //创建一个Save对象存储当前游戏数据
         SaveContent save = new SaveContent();
-        save.gq = LvManager.Zgs;
+        for (int i = 0; i < 3; i++)
+        {
+            save.glx.Add(new GuanLeiXing());
+        }
+
+        save.glx[PlayerPrefs.GetInt("Gtype", 0)].ydsg = LvManager.Zgs;
+        Debug.Log(LvManager.Zgs);
         return save;
     }
     //不需要加别的命名空间，简直爽死(bushi
@@ -26,7 +33,7 @@ public class Saver : MonoBehaviour
     {
         SaveContent save = CreateSave();
         //创建一个Save实例存储游戏数据(CreateSave函数在上面)
-        string JsonString = JsonUtility.ToJson(save);
+        string JsonString = SerializeTools.ListToJson<GuanLeiXing>(save.glx);
         //将对象save转化为json字符串
         //上面说了Json是string类型，所以命名string
         StreamWriter sw = new StreamWriter(Application.dataPath + "/Data.json");
@@ -37,8 +44,9 @@ public class Saver : MonoBehaviour
         sw.Close();
         //把流关了
     }
-    public void SaveByJSON(List<Waves> save, int gqs)
+    public void SaveByJSON(List<Waves> save, string gqs)
     {
+        Debug.Log(gqs);
         if (File.Exists(Application.dataPath + "/GuanQia" + gqs + ".json"))
         {
             File.Delete(Application.dataPath + "/GuanQia" + gqs + ".json");
@@ -65,8 +73,14 @@ public class Saver : MonoBehaviour
             //ReadToEnd()方法可以读取从流当前位置到结尾的所有字符
             //还有Read()方法，但是只读了一个字符，还有更多方法捏懒得打了
             sr.Close();
+            List<GuanLeiXing> lst = SerializeTools.ListFromJson<GuanLeiXing>(JsonString);
+            for (int i = 0; i < 6; i++)
+            {
+                lst.Add(new GuanLeiXing());
+            }
+            //List<GuanLeiXing> guanLeiXings=SerializeTools.ListFromJson<GuanLeiXing>(JsonString);
             //把流关了
-            zgs = JsonUtility.FromJson<SaveContent>(JsonString).gq;
+            //zgs = SerializeTools.ListFromJson<GuanLeiXing>(JsonString)[PlayerPrefs.GetInt("Gtype", 0)].ydsg;
         }
         else
         {
@@ -74,9 +88,9 @@ public class Saver : MonoBehaviour
         }
     }
 
-    public static void LoadByJSON(int gqs)
+    public static void LoadByJSON(string gqs)
     {
-        if (File.Exists(Application.dataPath + "/GuanQia" + gqs + ".json"))
+        if (File.Exists(Application.dataPath + "/GuanQia" + gqs + ".json") || File.Exists("D:/Datas/GuanQia" + gqs + ".json"))
         //判断文件是否创建
         {
             StreamReader sr = new StreamReader(Application.dataPath + "/GuanQia" + gqs + ".json");
@@ -89,7 +103,7 @@ public class Saver : MonoBehaviour
             List<Waves> save = SerializeTools.ListFromJson<Waves>(JsonString);
             //该方法属于泛型方法T，需要给出明确的类型定义，所以要写<Save>
             Debug.Log(gqs);
-            LvManager.Instance.gq[gqs].waves = save;
+            LvManager.Instance.waves = save;
             Debug.Log(save);
             /*GameManager.Instance.coins = save.coins;
             player.transform.position = new Vector2(save.playerPosition.x, save.playerPositionY);

@@ -14,6 +14,7 @@ public class kuangS : MonoBehaviour
         //PlayerPrefs.SetString("gameMode", "gamer");
         PlayerPrefs.SetInt("gq", selfGqs);
         Time.timeScale = 1;
+
         switch (guanTP)
         {
             case GuanTP.grass:

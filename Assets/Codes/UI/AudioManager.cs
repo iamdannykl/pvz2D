@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource plant2;
     public AudioSource bg;
     public AudioSource plant;
+    public AudioSource shui;
     public AudioSource additionalSd;
 
     void Start()
@@ -30,19 +31,27 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void PlantIt()
+    public void PlantIt(PlantType tp)
     {
-        int a = Random.Range(0, 2);
-        switch (a)
+        if (tp == PlantType.heYe)
         {
-            case 0:
-                plant.Play();
-                break;
-            case 1:
-                plant2.Play();
-                break;
+            shui.Play();
+        }
+        else
+        {
+            int a = Random.Range(0, 2);
+            switch (a)
+            {
+                case 0:
+                    plant.Play();
+                    break;
+                case 1:
+                    plant2.Play();
+                    break;
+            }
         }
     }
+
 
     public void BG()
     {

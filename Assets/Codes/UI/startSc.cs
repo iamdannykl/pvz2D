@@ -11,12 +11,14 @@ public class startSc : MonoBehaviour
     bool isGq, isTp;
     public void startGame()
     {
+        /*startAnNiu.Instance.loadIt();
         isGq = !isGq;
         guanQia.SetActive(isGq);
-        //BossManager.Instance.GameModeCurrent = BossManager.GameMode.gamer;
+        //BossManager.Instance.GameModeCurrent = BossManager.GameMode.gamer;*/
+        guanQia.SetActive(!isGq);
         PlayerPrefs.SetString("gameMode", "gamer");
         Time.timeScale = 1;
-        //SceneManager.LoadScene("SampleScene");
+        //SceneManager.LoadScene("Pool");
     }
     public void 关闭类型窗口()
     {
@@ -34,12 +36,12 @@ public class startSc : MonoBehaviour
         /*PlayerPrefs.SetString("gameMode", "editor");
         Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene");*/
-        isGq = !isGq;
-        guanQia.SetActive(isGq);
+        //isGq = !isGq;
+        //guanQia.SetActive(isGq);
         //BossManager.Instance.GameModeCurrent = BossManager.GameMode.gamer;
         PlayerPrefs.SetString("gameMode", "editor");
         Time.timeScale = 1;
-        //SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Pool");
     }
     public void backStartGame()
     {

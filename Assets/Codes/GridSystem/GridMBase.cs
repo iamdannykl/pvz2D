@@ -29,7 +29,7 @@ public class GridMBase : MonoBehaviour
                 if (i < Saver.zgs)
                 {
                     if (i != 0)
-                        LvManager.Instance.gq.Add(new GuanQia("第" + (i + 1) + "关"));
+                        LvManager.Instance.glx[PlayerPrefs.GetInt("Gtype", 0)].gq.Add(new GuanQia("第" + (i + 1) + "关"));
                     gm.SetActive(true);
                     gridList[i].name = "第" + (i + 1) + "关";
                     gridList[i].transform.GetChild(0).GetComponent<Text>().text = "第" + (i + 1) + "关";
@@ -52,7 +52,7 @@ public class GridMBase : MonoBehaviour
             gridList[LvManager.Zgs].name = "第" + (LvManager.Zgs + 1) + "关";
             gridList[LvManager.Zgs].transform.GetChild(0).GetComponent<Text>().text = "第" + (LvManager.Zgs + 1) + "关";
             LvManager.Zgs++;
-            LvManager.Instance.gq.Add(new GuanQia("第" + LvManager.Zgs + "关"));
+            LvManager.Instance.glx[PlayerPrefs.GetInt("Gtype", 0)].gq.Add(new GuanQia("第" + LvManager.Zgs + "关"));
         }
         else
         {
@@ -62,6 +62,6 @@ public class GridMBase : MonoBehaviour
 
     public void setGqs()
     {
-        LvManager.Instance.gqs = LvManager.Zgs - 1;
+        //LvManager.Instance.gqs = LvManager.Zgs - 1;
     }
 }

@@ -8,10 +8,13 @@ using UnityEngine.UI;
 public class LvManager : MonoBehaviour
 {
     public static LvManager Instance;
-    public List<GuanQia> gq = new List<GuanQia>();
-    public List<Waves> wavess = new List<Waves>();
+    //public static int leiXingShu = PlayerPrefs.GetInt("Gtype", 0);
+    public List<GuanLeiXing> glx = new List<GuanLeiXing>();
+    //public List<GuanQia> glx[leiXingShu].gq = new List<GuanQia>();
+    public List<Waves> waves = new List<Waves>();
     [Header("sss")]
-    public int gqs;//第几关
+    public Text gqs;//第几关
+    public string ggqs;
     //[SerializeField] string[] strings;
     public GameObject zero, one, two, three, four, five;
 
@@ -22,7 +25,7 @@ public class LvManager : MonoBehaviour
     public int waveNow;
     public int waveNowInEdit;
     public Text text;
-    private int sameLineSortNum = 0;
+    private int sameLineSortNum = 1;
     public int allZomNum, allCrtZom;
     int hangShu, geShu;
     public float timePerWave;
@@ -50,7 +53,7 @@ public class LvManager : MonoBehaviour
             allZomNum = value;
             if (allZomNum >= allCrtZom)
             {
-                if (waveNow < gq[gqs].waves.Count - 1)
+                if (waveNow < waves.Count - 1)
                 {
                     waveNow++;
                     Invoke("BoShuCrt", 3f);
@@ -66,12 +69,12 @@ public class LvManager : MonoBehaviour
     {
         fatherOb.GetChild(waveNowInEdit).gameObject.SetActive(false);
         WaveNowInEdit++;
-        if (waveNowInEdit < gq[gqs].waves.Count)
+        if (waveNowInEdit < waves.Count)
         {
             fatherOb.GetChild(waveNowInEdit).gameObject.SetActive(true);
             return;
         }
-        gq[gqs].waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
+        waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
         GameObject waveEdit = new GameObject();
         waveEdit.name = "wave" + (waveNowInEdit + 1);
         waveEdit.transform.SetParent(fatherOb);
@@ -85,20 +88,25 @@ public class LvManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        Zgs = PlayerPrefs.GetInt("zongGQ", 1);
+        waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
+        //Zgs = PlayerPrefs.GetInt("zongGQ", 1);
+        /*for (int i = 0; i < 3; i++)
+        {
+            glx.Add(new GuanLeiXing());
+        }
         for (int i = 0; i < Zgs; i++)
         {
-            gq.Add(new GuanQia("第" + (i + 1) + "关"));
+            glx[PlayerPrefs.GetInt("Gtype", 0)].gq.Add(new GuanQia("第" + (i + 1) + "关"));
         }
 
         //wlist.Add(tou);
 
-        gq[gqs].waves.Add(new Waves("第" + (waveNowInEdit + 1) + "波", EditHangShu));
-        WaveNowInEdit = waveNowInEdit;
+        
+        WaveNowInEdit = waveNowInEdit;*/
     }
     public void foreachZ()
     {
-        int bos = gq[gqs].waves.Count;//波数
+        int bos = waves.Count;//波数
         for (int i = 1; i < bos; i++)
         {
             GameObject waveEdit = new GameObject();
@@ -110,13 +118,13 @@ public class LvManager : MonoBehaviour
         {
             for (int j = 0; j < EditHangShu; j++)
             {
-                foreach (Ztype zt in gq[gqs].waves[i].hang[j].ztp)
+                foreach (Ztype zt in waves[i].hang[j].ztp)
                 {
                     ZomPos zb = PoolManager.Instance.GetObject(ZombieTypeManager.Instance.GetZombieFromType(zt.zType)).GetComponent<ZomPos>();
                     zb.canMv = false;
                     zb.transform.position = new Vector2(zx.position.x + zt.distanceZ, ZomGrid.Instanse.lineList[j].ZomLineLeftPoint.y);
                     zb.transform.SetParent(fatherOb.transform.GetChild(i));
-                    zb.djg = gqs;
+                    //zb.djg = gqs;
                     zb.djb = i;
                     zb.djh = j;
                 }
@@ -154,13 +162,13 @@ public class LvManager : MonoBehaviour
     {
         if (isBegin && Time.time - nowTime >= timePerWave)
         {
-            if (waveNow < gq[gqs].waves.Count - 1)
+            if (waveNow < waves.Count - 1)
             {
                 ifChaoShi();
             }
         }
         //        Debug.Log(gqs);
-        //wavess = gq[gqs].waves;
+        //wavess = glx[leiXingShu].gq[gqs].waves;
     }
 
     void ifChaoShi()
@@ -176,19 +184,20 @@ public class LvManager : MonoBehaviour
     // Start is called before the first frame update
     void BoShuCrt()//开始新的一波刷新
     {
+        nowTime = Time.time;
         allCrtZom = 0;
         allZomNum = 0;
-        hangShu = gq[gqs].waves[waveNow].hang.Count;
+        hangShu = waves[waveNow].hang.Count;
         for (int i = 0; i < hangShu; i++)//i为第几行zombie
         {
-            geShu = gq[gqs].waves[waveNow].hang[i].ztp.Count;
+            geShu = waves[waveNow].hang[i].ztp.Count;
             for (int j = 0; j < geShu; j++)//j为第几种zombie
             {
-                allCrtZom += gq[gqs].waves[waveNow].hang[i].ztp[j].number;
-                createZombie(gq[gqs].waves[waveNow].hang[i].ztp[j].number,
+                allCrtZom += waves[waveNow].hang[i].ztp[j].number;
+                createZombie(waves[waveNow].hang[i].ztp[j].number,
                     trsf(i, j),
-                    gq[gqs].waves[waveNow].hang[i].ztp[j].delayTime,
-                    gq[gqs].waves[waveNow].hang[i].ztp[j].crtSpeed);
+                    waves[waveNow].hang[i].ztp[j].delayTime,
+                    waves[waveNow].hang[i].ztp[j].crtSpeed);
             }
         }
     }
@@ -210,7 +219,7 @@ public class LvManager : MonoBehaviour
             ZomPos zombieType = /*Instantiate(ZombieTypeManager.Instance.GetZombieFromType(waves[wave].hang[(int)zom.x].ztp[(int)zom.y].zType),
                 getV3ByLine((int)zom.x),
                 quaternion.identity).GetComponent<ZomPos>();*/
-            PoolManager.Instance.GetObject(ZombieTypeManager.Instance.GetZombieFromType(gq[gqs].waves[wave].hang[(int)zom.x].ztp[(int)zom.y].zType)).GetComponent<ZomPos>();
+            PoolManager.Instance.GetObject(ZombieTypeManager.Instance.GetZombieFromType(waves[wave].hang[(int)zom.x].ztp[(int)zom.y].zType)).GetComponent<ZomPos>();
             zombieType.gameObject.transform.position = getV3ByLine((int)zom.x);
             zombieType.Find((int)zom.x);
             zombieType.sortZom(sameLineSortNum);
@@ -232,6 +241,8 @@ public class LvManager : MonoBehaviour
                 return three.transform.position;
             case 4:
                 return four.transform.position;
+            case 5:
+                return five.transform.position;
             default:
                 return new Vector3(0, 0, 0);
         }
@@ -241,10 +252,10 @@ public class LvManager : MonoBehaviour
     {
         nowTime = Time.time;
         waveNow = 0;
-        gqs = PlayerPrefs.GetInt("gq", 0);
-        Debug.Log(gqs);
+        ggqs = PlayerPrefs.GetInt("gq", 0).ToString();
+        //Debug.Log(gqs);
+        Saver.LoadByJSON(ggqs);
 
-        Saver.LoadByJSON(gqs);
         BoShuCrt();
         isBegin = true;
     }

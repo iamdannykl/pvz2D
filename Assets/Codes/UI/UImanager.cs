@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UImanager : MonoBehaviour
 {
     public static UImanager Instance;
+    public Transform sun;
     public Text SunNums;
     bool isDbspd;
     private UIPlantCards currentCard;
@@ -50,6 +51,6 @@ public class UImanager : MonoBehaviour
     //return the position of the Sum Number;
     public Vector3 GetSunNumPosition()
     {
-        return SunNums.transform.position;
+        return sun.position;
     }
 }

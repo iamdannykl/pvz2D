@@ -1,1 +1,162 @@
-{"target":[{"name":"第1波","hang":[{"name":"","ztp":[]},{"name":"","ztp":[{"name":"","number":1,"delayTime":14.125909805297852,"crtSpeed":1.0,"zType":0,"distanceZ":3.899197578430176}]},{"name":"","ztp":[{"name":"","number":1,"delayTime":17.56893539428711,"crtSpeed":1.0,"zType":1,"distanceZ":4.849581718444824}]},{"name":"","ztp":[{"name":"","number":1,"delayTime":11.300862312316895,"crtSpeed":1.0,"zType":0,"distanceZ":3.1193952560424806}]},{"name":"","ztp":[]}]},{"name":"第2波","hang":[{"name":"","ztp":[]},{"name":"","ztp":[{"name":"","number":1,"delayTime":18.363483428955079,"crtSpeed":1.0,"zType":0,"distanceZ":5.068902015686035}]},{"name":"","ztp":[{"name":"","number":1,"delayTime":11.830554008483887,"crtSpeed":1.0,"zType":1,"distanceZ":3.2656068801879885}]},{"name":"","ztp":[]},{"name":"","ztp":[]}]}]}
+{
+    "target": [
+        {
+            "name": "第1波",
+            "hang": [
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 9.346233367919922,
+                            "crtSpeed": 1.0,
+                            "zType": 0,
+                            "distanceZ": 2.5798559188842775
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "第2波",
+            "hang": [
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 10.476539611816407,
+                            "crtSpeed": 1.0,
+                            "zType": 1,
+                            "distanceZ": 2.8918561935424806
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 10.476539611816407,
+                            "crtSpeed": 1.0,
+                            "zType": 0,
+                            "distanceZ": 2.8918561935424806
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                }
+            ]
+        },
+        {
+            "name": "第3波",
+            "hang": [
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 4.39027738571167,
+                            "crtSpeed": 1.0,
+                            "zType": 2,
+                            "distanceZ": 1.211855411529541
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 10.128750801086426,
+                            "crtSpeed": 1.0,
+                            "zType": 1,
+                            "distanceZ": 2.7958555221557619
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": []
+                },
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 7.868138313293457,
+                            "crtSpeed": 1.0,
+                            "zType": 3,
+                            "distanceZ": 2.1718549728393556
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "ztp": [
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 14.649969100952149,
+                            "crtSpeed": 1.0,
+                            "zType": 2,
+                            "distanceZ": 4.043854713439941
+                        },
+                        {
+                            "name": "",
+                            "number": 1,
+                            "delayTime": 11.780740737915039,
+                            "crtSpeed": 1.0,
+                            "zType": 1,
+                            "distanceZ": 3.251856803894043
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
