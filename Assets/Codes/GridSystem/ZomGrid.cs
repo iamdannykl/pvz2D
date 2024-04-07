@@ -103,6 +103,8 @@ public class ZomGrid : MonoBehaviour
                     LvManager.Instance.waves[djbb].hang[djhh].ztp.Add(new Ztype(zm.nameZ, 1, Mathf.Abs(zm.transform.position.x - transform.position.x) / 0.2760316f, 1, zm.ztpp, Mathf.Abs(zm.transform.position.x - transform.position.x)));
             }
         }
+        Debug.Log(LvManager.Instance.waves);
+        Debug.Log(LvManager.Instance.gqs.text.ToString());
         Saver.Instance.SaveByJSON(LvManager.Instance.waves, LvManager.Instance.gqs.text.ToString());
     }
 }

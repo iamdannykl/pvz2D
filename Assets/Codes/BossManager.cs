@@ -13,6 +13,7 @@ public class BossManager : MonoBehaviour
 
     public GameObject yi, er, san, si, wu;
     public GameObject cameraM;
+    public GameObject huiMu;
     public GameObject editorUI;
     public GameObject ZhongZhiUI;
     private ZomCardBase currentZCard;
@@ -51,7 +52,7 @@ public class BossManager : MonoBehaviour
     private void Update()
     {
         GameModeCurrent = gameModeCurrent;
-        /*if (Input.GetMouseButtonUp(1))
+        if (gameModeCurrent == GameMode.editor && Input.GetMouseButtonUp(1))
         {
             Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(new Vector2(myRay.origin.x, myRay.origin.y), Vector2.down);
@@ -62,7 +63,7 @@ public class BossManager : MonoBehaviour
                 gameObj.GetComponent<ZomPos>().willDlt = true;
                 gameObj.SetActive(false);
             }
-        }*/
+        }
     }
 
     IEnumerator switchGameMode(GameMode gameModeCurrent)
@@ -73,11 +74,13 @@ public class BossManager : MonoBehaviour
             case GameMode.editor:
                 LvManager.Instance.isBegin = false;
                 LvManager.Instance.foreachZ();
+                huiMu.SetActive(true);
                 ZhongZhiUI.SetActive(false);
                 editorUI.SetActive(true);
                 cameraM.GetComponent<Animator>().Play("youyi");
                 break;
             case GameMode.gamer:
+                huiMu.SetActive(false);
                 editorUI.SetActive(false);
                 ZhongZhiUI.SetActive(true);
                 cameraM.GetComponent<Animator>().Play("zuoyi");
@@ -88,6 +91,7 @@ public class BossManager : MonoBehaviour
             case GameMode.beforeStart:
                 LvManager.Instance.isBegin = false;
                 editorUI.SetActive(false);
+                huiMu.SetActive(false);
                 ZhongZhiUI.SetActive(false);
                 cameraM.GetComponent<Animator>().Play("youyi");
                 break;

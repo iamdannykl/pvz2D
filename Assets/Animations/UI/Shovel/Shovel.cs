@@ -81,6 +81,17 @@ public class Shovel : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
                 {
                     if (jiaoXia.Plant)
                     {
+                        WantShovel = false;
+                        if (HengTiao != null)
+                        {
+                            Destroy(HengTiao.gameObject);
+                            HengTiao = null;
+                        }
+                        if (ShuTiao != null)
+                        {
+                            Destroy(ShuTiao.gameObject);
+                            ShuTiao = null;
+                        }
                         if (jiaoXia.nowCTM[0].isHY && jiaoXia.nowCTM.Count == 2)
                         {
                             jiaoXia.isPlantOnHeYe = false;
@@ -139,13 +150,13 @@ public class Shovel : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     public void OnPointerEnter(PointerEventData evenData)
     {
         isOn = true;
-        transform.localScale = new Vector2(2.8f, 2.8f);
+        transform.localScale = new Vector2(1.3f, 1.3f);
     }
     //鼠标移出效果
     public void OnPointerExit(PointerEventData evenData)
     {
         isOn = false;
-        transform.localScale = new Vector2(2.32309f, 2.32309f);
+        transform.localScale = new Vector2(1f, 1f);
         isSelected = false;
     }
     //按下

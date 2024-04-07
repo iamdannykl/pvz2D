@@ -32,7 +32,7 @@ MonoBehaviour:
   heYe: {fileID: 2573299202240782445, guid: efbafd95c1196f44a9ace59f7a5c847a, type: 3}
   ShuTiao: {fileID: 6622202687371277553, guid: 233dc3839e317f24f9cb8c3c160c1099, type: 3}
   HengTiao: {fileID: 1853747703726671904, guid: 60b6b6e69becbcf4295e3dbedb242982, type: 3}
-  Shovel: {fileID: 371221477381932106, guid: 764a2619f25a3394e9a90c9805a9133c, type: 3}
+  Shovel: {fileID: 3202535827745462937, guid: 598dd83c906e0be4a99cf0d63acf8da4, type: 3}
   Zombie: {fileID: 1783879414854449611, guid: 65d75ad2bc0ad0d49a7db15f27baee1b, type: 3}
   LzZombie: {fileID: 7340369881572823505, guid: a9dabd8c9263e6f49bbc638ca67d014e, type: 3}
   tieTongZombie: {fileID: 7340369881572823505, guid: 7711adbce5a609e47b941910d368459b, type: 3}

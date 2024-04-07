@@ -17,7 +17,7 @@ public class GridMBase : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        Saver.LoadByJSON();
+        //Saver.LoadByJSON();
         LvManager.Zgs = Saver.zgs;
         for (int i = 0; i < 20; i++)
         {

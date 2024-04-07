@@ -15,6 +15,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
         NotSun,
         NotAll
     }
+    public bool isChanZi;
     public Vector2 bili;
     private Image maskIt, self;//遮罩组件
     public float CDTime;//CD时间
@@ -32,6 +33,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
     private PlantState cardState = PlantState.NotAll;
     private bool isEnterLQ;
     private GridS grid;
+    private GameObject chanzi;
 
     public PlantState CardState
     {
@@ -109,16 +111,27 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
             wantPlace = value;
             if (wantPlace)
             {
-                GameObject prefab = PlantManager.Instance.GetPlantFromType(cardType);
-                plant = Instantiate<GameObject>(prefab, Vector3.zero, Quaternion.identity, PlantManager.Instance.transform).GetComponent<CardTM>();
-                plant.placing(false, grid);
+                if (!isChanZi)
+                {
+                    GameObject prefab = PlantManager.Instance.GetPlantFromType(cardType);
+                    plant = Instantiate<GameObject>(prefab, Vector3.zero, Quaternion.identity, PlantManager.Instance.transform).GetComponent<CardTM>();
+                    plant.placing(false, grid);
+                }
+                else
+                {
+                    GameObject prefab = PlantManager.Instance.GetPlantFromType(cardType);
+                    chanzi = Instantiate<GameObject>(prefab, Vector3.zero, Quaternion.identity, PlantManager.Instance.transform);
+                }
             }
             else
             {
-                if (plant != null)
+                if (!isChanZi)
                 {
-                    Destroy(plant.gameObject);
-                    plant = null;
+                    if (plant != null)
+                    {
+                        Destroy(plant.gameObject);
+                        plant = null;
+                    }
                 }
             }
         }
@@ -228,45 +241,101 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
     // Update is called once per frame
     void Update()
     {
-        panDuanState();
-        //        Debug.Log(Input.GetMouseButtonUp(0));
-        //panDuanState();
-        if (wantPlace && plant != null)
+        if (!isChanZi)
         {
-            //炮台跟随鼠标
-            Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            grid = GridManager.Instance.GetPosByMouse();
-            plant.transform.position = new Vector3(mousePoint.x + plant.pianYiX, mousePoint.y + plant.pianYiY, 0);
-            //Debug.Log(grid.Plant==false&&Vector2.Distance(mousePoint,grid.Position)<0.9f);
-            //Debug.Log(grid.Plant);
-            //在鼠标最近的格子上生成一个半透明的炮台
-            if (((grid.Plant == false && grid.gt == gridType.grass && cardType != PlantType.heYe) || (grid.isHeYe && !grid.isPlantOnHeYe && PlantType.heYe != cardType) || (grid.Plant == false && grid.gt == gridType.water && cardType == PlantType.heYe)) && Vector2.Distance(mousePoint, grid.Position) < 0.9f)
+            panDuanState();
+            //        Debug.Log(Input.GetMouseButtonUp(0));
+            //panDuanState();
+            if (wantPlace && plant != null)
             {
-                if (plantInGrid == null)
+                //炮台跟随鼠标
+                Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                grid = GridManager.Instance.GetPosByMouse();
+                plant.transform.position = new Vector3(mousePoint.x + plant.pianYiX, mousePoint.y + plant.pianYiY, 0);
+                //Debug.Log(grid.Plant==false&&Vector2.Distance(mousePoint,grid.Position)<0.9f);
+                //Debug.Log(grid.Plant);
+                //在鼠标最近的格子上生成一个半透明的炮台
+                if (((grid.Plant == false && grid.gt == gridType.grass && cardType != PlantType.heYe) || (grid.isHeYe && !grid.isPlantOnHeYe && PlantType.heYe != cardType) || (grid.Plant == false && grid.gt == gridType.water && cardType == PlantType.heYe)) && Vector2.Distance(mousePoint, grid.Position) < 0.9f)
                 {
-                    if (ShuTiao == null)
+                    if (plantInGrid == null)
                     {
-                        ShuTiao = Instantiate(BossManager.Instance.GameConf.ShuTiao, new Vector2(/*-8.7418f*/GridManager.Instance.shuFirst.x + grid.Point.x * GridManager.Instance.XjianGe, GridManager.Instance.shuFirst.y), quaternion.identity);
-                    }
-                    if (HengTiao == null)
-                    {
-                        HengTiao = Instantiate(BossManager.Instance.GameConf.HengTiao, new Vector2(GridManager.Instance.hengFirst.x, GridManager.Instance.hengFirst.y + grid.Point.y * GridManager.Instance.YjianGe), quaternion.identity);
-                    }
-                    plantInGrid = Instantiate(plant.gameObject, grid.Position + new Vector2(plant.pianYiX, plant.pianYiY), Quaternion.identity, PlantManager.Instance.transform).GetComponent<CardTM>();
-                    plantInGrid.placing(true, grid);
+                        if (ShuTiao == null)
+                        {
+                            ShuTiao = Instantiate(BossManager.Instance.GameConf.ShuTiao, new Vector2(/*-8.7418f*/GridManager.Instance.shuFirst.x + grid.Point.x * GridManager.Instance.XjianGe, GridManager.Instance.shuFirst.y), quaternion.identity);
+                        }
+                        if (HengTiao == null)
+                        {
+                            HengTiao = Instantiate(BossManager.Instance.GameConf.HengTiao, new Vector2(GridManager.Instance.hengFirst.x, GridManager.Instance.hengFirst.y + grid.Point.y * GridManager.Instance.YjianGe), quaternion.identity);
+                        }
+                        plantInGrid = Instantiate(plant.gameObject, grid.Position + new Vector2(plant.pianYiX, plant.pianYiY), Quaternion.identity, PlantManager.Instance.transform).GetComponent<CardTM>();
+                        plantInGrid.placing(true, grid);
 
+                    }
+                    else
+                    {
+                        if (ShuTiao != null)
+                            ShuTiao.transform.position = new Vector2(GridManager.Instance.shuFirst.x + grid.Point.x * GridManager.Instance.XjianGe, GridManager.Instance.shuFirst.y);
+                        if (HengTiao != null)
+                            HengTiao.transform.position = new Vector2(GridManager.Instance.hengFirst.x, GridManager.Instance.hengFirst.y + grid.Point.y * GridManager.Instance.YjianGe);
+                        plantInGrid.transform.position = grid.Position + new Vector2(plant.pianYiX, plant.pianYiY);
+                        plantInGrid.placing(true, grid);
+                    }
+
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        if (HengTiao != null)
+                        {
+                            Destroy(HengTiao.gameObject);
+                            HengTiao = null;
+                        }
+                        if (ShuTiao != null)
+                        {
+                            Destroy(ShuTiao.gameObject);
+                            ShuTiao = null;
+                        }
+                        //                    Debug.Log("sdsdsd");
+                        AudioManager.Instance.PlantIt(cardType);
+                        if (cardType != PlantType.heYe)
+                            grid.isPlantOnHeYe = true;
+                        else
+                        {
+                            grid.isPlantOnHeYe = false;
+                            grid.isHeYe = true;
+                            Debug.Log(grid.isHeYe);
+                            Debug.Log(grid.isPlantOnHeYe);
+                        }
+                        plant.placed(grid);
+                        plant.jiaoxiaG = grid;
+                        BossManager.Instance.SunNum -= sunCost;
+                        if (plant != null) { plant = null; }
+                        Destroy(plantInGrid.gameObject);
+                        plantInGrid = null;
+                        wantPlace = false;
+                        CanPlace = false;
+                    }
                 }
                 else
                 {
-                    if (ShuTiao != null)
-                        ShuTiao.transform.position = new Vector2(GridManager.Instance.shuFirst.x + grid.Point.x * GridManager.Instance.XjianGe, GridManager.Instance.shuFirst.y);
-                    if (HengTiao != null)
-                        HengTiao.transform.position = new Vector2(GridManager.Instance.hengFirst.x, GridManager.Instance.hengFirst.y + grid.Point.y * GridManager.Instance.YjianGe);
-                    plantInGrid.transform.position = grid.Position + new Vector2(plant.pianYiX, plant.pianYiY);
-                    plantInGrid.placing(true, grid);
+                    if (plantInGrid != null)
+                    {
+                        Destroy(plantInGrid.gameObject);
+                        plantInGrid = null;
+                    }
                 }
-
-                if (Input.GetMouseButtonUp(0))
+            }
+        }
+        else
+        {
+            //panDuanState();
+            //        Debug.Log(Input.GetMouseButtonUp(0));
+            //panDuanState();
+            if (wantPlace)
+            {
+                //炮台跟随鼠标
+                Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                grid = GridManager.Instance.GetPosByMouse();
+                chanzi.transform.position = mousePoint;
+                /*if (Input.GetMouseButtonUp(0))
                 {
                     if (HengTiao != null)
                     {
@@ -297,15 +366,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
                     plantInGrid = null;
                     wantPlace = false;
                     CanPlace = false;
-                }
-            }
-            else
-            {
-                if (plantInGrid != null)
-                {
-                    Destroy(plantInGrid.gameObject);
-                    plantInGrid = null;
-                }
+                }*/
             }
         }
     }

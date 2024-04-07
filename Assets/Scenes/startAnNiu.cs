@@ -20,7 +20,7 @@ public class startAnNiu : MonoBehaviour
     public void loadIt()
     {
         gridList.Clear();
-        Saver.LoadByJSON();
+        //Saver.LoadByJSON();
         LvManager.Zgs = Saver.zgs;
         for (int i = 0; i < 20; i++)
         {
