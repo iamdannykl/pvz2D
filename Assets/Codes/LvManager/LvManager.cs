@@ -15,8 +15,10 @@ public class LvManager : MonoBehaviour
     [Header("sss")]
     public Text gqs;//第几关
     public string ggqs;
+    public bool xuanKaWanBi;
     //[SerializeField] string[] strings;
     public GameObject zero, one, two, three, four, five;
+    public GameObject xuanKaKuang;
 
     public bool isBegin;
     public static int Zgs;//一共多少关
@@ -157,9 +159,22 @@ public class LvManager : MonoBehaviour
             }
         }
     }
-
+    public void letsRock()
+    {
+        xuanKaWanBi = true;
+    }
+    public void xiajiang()
+    {
+        xuanKaKuang.SetActive(false);
+    }
     private void Update()
     {
+        if (xuanKaWanBi)
+        {
+            xuanKaKuang.GetComponent<Animator>().Play("kaishi");
+            gameStart();
+            xuanKaWanBi = false;
+        }
         if (isBegin && Time.time - nowTime >= timePerWave)
         {
             if (waveNow < waves.Count - 1)

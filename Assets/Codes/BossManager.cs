@@ -86,7 +86,7 @@ public class BossManager : MonoBehaviour
                 cameraM.GetComponent<Animator>().Play("zuoyi");
                 SunNum = 50;
                 createSun.Instance.dingShi();
-                LvManager.Instance.gameStart();
+                //LvManager.Instance.gameStart();
                 break;
             case GameMode.beforeStart:
                 LvManager.Instance.isBegin = false;
