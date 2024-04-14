@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e888a6b1d9f64fb4cbd81d95204138fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zuocao: {fileID: 0}
   isChanZi: 0
   bili: {x: 1, y: 1}
   CDTime: 7.5

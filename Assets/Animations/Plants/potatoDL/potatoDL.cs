@@ -29,11 +29,12 @@ public class potatoDL : CardTM
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "zom"&&isMaoChu)
+        if (other.tag == "zom" && isMaoChu)
         {
-            anim.SetInteger("potatoInt",3);
+            anim.SetInteger("potatoInt", 3);
             other.gameObject.GetComponent<ZomPos>().isBoom = true;
             other.gameObject.GetComponent<ZomPos>().Hp1 = 0;
+            attackEn.Play();
         }
     }
 

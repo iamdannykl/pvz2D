@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6706359970109493020
 CanvasRenderer:
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e888a6b1d9f64fb4cbd81d95204138fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zuocao: {fileID: 0}
   isChanZi: 0
   bili: {x: 1, y: 1}
   CDTime: 7.5
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -553791770, guid: 836adc19f8c2df04982db07dbb51f9fc, type: 3}
+  m_Sprite: {fileID: -315481728, guid: a83c544e1791881489e74434de3c0321, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

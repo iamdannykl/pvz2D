@@ -37,6 +37,21 @@ public class LvManager : MonoBehaviour
     public Transform zx;
     public List<GameObject> wlist = new List<GameObject>();
     public GameObject tou;
+    public bool XuanKaWanBi
+    {
+        get => xuanKaWanBi;
+        set
+        {
+            if (xuanKaWanBi == value) return;
+            xuanKaWanBi = value;
+            if (value)
+            {
+                createSun.Instance.dingShi();
+                xuanKaKuang.GetComponent<Animator>().Play("kaishi");
+                gameStart();
+            }
+        }
+    }
     public int WaveNowInEdit
     {
         get => waveNowInEdit;
@@ -161,7 +176,7 @@ public class LvManager : MonoBehaviour
     }
     public void letsRock()
     {
-        xuanKaWanBi = true;
+        XuanKaWanBi = true;
     }
     public void xiajiang()
     {
@@ -169,12 +184,6 @@ public class LvManager : MonoBehaviour
     }
     private void Update()
     {
-        if (xuanKaWanBi)
-        {
-            xuanKaKuang.GetComponent<Animator>().Play("kaishi");
-            gameStart();
-            xuanKaWanBi = false;
-        }
         if (isBegin && Time.time - nowTime >= timePerWave)
         {
             if (waveNow < waves.Count - 1)

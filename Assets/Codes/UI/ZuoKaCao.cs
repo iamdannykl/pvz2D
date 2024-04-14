@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class ZuoKaCao : MonoBehaviour
 {
+    public static ZuoKaCao Instance;
     // Start is called before the first frame update
     public int cardsNum;
-    public List<GameObject> cards = new List<GameObject>();
-    void Start()
-    {
+    public int currentCardNum;
+    //public List<GameObject> cards = new List<GameObject>();
 
+    void Awake()
+    {
+        Instance = this;
     }
 
     // Update is called once per frame

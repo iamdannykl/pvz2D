@@ -51,6 +51,7 @@ public class BossManager : MonoBehaviour
     }
     private void Update()
     {
+        //        Debug.Log(LvManager.Instance.xuanKaWanBi);
         GameModeCurrent = gameModeCurrent;
         if (gameModeCurrent == GameMode.editor && Input.GetMouseButtonUp(1))
         {
@@ -85,7 +86,6 @@ public class BossManager : MonoBehaviour
                 ZhongZhiUI.SetActive(true);
                 cameraM.GetComponent<Animator>().Play("zuoyi");
                 SunNum = 50;
-                createSun.Instance.dingShi();
                 //LvManager.Instance.gameStart();
                 break;
             case GameMode.beforeStart:

@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class startSc : MonoBehaviour
 {
+    public static startSc Instance;
     // Start is called before the first frame update
     public GameObject guanQia, MapType;
     bool isGq, isTp;
+    void Awake()
+    {
+        Instance = this;
+    }
     public void startGame()
     {
         /*startAnNiu.Instance.loadIt();
