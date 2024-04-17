@@ -37,3 +37,4 @@ MonoBehaviour:
   LzZombie: {fileID: 7340369881572823505, guid: a9dabd8c9263e6f49bbc638ca67d014e, type: 3}
   tieTongZombie: {fileID: 7340369881572823505, guid: 7711adbce5a609e47b941910d368459b, type: 3}
   allStar: {fileID: 7340369881572823505, guid: 873af6b576aab494caa70de4efe94e22, type: 3}
+  haiTunZom: {fileID: 7340369881572823505, guid: 1f4a0d19f22d9954884fd4898045ea8c, type: 3}

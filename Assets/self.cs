@@ -15,6 +15,19 @@ public class self : MonoBehaviour
     {
         transform.parent.GetComponent<ZomPos>().eatPlt();
     }
+    public void enterShui()
+    {
+        transform.parent.GetComponent<ZomPos>().canMv = false;
+    }
+    public void chongci()
+    {
+        if (BossManager.Instance.GameModeCurrent == BossManager.GameMode.gamer)
+        {
+            transform.parent.GetComponent<ZomPos>().canMv = true;
+            GetComponent<Animator>().Play("rush");
+        }
+    }
+
     public void padi()
     {
         anim.Play("padi");
@@ -24,5 +37,22 @@ public class self : MonoBehaviour
     {
         //Destroy(transform.parent);
         PoolManager.Instance.SetInPool(ZombieTypeManager.Instance.GetZombieFromType(zomTyp), gameObject.transform.parent.gameObject);
+        if (zomTyp == ZombieType.haiTunZom)
+        {
+            GetComponent<Animator>().SetBool("isJump", false);
+            GetComponent<Animator>().SetBool("isRuShui", false);
+        }
+    }
+    public void RuShui()
+    {
+        transform.parent.GetComponent<ZomPos>().reSpd *= 0.25f;
+        transform.parent.GetComponent<BoxCollider2D>().enabled = true;
+        GetComponent<Animator>().SetBool("isRuShui", true);
+        transform.parent.GetComponent<haiTunZom>().target = null;
+        //transform.parent.GetComponent<haiTunZom>().isTiaoYueZom = false;
+    }
+    public void YueQi()
+    {
+        transform.parent.GetComponent<ZomPos>().reSpd *= 4;
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1587875716852888036}
   m_Layer: 0
   m_Name: snowPea
-  m_TagString: Untagged
+  m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   hurt1: {fileID: 0}
   attackEn: {fileID: 1587875716852888036}
   mr: {fileID: 0}
+  isHY: 0
   shootPoint: {fileID: 4195101939104811240}
 --- !u!82 &1587875716852888036
 AudioSource:

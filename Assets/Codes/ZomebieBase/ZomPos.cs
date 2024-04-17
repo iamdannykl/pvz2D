@@ -24,7 +24,7 @@ public abstract class ZomPos : MonoBehaviour
     public bool willDlt;
     bool isFrozen;
     public bool isDong;
-    public bool canMv = true;
+    public bool canMv;
     public bool IsFrozen
     {
         get => isFrozen;
@@ -44,6 +44,7 @@ public abstract class ZomPos : MonoBehaviour
             }
         }
     }
+    public bool isTiaoYueZom;
     TimeJS timeJS;
     float oriTime;
     float nowTime;
@@ -202,8 +203,7 @@ public abstract class ZomPos : MonoBehaviour
             }
         }
     }
-    public void
-    Find(int line)
+    public void Find(int line)
     {
         transform.position += py;
         isFrozen = false;
@@ -217,7 +217,8 @@ public abstract class ZomPos : MonoBehaviour
         isBoom = false;
         Hp = HpOrigin;
         i = 100;
-        canMv = true;//<===============================================
+        if (ztpp != ZombieType.haiTunZom)
+            canMv = true;//<===============================================
         isUpdate = true;
         coll2d = GetComponent<BoxCollider2D>();
         coll2d.enabled = true;
@@ -333,7 +334,7 @@ public abstract class ZomPos : MonoBehaviour
         {
             if (downGrid.Plant && transform.position.x - downGrid.Position.x < 0.35f)
             {
-                if (!isAttack)
+                if (!isTiaoYueZom && !isAttack)
                     attackP(downGrid.nowCTM[downGrid.nowCTM.Count - 1]);
             }
             else

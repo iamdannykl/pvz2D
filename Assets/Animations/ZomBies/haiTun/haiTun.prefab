@@ -110,27 +110,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Size.y
-      value: 1.1598835
+      value: 1.5035366
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Offset.y
-      value: 1.6374211
+      value: 1.0360284
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.size
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.data[0]
-      value: 100
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.data[1]
-      value: 60
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.data[2]
-      value: 35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.data[3]
@@ -153,6 +153,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3374730289348723176}
   m_SourcePrefab: {fileID: 100100000, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+--- !u!82 &4572194433412085402 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9044462287534349079, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+  m_PrefabInstance: {fileID: 4825554341197606285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7340369881572823505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2822045709932608604, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
@@ -170,20 +175,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99d73f5a789ca94d8b437f31ea9f91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  py: {x: 0, y: 0, z: 0}
+  py: {x: 0, y: -0.8, z: 0}
   willDlt: 0
   isDong: 0
-  canMv: 1
+  canMv: 0
+  isTiaoYueZom: 1
   "\u6297\u51BB\u6307\u6570": 0
-  reSpd: -1.38
-  oriSpd: -1.38
-  HpOrigin: 0
-  speed: 0
+  reSpd: -9
+  oriSpd: -9
+  HpOrigin: 15
+  speed: 5
   anim: {fileID: 0}
   isBoom: 0
   isEat: 0
   sR: {fileID: 0}
-  eat: {fileID: 0}
+  eat: {fileID: 4572194433412085402}
   isUpdate: 1
   realSpd: 0
   delayTime: 0
@@ -191,4 +197,6 @@ MonoBehaviour:
   djg: 0
   djb: 0
   djh: 0
-  ztpp: 0
+  ztpp: 4
+  sheCheng: 0.85
+  target: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -248344930116166139}
   m_Layer: 0
   m_Name: DSpea
-  m_TagString: Untagged
+  m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   hurt1: {fileID: 0}
   attackEn: {fileID: 0}
   mr: {fileID: 0}
+  isHY: 0
   shootPoint: {fileID: 3094358796437460314}
 --- !u!1 &3907976945282846990
 GameObject:

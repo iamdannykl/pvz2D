@@ -7,6 +7,7 @@ TagManager:
   - pea
   - zom
   - kill
+  - plant
   layers:
   - Default
   - TransparentFX

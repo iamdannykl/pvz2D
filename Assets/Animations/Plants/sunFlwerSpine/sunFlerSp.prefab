@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4712634643858082587}
   m_Layer: 0
   m_Name: sunFlerSp
-  m_TagString: Untagged
+  m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,10 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c212be534c12fb44bbcdc7060c59c6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   pianYiX: 0
   pianYiY: 0
   hurt1: {fileID: 0}
   attackEn: {fileID: 0}
   mr: {fileID: 879876947794542256}
+  isHY: 0
   footstepEventName: sunOut
   sunFns: sunFns

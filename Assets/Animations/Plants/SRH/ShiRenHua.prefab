@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6448745548997811051}
   m_Layer: 0
   m_Name: ShiRenHua
-  m_TagString: Untagged
+  m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   hurt1: {fileID: 0}
   attackEn: {fileID: 6448745548997811051}
   mr: {fileID: 0}
+  isHY: 0
   size: {x: 0, y: 0}
   sheCheng: 2.24
   enemy:

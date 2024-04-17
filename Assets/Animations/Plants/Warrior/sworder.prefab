@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -4028291467199238375}
   m_Layer: 0
   m_Name: sworder
-  m_TagString: Untagged
+  m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,10 +149,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952256b0736ff8c41ab14d70a10f692a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   pianYiX: 0.35
   pianYiY: 0.9
   hurt1: {fileID: -7174778126000692345}
   attackEn: {fileID: -4028291467199238375}
+  mr: {fileID: 0}
+  isHY: 0
   size: {x: 0, y: 0}
   sheCheng: 2.24
   enemy:

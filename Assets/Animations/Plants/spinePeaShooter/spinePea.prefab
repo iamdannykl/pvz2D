@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3713925397328780774}
   m_Layer: 0
   m_Name: spinePea
-  m_TagString: Untagged
+  m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,11 +136,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961bbd316f5a9f64aae5abcbdad10404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   pianYiX: 0
   pianYiY: 0
   hurt1: {fileID: 0}
   attackEn: {fileID: 0}
   mr: {fileID: 3386034487457001713}
+  isHY: 0
   shootPoint: {fileID: 1802039615140851158}
   footstepEventName: shoot
 --- !u!114 &-3713925397328780774
