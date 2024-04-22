@@ -8,6 +8,7 @@ TagManager:
   - zom
   - kill
   - plant
+  - enemy
   layers:
   - Default
   - TransparentFX

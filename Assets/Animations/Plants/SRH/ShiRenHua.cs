@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShiRenHua : CardTM
 {
     TimeJS jsq;
+    public float rayPianyiY;
     public Vector2 size;
     private Ray2D ray;
     public float sheCheng;
@@ -29,7 +30,7 @@ public class ShiRenHua : CardTM
 
     void checkIt()
     {
-        ray = new Ray2D(grdPos, Vector2.right);
+        ray = new Ray2D(grdPos + new Vector2(0, rayPianyiY), Vector2.right);
         RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction, sheCheng);
         Debug.DrawLine(grdPos, grdPos + new Vector2(sheCheng, 0), Color.yellow);
         //Debug.DrawRay(ray.origin,ray.direction,Color.blue);

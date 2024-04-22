@@ -10,9 +10,10 @@ public class haiTunZom : ZomPos
     public GameObject target = null;
     void checkIt()
     {
-        ray = new Ray2D(transform.position, Vector2.left);
+        Vector3 middlePoint = transform.position + new Vector3(0, 0.4f, 0);
+        ray = new Ray2D(middlePoint, Vector2.left);
         RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction, sheCheng);
-        Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y) - new Vector2(sheCheng, 0), Color.yellow);
+        Debug.DrawLine(middlePoint, new Vector2(middlePoint.x, middlePoint.y) - new Vector2(sheCheng, 0), Color.yellow);
         //Debug.DrawRay(ray.origin,ray.direction,Color.blue);
 
         if (info.collider != null)
@@ -20,7 +21,6 @@ public class haiTunZom : ZomPos
             if (info.transform.gameObject.CompareTag("plant"))
             {
                 target = info.transform.gameObject;
-                GetComponent<BoxCollider2D>().enabled = false;
                 anim.SetBool("isJump", true);
             }
         }

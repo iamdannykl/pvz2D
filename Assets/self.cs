@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class self : MonoBehaviour
@@ -45,14 +46,25 @@ public class self : MonoBehaviour
     }
     public void RuShui()
     {
-        transform.parent.GetComponent<ZomPos>().reSpd *= 0.25f;
-        transform.parent.GetComponent<BoxCollider2D>().enabled = true;
+        //Debug.Log(transform.parent.GetComponent<ZomPos>().oriSpd);
+        transform.parent.GetComponent<ZomPos>().reSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 2f;
+        transform.parent.GetComponent<ZomPos>().oriSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 2f;
+        //Debug.Log(transform.parent.GetComponent<ZomPos>().reSpd);
+        Invoke("EnableCollider", 0.2f);
         GetComponent<Animator>().SetBool("isRuShui", true);
         transform.parent.GetComponent<haiTunZom>().target = null;
+        //EnableCollider();
         //transform.parent.GetComponent<haiTunZom>().isTiaoYueZom = false;
+    }
+    void EnableCollider()
+    {
+        transform.parent.GetComponent<haiTunZom>().isTiaoYueZom = false;
+        transform.parent.GetComponent<BoxCollider2D>().enabled = true;
+
     }
     public void YueQi()
     {
-        transform.parent.GetComponent<ZomPos>().reSpd *= 4;
+        transform.parent.GetComponent<BoxCollider2D>().enabled = false;
+        transform.parent.GetComponent<ZomPos>().reSpd *= 3;
     }
 }

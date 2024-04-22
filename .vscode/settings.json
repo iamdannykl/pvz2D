@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "pvz2D.sln"
+    "dotnet.defaultSolution": "pvz2D.sln",
+    "dotnet.preferCSharpExtension": true
 }

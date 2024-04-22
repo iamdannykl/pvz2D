@@ -125,6 +125,7 @@ public abstract class CardTM : MonoBehaviour
     }
     public void placed(GridS grid)//Placed
     {
+        GetComponent<BoxCollider2D>().enabled = true;
         isUpdt = true;
         grdPos = grid.Position;
         //sortLayer((int)GridManager.Instance.hpjiaoxiaGrid(grdPos).Point.y);
@@ -241,5 +242,6 @@ public abstract class CardTM : MonoBehaviour
         jiaoxiaG.nowCTM.Remove(jiaoxiaG.nowCTM[jiaoxiaG.nowCTM.Count - 1]);
         if (jiaoxiaG.nowCTM.Count <= 0)
             jiaoxiaG.setPlant(false);
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }

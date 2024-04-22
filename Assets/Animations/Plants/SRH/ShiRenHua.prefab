@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8753700520221969046}
   - component: {fileID: -1921775626351199629}
   - component: {fileID: 6448745548997811051}
+  - component: {fileID: 1892290006074904936}
   m_Layer: 0
   m_Name: ShiRenHua
   m_TagString: plant
@@ -123,11 +124,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   pianYiX: 0
-  pianYiY: 0
+  pianYiY: -0.2
   hurt1: {fileID: 0}
   attackEn: {fileID: 6448745548997811051}
   mr: {fileID: 0}
   isHY: 0
+  rayPianyiY: 0.4
   size: {x: 0, y: 0}
   sheCheng: 2.24
   enemy:
@@ -247,3 +249,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &1892290006074904936
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073936779738827891}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.11289883, y: 1.0788503}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4435506, y: 0.045747254}
+    oldSize: {x: 2, y: 2.375}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.375}
+  m_EdgeRadius: 0

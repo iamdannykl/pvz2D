@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: zomCard
     originalName: 
-    pivot: {x: 0.8888889, y: 0}
+    pivot: {x: 0.4509804, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 27
+      width: 51
       height: 28
     spriteID: b9c213a6368ecf74d8ea84f4fe7e0f9f
     spriteBone: []
@@ -153,9 +153,9 @@ ScriptedImporter:
     - name: zomCard
       frameIndex: 0
       cellRect:
-        x: 4
+        x: 5
         y: 0
-        width: 27
+        width: 51
         height: 28
       spriteId: b9c213a6368ecf74d8ea84f4fe7e0f9f
     linkedCells: []

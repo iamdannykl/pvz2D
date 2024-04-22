@@ -8,9 +8,7 @@ using UnityEngine.UI;
 public class LvManager : MonoBehaviour
 {
     public static LvManager Instance;
-    //public static int leiXingShu = PlayerPrefs.GetInt("Gtype", 0);
     public List<GuanLeiXing> glx = new List<GuanLeiXing>();
-    //public List<GuanQia> glx[leiXingShu].gq = new List<GuanQia>();
     public List<Waves> waves = new List<Waves>();
     [Header("sss")]
     public Text gqs;//第几关

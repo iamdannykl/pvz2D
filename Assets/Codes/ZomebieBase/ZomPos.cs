@@ -325,7 +325,7 @@ public abstract class ZomPos : MonoBehaviour
             if (!isBoom && !isAttack)
                 zuoYi();
         }
-        else if (downGrid == null)
+        else if (isTiaoYueZom || downGrid == null)
         {
             zuoYi();
         }
