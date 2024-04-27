@@ -205,6 +205,10 @@ public abstract class ZomPos : MonoBehaviour
     }
     public void Find(int line)
     {
+        if (ztpp != ZombieType.haiTunZom)
+        {
+            canMv = true;
+        }
         transform.position += py;
         isFrozen = false;
         timeJS = GetComponent<TimeJS>();
@@ -381,6 +385,7 @@ public abstract class ZomPos : MonoBehaviour
     }
     public void eatPlt()
     {
+        Debug.Log(downGrid);
         if (downGrid.nowCTM[downGrid.nowCTM.Count - 1] != null)
         {
             downGrid.nowCTM[downGrid.nowCTM.Count - 1].attacked(atkValue * 0.65f);

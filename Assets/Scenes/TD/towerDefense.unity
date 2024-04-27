@@ -569,6 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1723744354}
   - component: {fileID: 1723744353}
+  - component: {fileID: 1723744355}
   m_Layer: 0
   m_Name: PathLJ
   m_TagString: Untagged
@@ -615,6 +616,29 @@ Transform:
   - {fileID: 1144956863}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723744355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723744352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b27a163431282b4f86ab58b72e347bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves: []
+  isBegin: 0
+  waveNow: 0
+  waveNowInEdit: 0
+  allZomNum: 0
+  allCrtZom: 0
+  timePerWave: 0
+  plantSort: 0
+  zx: {fileID: 0}
+  wlist: []
+  tou: {fileID: 0}
 --- !u!1 &1796453338
 GameObject:
   m_ObjectHideFlags: 0

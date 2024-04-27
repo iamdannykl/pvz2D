@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.data[1]
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.data[2]

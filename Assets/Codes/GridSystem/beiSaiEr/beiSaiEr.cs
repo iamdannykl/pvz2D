@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class beiSaiEr : MonoBehaviour
@@ -20,6 +22,7 @@ public class beiSaiEr : MonoBehaviour
             dots.Add(Instantiate(dot, data[i], Quaternion.identity));
         }
     }
+
 
     // Update is called once per frame
     void FixedUpdate()

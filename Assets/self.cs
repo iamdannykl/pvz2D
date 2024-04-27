@@ -31,6 +31,10 @@ public class self : MonoBehaviour
 
     public void padi()
     {
+        if (zomTyp == ZombieType.haiTunZom)
+        {
+            transform.parent.GetComponent<ZomPos>().canMv = false;
+        }
         anim.Play("padi");
     }
     // Start is called before the first frame update
@@ -47,8 +51,8 @@ public class self : MonoBehaviour
     public void RuShui()
     {
         //Debug.Log(transform.parent.GetComponent<ZomPos>().oriSpd);
-        transform.parent.GetComponent<ZomPos>().reSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 2f;
-        transform.parent.GetComponent<ZomPos>().oriSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 2f;
+        transform.parent.GetComponent<ZomPos>().reSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 2.5f;
+        transform.parent.GetComponent<ZomPos>().oriSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 2.5f;
         //Debug.Log(transform.parent.GetComponent<ZomPos>().reSpd);
         Invoke("EnableCollider", 0.2f);
         GetComponent<Animator>().SetBool("isRuShui", true);
