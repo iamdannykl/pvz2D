@@ -213,7 +213,8 @@ public abstract class ZomPos : MonoBehaviour
         }
         else
         {
-            haiTunAppear.Play();
+            if (BossManager.Instance.gameModeCurrent == BossManager.GameMode.gamer)
+                haiTunAppear.Play();
         }
         transform.position += py;
         isFrozen = false;
