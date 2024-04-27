@@ -51,8 +51,8 @@ public class self : MonoBehaviour
     public void RuShui()
     {
         //Debug.Log(transform.parent.GetComponent<ZomPos>().oriSpd);
-        transform.parent.GetComponent<ZomPos>().reSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 2.5f;
-        transform.parent.GetComponent<ZomPos>().oriSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 2.5f;
+        transform.parent.GetComponent<ZomPos>().reSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 4f;
+        transform.parent.GetComponent<ZomPos>().oriSpd = transform.parent.GetComponent<ZomPos>().oriSpd / 4f;
         //Debug.Log(transform.parent.GetComponent<ZomPos>().reSpd);
         Invoke("EnableCollider", 0.2f);
         GetComponent<Animator>().SetBool("isRuShui", true);
@@ -70,5 +70,6 @@ public class self : MonoBehaviour
     {
         transform.parent.GetComponent<BoxCollider2D>().enabled = false;
         transform.parent.GetComponent<ZomPos>().reSpd *= 3;
+        transform.parent.GetComponent<ZomPos>().haiTunYueqi.Play();
     }
 }

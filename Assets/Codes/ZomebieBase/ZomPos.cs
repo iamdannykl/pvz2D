@@ -21,6 +21,8 @@ public abstract class ZomPos : MonoBehaviour
         disAppear
     }
     //private CardTM plant;
+    public AudioSource haiTunAppear;
+    public AudioSource haiTunYueqi;
     public bool willDlt;
     bool isFrozen;
     public bool isDong;
@@ -208,6 +210,10 @@ public abstract class ZomPos : MonoBehaviour
         if (ztpp != ZombieType.haiTunZom)
         {
             canMv = true;
+        }
+        else
+        {
+            haiTunAppear.Play();
         }
         transform.position += py;
         isFrozen = false;

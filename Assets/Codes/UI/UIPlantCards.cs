@@ -266,6 +266,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
                 //panDuanState();
                 if (wantPlace && plant != null)
                 {
+                    //Debug.Log(GridManager.Instance._GetPosByMouse());
                     //炮台跟随鼠标
                     Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     grid = GridManager.Instance.GetPosByMouse();
@@ -273,7 +274,7 @@ IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
                     //Debug.Log(grid.Plant==false&&Vector2.Distance(mousePoint,grid.Position)<0.9f);
                     //Debug.Log(grid.Plant);
                     //在鼠标最近的格子上生成一个半透明的炮台
-                    if (((grid.Plant == false && grid.gt == gridType.grass && cardType != PlantType.heYe) || (grid.isHeYe && !grid.isPlantOnHeYe && PlantType.heYe != cardType) || (grid.Plant == false && grid.gt == gridType.water && cardType == PlantType.heYe)) && Vector2.Distance(mousePoint, grid.Position) < 0.9f)
+                    if (grid != null && ((grid.Plant == false && grid.gt == gridType.grass && cardType != PlantType.heYe) || (grid.isHeYe && !grid.isPlantOnHeYe && PlantType.heYe != cardType) || (grid.Plant == false && grid.gt == gridType.water && cardType == PlantType.heYe)) && Vector2.Distance(mousePoint, grid.Position) < 0.9f)
                     {
                         if (plantInGrid == null)
                         {

@@ -15,6 +15,8 @@ public class GridManager : MonoBehaviour
 {
     public static GridManager Instance;
     public Vector2 hangLie;
+    private Vector2 realZX;
+    private bool isOut = true;
     private List<Vector2> pointList = new List<Vector2>();
     public List<GridS> gridList = new List<GridS>();
 
@@ -37,6 +39,7 @@ public class GridManager : MonoBehaviour
         {
             tr[ax].position = new Vector2(tr[0].position.x, zuoxia.position.y + ax * YjianGe - pianYi);
         }
+        realZX = (Vector2)zuoxia.position - new Vector2(XjianGe / 2, YjianGe / 2);
     }
     // Start is called before the first frame update
     void Start()
@@ -45,6 +48,7 @@ public class GridManager : MonoBehaviour
     }
     void Update()
     {
+        //Debug.Log(GetPointByMouse());
         if (Input.GetMouseButtonUp(1))
             Debug.Log(GetPosByMouse().Zombie);
     }
@@ -77,7 +81,7 @@ public class GridManager : MonoBehaviour
     {
         return GetPosByMouse().Position;
     }
-    public GridS GetPosByMouse()
+    public GridS _GetPosByMouse()
     {
         //Vector2 point=new Vector2();
         float dis = 100000;
@@ -95,6 +99,16 @@ public class GridManager : MonoBehaviour
             i++;
         }
         return grid;
+    }
+    public GridS GetGridByPoint(Vector2 point)
+    {
+        if (point == new Vector2(-1, -1)) return null;
+        else
+        {
+            //nowGrd = gridList[(int)(point.x + 1 + point.y * 9) - 1];
+            //GD.Print(nowGrd.Plant);
+            return gridList[(int)(point.x + 1 + point.y * 9) - 1];
+        }
     }
     public GridS GetGridByVerticalNum(int VerticalNum)
     {
@@ -123,7 +137,46 @@ public class GridManager : MonoBehaviour
         }
         return grid;
     }
-
+    public Vector2 GetPointByMouse()
+    {
+        Vector2 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 distance = clickPos - realZX;
+        Vector2 gridPoint = new Vector2((int)(distance.x / XjianGe), (int)(distance.y / YjianGe));
+        //GD.Print(gridPoint, gridPoint.X > 8 || gridPoint.X < 0 || gridPoint.Y > 4 || gridPoint.Y < 0);
+        if (gridPoint.x > 8 || gridPoint.x < 0 || gridPoint.y > hangLie.y - 1 || gridPoint.y < 0)
+        {
+            isOut = true;
+            //GD.Print("NULL" + isOut);
+            return new Vector2(-1, -1);
+        }
+        else
+        {
+            isOut = false;
+            //GD.Print((int)(gridPoint.X + 1 + gridPoint.Y * 9) - 1);
+            return gridPoint;
+        }
+    }
+    public GridS GetPosByMouse()
+    {
+        Vector2 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 distance = clickPos - realZX;
+        Vector2 gridPoint = new Vector2((int)(distance.x / XjianGe), (int)(distance.y / YjianGe));
+        //GD.Print(gridPoint, gridPoint.X > 8 || gridPoint.X < 0 || gridPoint.Y > 4 || gridPoint.Y < 0);
+        if (gridPoint.x > 8 || gridPoint.x < 0 || gridPoint.y > hangLie.x - 1 || gridPoint.y < 0)
+        {
+            isOut = true;
+            //GD.Print("NULL" + isOut);
+            gridPoint = new Vector2(-1, -1);
+            return null;
+        }
+        else
+        {
+            isOut = false;
+            //Debug.Log(gridPoint);
+            //Debug.Log((int)(gridPoint.x + 1 + gridPoint.y * 9) - 1);
+            return gridList[(int)(gridPoint.x + 1 + gridPoint.y * 9) - 1];
+        }
+    }
     public GridS returnGridByPoint(Vector2 point)
     {
 
