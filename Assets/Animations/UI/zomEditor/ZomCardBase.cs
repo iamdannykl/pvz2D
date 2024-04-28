@@ -56,18 +56,18 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             currentLine = ZomGrid.Instanse.getLineFromMouse();
-            zomNow.transform.position = mousePoint;
+            zomNow.transform.position = new Vector3(mousePoint.x + zomNow.py.x, mousePoint.y + zomNow.py.y, 0);
             if (canPlace && mousePoint.x >= ZomGrid.Instanse.lineList[1].ZomLineLeftPoint.x && Mathf.Abs(mousePoint.y - currentLine.ZomLineLeftPoint.y) < 0.9f)
             {
                 if (zomNowInGrid == null)
                 {
-                    zomNowInGrid = Instantiate(zomNow, new Vector2(mousePoint.x, currentLine.ZomLineLeftPoint.y), Quaternion.identity);
+                    zomNowInGrid = Instantiate(zomNow, new Vector2(mousePoint.x + zomNow.py.x, currentLine.ZomLineLeftPoint.y + zomNow.py.y), Quaternion.identity);
                     zomNowInGrid.placing();
                 }
 
                 else
                 {
-                    zomNowInGrid.transform.position = new Vector2(mousePoint.x, currentLine.ZomLineLeftPoint.y);
+                    zomNowInGrid.transform.position = new Vector2(mousePoint.x + zomNow.py.x, currentLine.ZomLineLeftPoint.y + zomNow.py.y);
                 }
                 if (Input.GetMouseButtonUp(0))
                 {

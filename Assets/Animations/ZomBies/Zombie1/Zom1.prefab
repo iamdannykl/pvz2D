@@ -69,8 +69,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6095472078401583699, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: reSpd
+      value: -1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095472078401583699, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: speed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095472078401583699, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: oriSpd
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 6095472078401583699, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: HpOrigin

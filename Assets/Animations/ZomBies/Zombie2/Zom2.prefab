@@ -139,11 +139,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950b94330c667e54baefefa79311cec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  py: {x: 0, y: 0, z: 0}
+  haiTunAppear: {fileID: 0}
+  haiTunYueqi: {fileID: 0}
+  willDlt: 0
   isDong: 0
   canMv: 1
+  isTiaoYueZom: 0
   "\u6297\u51BB\u6307\u6570": 5
-  reSpd: -1.38
-  oriSpd: -1.38
+  reSpd: -1.45
+  oriSpd: -1.45
   HpOrigin: 28
   speed: 5
   anim: {fileID: 0}
@@ -151,6 +156,7 @@ MonoBehaviour:
   isEat: 0
   sR: {fileID: 0}
   eat: {fileID: 4572194433412085402}
+  isUpdate: 1
   realSpd: 0
   delayTime: 0
   nameZ: 
