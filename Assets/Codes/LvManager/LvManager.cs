@@ -270,6 +270,7 @@ public class LvManager : MonoBehaviour
         }
     }
 
+
     public void gameStart()
     {
         nowTime = Time.time;

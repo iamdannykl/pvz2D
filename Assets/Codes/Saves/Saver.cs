@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Saver : MonoBehaviour
 {
     public static Saver Instance;
+    public bool isRandomHang;
     int otpt;
     //public List<GuanLeiXing> lst = new List<GuanLeiXing>();
     public static int zgs;
@@ -102,9 +103,13 @@ public class Saver : MonoBehaviour
             //把流关了
             List<Waves> save = SerializeTools.ListFromJson<Waves>(JsonString);
             //该方法属于泛型方法T，需要给出明确的类型定义，所以要写<Save>
-            Debug.Log(gqs);
+            //Debug.Log(gqs);
+            if (Saver.Instance.isRandomHang)
+            {
+
+            }
             LvManager.Instance.waves = save;
-            Debug.Log(save);
+            //Debug.Log(save);
             /*GameManager.Instance.coins = save.coins;
             player.transform.position = new Vector2(save.playerPosition.x, save.playerPositionY);
             */

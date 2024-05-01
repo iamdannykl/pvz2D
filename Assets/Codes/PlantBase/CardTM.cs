@@ -15,6 +15,7 @@ public abstract class CardTM : MonoBehaviour
     protected SpriteRenderer sR;
     protected GridS nowGrid;
     public float hp;
+    public bool isJiaoZom;
     protected int sunCost;
     protected Vector2 grdPos;
     public float pianYiX, pianYiY;
@@ -125,6 +126,7 @@ public abstract class CardTM : MonoBehaviour
     }
     public void placed(GridS grid)//Placed
     {
+        isJiaoZom = false;
         GetComponent<BoxCollider2D>().enabled = true;
         isUpdt = true;
         grdPos = grid.Position;

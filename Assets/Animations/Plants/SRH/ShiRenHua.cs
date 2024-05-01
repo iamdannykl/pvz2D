@@ -15,7 +15,7 @@ public class ShiRenHua : CardTM
     [Header("数值")]
     public float hpSet;
     public int atkSet;
-    bool isJiaoZom;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,15 +30,17 @@ public class ShiRenHua : CardTM
 
     void checkIt()
     {
+        // Physics2D.IgnoreCollision();
         ray = new Ray2D(grdPos + new Vector2(0, rayPianyiY), Vector2.right);
         RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction, sheCheng);
-        Debug.DrawLine(grdPos, grdPos + new Vector2(sheCheng, 0), Color.yellow);
+        Debug.DrawLine(grdPos + new Vector2(0, rayPianyiY), grdPos + new Vector2(0, rayPianyiY) + new Vector2(sheCheng, 0), Color.yellow);
         //Debug.DrawRay(ray.origin,ray.direction,Color.blue);
 
         if (info.collider != null)
         {
-            if (info.transform.gameObject.CompareTag("zom") && !isJiaoZom)
+            if (info.collider.tag == "zom" && !isJiaoZom)
             {
+                Debug.Log("enter");
                 isJiaoZom = true;
                 anim.SetBool("isZomQian", true);
                 target = info.transform.gameObject;
@@ -46,6 +48,7 @@ public class ShiRenHua : CardTM
         }
         else
         {
+            Debug.Log("Null");
             target = null;
             anim.SetBool("isZomQian", false);
         }
