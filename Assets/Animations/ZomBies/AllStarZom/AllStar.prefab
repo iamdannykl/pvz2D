@@ -106,11 +106,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Size.y
-      value: 1.1598835
+      value: 1.5031209
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Offset.y
-      value: 1.6374211
+      value: 1.4658024
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.size
@@ -172,9 +172,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   py: {x: 0, y: -0.8, z: 0}
+  haiTunAppear: {fileID: 0}
+  haiTunYueqi: {fileID: 0}
   willDlt: 0
   isDong: 0
   canMv: 1
+  isTiaoYueZom: 0
   "\u6297\u51BB\u6307\u6570": 6
   reSpd: -2.5
   oriSpd: -2.5

@@ -37,4 +37,5 @@ public class GameConf : ScriptableObject//��Ϸ����
     public GameObject tieTongZombie;
     public GameObject allStar;
     public GameObject haiTunZom;
+    public GameObject iceCar;
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6095472078401583699}
   - component: {fileID: 8245805502821165800}
   - component: {fileID: 2675307964270598844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ZombieW1
   m_TagString: zom
   m_Icon: {fileID: 0}
@@ -218,6 +218,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2061a21ccaa93c640bd53930609491bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  py: {x: 0, y: 0, z: 0}
+  haiTunAppear: {fileID: 0}
+  haiTunYueqi: {fileID: 0}
+  willDlt: 0
+  isDong: 0
+  canMv: 0
+  isTiaoYueZom: 0
   "\u6297\u51BB\u6307\u6570": 0
   reSpd: -1.38
   oriSpd: -1.38
@@ -225,8 +232,17 @@ MonoBehaviour:
   speed: 30
   anim: {fileID: 0}
   isBoom: 0
+  isEat: 0
   sR: {fileID: 0}
   eat: {fileID: 9044462287534349079}
+  isUpdate: 1
+  realSpd: 0
+  delayTime: 0
+  nameZ: 
+  djg: 0
+  djb: 0
+  djh: 0
+  ztpp: 0
 --- !u!114 &8245805502821165800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +287,7 @@ GameObject:
   - component: {fileID: 1308191342963901529}
   - component: {fileID: 2775049912064738310}
   - component: {fileID: 439460125941879723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie_Walk1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,6 +393,10 @@ PrefabInstance:
     - target: {fileID: 5163479584282527592, guid: 3fa2aa6b5a105cd4fb19047397b95a5b, type: 3}
       propertyPath: m_Name
       value: Zombie_Walk1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163479584282527592, guid: 3fa2aa6b5a105cd4fb19047397b95a5b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5163479584282527592, guid: 3fa2aa6b5a105cd4fb19047397b95a5b, type: 3}
       propertyPath: m_TagString

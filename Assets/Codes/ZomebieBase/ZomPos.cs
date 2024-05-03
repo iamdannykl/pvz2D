@@ -111,7 +111,7 @@ public abstract class ZomPos : MonoBehaviour
     {
         Find(zl.Hang);
         canMv = false;
-        transform.position = new Vector2(ms.x, zl.ZomLineLeftPoint.y);
+        transform.position = new Vector2(ms.x, zl.ZomLineLeftPoint.y + py.y);
     }
     void beFrozened()
     {
