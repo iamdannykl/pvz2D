@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99d73f5a789ca94d8b437f31ea9f91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  py: {x: 0, y: -0.4, z: 0}
+  py: {x: 0, y: -0.6, z: 0}
   haiTunAppear: {fileID: 7953487540854986478}
   haiTunYueqi: {fileID: 3787211242116443030}
   willDlt: 0
