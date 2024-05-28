@@ -97,7 +97,7 @@ public class LvManager : MonoBehaviour
     }
     public void saveGqs()
     {
-        Saver.Instance.SaveByJSON();
+        //Saver.Instance.SaveByJSON();
     }
 
     private void Awake()

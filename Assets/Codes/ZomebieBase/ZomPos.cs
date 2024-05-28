@@ -386,7 +386,13 @@ public abstract class ZomPos : MonoBehaviour
     protected void attackP(CardTM plant)
     {
         isAttack = true;
-        Debug.Log("chi");
+        if (ztpp == ZombieType.iceCar)
+        {
+            if (downGrid.nowCTM[downGrid.nowCTM.Count - 1] != null)
+            {
+                downGrid.nowCTM[downGrid.nowCTM.Count - 1].awsl();
+            }
+        }
         anim.SetBool("isEating", true);//播放吃植物动画 
         //StartCoroutine(hurtPlant(plant));
     }

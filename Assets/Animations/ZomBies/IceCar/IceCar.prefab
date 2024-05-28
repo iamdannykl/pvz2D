@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 439460125941879723, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
+      propertyPath: smoke
+      value: 
+      objectReference: {fileID: 1511702651083695007, guid: 2ee9e6c6344c4934299cd90ee952b0ef, type: 3}
+    - target: {fileID: 439460125941879723, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: zomTyp
       value: 5
       objectReference: {fileID: 0}

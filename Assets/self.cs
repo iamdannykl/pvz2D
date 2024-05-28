@@ -8,6 +8,7 @@ public class self : MonoBehaviour
 {
     private Animator anim;
     public ZombieType zomTyp;
+    public GameObject smoke;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -34,6 +35,11 @@ public class self : MonoBehaviour
         if (zomTyp == ZombieType.haiTunZom)
         {
             transform.parent.GetComponent<ZomPos>().canMv = false;
+        }
+        if (zomTyp == ZombieType.iceCar)
+        {
+            GameObject newSmoke = Instantiate(smoke);
+            newSmoke.transform.position = transform.position;
         }
         anim.Play("padi");
     }

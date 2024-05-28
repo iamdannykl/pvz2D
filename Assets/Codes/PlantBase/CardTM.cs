@@ -223,7 +223,7 @@ public abstract class CardTM : MonoBehaviour
         if (fun != null) fun();
     }
 
-    protected void awsl()
+    public void awsl()
     {
         /*isUpdt = false;
         nowGrid.setPlant(false);
