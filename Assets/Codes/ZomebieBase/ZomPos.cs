@@ -24,7 +24,7 @@ public abstract class ZomPos : MonoBehaviour
     public AudioSource haiTunAppear;
     public AudioSource haiTunYueqi;
     public bool willDlt;
-    bool isFrozen;
+    public bool isFrozen;
     public bool isDong;
     public bool canMv;
     public bool IsFrozen
@@ -60,6 +60,7 @@ public abstract class ZomPos : MonoBehaviour
     public float speed;
     protected int i, xb;
     public Animator anim;
+    public GameObject road;
     protected bool isAttack;//是否在攻击状态
     public bool isBoom, isEat;
     protected float atkValue = 100f;//僵尸の攻击力(hp/s)
@@ -79,16 +80,20 @@ public abstract class ZomPos : MonoBehaviour
     protected virtual void Update()
     {
         //Debug.Log("wwwwwwwwww");
-        if (timeJS.isFns)
+        if (BossManager.Instance.GameModeCurrent == BossManager.GameMode.gamer)
         {
-            IsFrozen = false;
+            if (timeJS.isFns)
+            {
+                IsFrozen = false;
+            }
+            if (i >= 0 && i < 9) { Xb = i; hang = 0; }
+            if (i >= 9 && i < 18) { Xb = i - 9; hang = 1; }
+            if (i >= 18 && i < 27) { Xb = i - 18; hang = 2; }
+            if (i >= 27 && i < 36) { Xb = i - 27; hang = 3; }
+            if (i >= 36 && i < 45) { Xb = i - 36; hang = 4; }
+            if (i >= 45 && i < 54) { Xb = i - 45; hang = 5; }
         }
-        if (i >= 0 && i < 9) { Xb = i; hang = 0; }
-        if (i >= 9 && i < 18) { Xb = i - 9; hang = 1; }
-        if (i >= 18 && i < 27) { Xb = i - 18; hang = 2; }
-        if (i >= 27 && i < 36) { Xb = i - 27; hang = 3; }
-        if (i >= 36 && i < 45) { Xb = i - 36; hang = 4; }
-        if (i >= 45 && i < 54) { Xb = i - 45; hang = 5; }
+
         //moveZom();
     }
     IEnumerator freezeIt()
@@ -190,6 +195,7 @@ public abstract class ZomPos : MonoBehaviour
             if (Hp <= 0)
             {
                 GridManager.Instance.jiaoxiaGrid(transform.position).setBianliang(false);//当前网格变为false
+                Debug.Log(GridManager.Instance.jiaoxiaGrid(transform.position).Zombie);
                 LvManager.Instance.AllZomNum++;
                 if (!isBoom && !isEat)
                     CurrentState = State.death;
@@ -205,6 +211,23 @@ public abstract class ZomPos : MonoBehaviour
             }
         }
     }
+    public void init()
+    {
+        isFrozen = false;
+        timeJS = GetComponent<TimeJS>();
+        timeJS.timeChiXu = 抗冻指数;
+        anim = transform.GetChild(0).GetComponent<Animator>();
+        sR = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        sR.material.color = new Color(1f, 1f, 1f);
+        anim.speed = 1f;
+        hPmanager = GetComponent<HPmanager>();
+        isBoom = false;
+        Hp = HpOrigin;
+        i = 100;
+        isUpdate = true;
+        coll2d = GetComponent<BoxCollider2D>();
+        reSpd = oriSpd;
+    }
     public void Find(int line)
     {
         if (ztpp != ZombieType.haiTunZom)
@@ -215,6 +238,15 @@ public abstract class ZomPos : MonoBehaviour
         {
             if (BossManager.Instance.gameModeCurrent == BossManager.GameMode.gamer)
                 haiTunAppear.Play();
+        }
+        if (ztpp == ZombieType.iceCar)
+        {
+            roadQueDing(5 - line);
+            if (BossManager.Instance.gameModeCurrent == BossManager.GameMode.gamer)
+            {
+                road.GetComponent<iceRoad>().iceList.Add(gameObject.GetComponent<iceCarZom>());
+                Debug.Log("addHere");
+            }
         }
         transform.position += py;
         isFrozen = false;
@@ -236,16 +268,17 @@ public abstract class ZomPos : MonoBehaviour
 
         reSpd = oriSpd;
         lineNum = line;
+        Debug.Log(hang);
     }
     protected virtual void XingWei()
     {
 
     }
 
-    private void Awake()
+    /*private void Awake()
     {
         Find(hang);
-    }
+    }*/
 
     public void sortZom(int sameLineSort)
     {
@@ -431,5 +464,32 @@ public abstract class ZomPos : MonoBehaviour
 
         sR.color = Color.white;
         if (fun != null) fun();
+    }
+    public void roadQueDing(int linehang)
+    {
+        switch (linehang)
+        {
+            case 0:
+                road = BossManager.Instance.iceRoad[0];
+                break;
+            case 1:
+                road = BossManager.Instance.iceRoad[1];
+                break;
+            case 2:
+                road = BossManager.Instance.iceRoad[2];
+                break;
+            case 3:
+                road = BossManager.Instance.iceRoad[3];
+                break;
+            case 4:
+                road = BossManager.Instance.iceRoad[4];
+                break;
+            case 5:
+                road = BossManager.Instance.iceRoad[5];
+                break;
+            case 6:
+                road = BossManager.Instance.iceRoad[6];
+                break;
+        }
     }
 }

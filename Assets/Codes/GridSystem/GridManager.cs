@@ -28,6 +28,7 @@ public class GridManager : MonoBehaviour
     public Vector2 shuFirst, hengFirst;
     public float pianYi;
     public Transform[] tr;
+    //public List<GridS> youGrid = new List<GridS>();
     private void Awake()
     {
         Instance = this;
@@ -45,6 +46,11 @@ public class GridManager : MonoBehaviour
     void Start()
     {
         CreateGridBaseGrid();
+        for (int i = 0; i < 6; i++)
+        {
+            BossManager.Instance.iceRoad[i].GetComponent<iceRoad>().hang = i;
+            //youGrid[i] = gridList[i * 9 + 8];
+        }
     }
     void Update()
     {

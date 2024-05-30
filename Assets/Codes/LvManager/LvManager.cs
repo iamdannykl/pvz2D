@@ -175,6 +175,7 @@ public class LvManager : MonoBehaviour
     public void letsRock()
     {
         XuanKaWanBi = true;
+        BossManager.Instance.cameraM.GetComponent<Animator>().Play("zuoyi");
     }
     public void xiajiang()
     {

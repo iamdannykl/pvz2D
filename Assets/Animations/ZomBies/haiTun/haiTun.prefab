@@ -185,15 +185,17 @@ MonoBehaviour:
   haiTunAppear: {fileID: 7953487540854986478}
   haiTunYueqi: {fileID: 3787211242116443030}
   willDlt: 0
+  isFrozen: 0
   isDong: 0
   canMv: 0
   isTiaoYueZom: 1
-  "\u6297\u51BB\u6307\u6570": 0
+  "\u6297\u51BB\u6307\u6570": 5
   reSpd: -9
   oriSpd: -9
   HpOrigin: 15
   speed: 5
   anim: {fileID: 0}
+  road: {fileID: 0}
   isBoom: 0
   isEat: 0
   sR: {fileID: 0}
@@ -206,7 +208,7 @@ MonoBehaviour:
   djb: 0
   djh: 0
   ztpp: 4
-  sheCheng: 0.85
+  sheCheng: 0.65
   target: {fileID: 0}
 --- !u!82 &7953487540854986478
 AudioSource:

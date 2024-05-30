@@ -16,6 +16,8 @@ public class BossManager : MonoBehaviour
     public GameObject huiMu;
     public GameObject editorUI;
     public GameObject ZhongZhiUI;
+    public List<GameObject> iceRoad = new List<GameObject>();
+    public GameObject ys;
     private ZomCardBase currentZCard;
     public ZomCardBase CurrentZCard
     {
@@ -84,7 +86,7 @@ public class BossManager : MonoBehaviour
                 huiMu.SetActive(false);
                 editorUI.SetActive(false);
                 ZhongZhiUI.SetActive(true);
-                cameraM.GetComponent<Animator>().Play("zuoyi");
+                cameraM.GetComponent<Animator>().Play("youyi");
                 SunNum = 50;
                 //LvManager.Instance.gameStart();
                 break;

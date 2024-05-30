@@ -14,6 +14,7 @@ public class GridS
     public int Num;
     public bool isHeYe;
     public bool isPlantOnHeYe;
+    public bool isIce;
     public gridType gt;
 
     public List<CardTM> nowCTM = new List<CardTM>();

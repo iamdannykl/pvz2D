@@ -32,6 +32,7 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 canPlace = true;
                 GameObject prefab = ZombieTypeManager.Instance.GetZombieFromType(zombieType);
                 zomNow = Instantiate<GameObject>(prefab, Vector3.zero, Quaternion.identity, ZombieTypeManager.Instance.transform).GetComponent<ZomPos>();
+                zomNow.init();
                 zomNow.transform.SetParent(zomIsHere.transform.GetChild(LvManager.Instance.waveNowInEdit));
             }
             else
@@ -74,8 +75,9 @@ public class ZomCardBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                     //                    currentLine.zomList.Add(zomNow);
                     canPlace = false;
                     WantPlace = false;
-                    zomNow.sR.sortingOrder = currentLine.Hang;
                     zomNow.placed(currentLine, mousePoint);
+                    zomNow.sR.sortingOrder = currentLine.Hang;
+
                     //zomNow.djg = LvManager.Instance.gqs;
                     zomNow.djb = LvManager.Instance.WaveNowInEdit;
                     zomNow.djh = LvManager.Instance.EditHangShu - currentLine.Hang;

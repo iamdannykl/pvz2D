@@ -53,6 +53,10 @@ public class self : MonoBehaviour
             GetComponent<Animator>().SetBool("isJump", false);
             GetComponent<Animator>().SetBool("isRuShui", false);
         }
+        if (zomTyp == ZombieType.iceCar)
+        {
+            transform.parent.GetComponent<ZomPos>().road.GetComponent<iceRoad>().iceList.Remove(transform.parent.GetComponent<iceCarZom>());
+        }
     }
     public void RuShui()
     {
@@ -75,7 +79,7 @@ public class self : MonoBehaviour
     public void YueQi()
     {
         transform.parent.GetComponent<BoxCollider2D>().enabled = false;
-        transform.parent.GetComponent<ZomPos>().reSpd *= 3;
+        //transform.parent.GetComponent<ZomPos>().reSpd *= 3;
         transform.parent.GetComponent<ZomPos>().haiTunYueqi.Play();
     }
 }

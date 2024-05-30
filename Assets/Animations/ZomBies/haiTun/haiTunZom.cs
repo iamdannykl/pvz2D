@@ -41,7 +41,8 @@ public class haiTunZom : ZomPos
             }
         }
         checkIt();
-        moveZom();
+        if (BossManager.Instance.GameModeCurrent == BossManager.GameMode.gamer)
+            moveZom();
         jiaoxia();
     }
 }

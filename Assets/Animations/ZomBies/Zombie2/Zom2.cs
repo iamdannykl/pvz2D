@@ -15,7 +15,8 @@ public class Zom2 : ZomPos
                 eat.Stop();
             }
         }
-        moveZom();
+        if (BossManager.Instance.GameModeCurrent == BossManager.GameMode.gamer)
+            moveZom();
         jiaoxia();
         //Debug.Log(GridManager.Instance.returnGridByPoint(new Vector2(8,0)).Zombie);
         /*if (i >= 0 && i < 9) { Xb = i; hang = 0; }
