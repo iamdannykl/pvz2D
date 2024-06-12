@@ -1,0 +1,527 @@
+fileFormatVersion: 2
+guid: 5086385a41280a942b0bac0f5768bbcb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 49
+        width: 38
+        height: 32
+      alignment: 9
+      pivot: {x: 0.6959216, y: 0.03943336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0844249e2585a47888c30bb5cb6fad
+      internalID: 384358511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 49
+        width: 38
+        height: 33
+      alignment: 9
+      pivot: {x: 0.70256305, y: 0.045885954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7976d22c2860074c870ffcee680e17e
+      internalID: -698293864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 49
+        width: 37
+        height: 32
+      alignment: 9
+      pivot: {x: 0.68843204, y: 0.04902172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cda98268c73b14a9808636d7aaa2ff
+      internalID: 493392421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 49
+        width: 38
+        height: 30
+      alignment: 9
+      pivot: {x: 0.698763, y: 0.052289836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b895485dee29294db2f9d72b105ea99
+      internalID: -26953658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_4
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 49
+        width: 37
+        height: 32
+      alignment: 9
+      pivot: {x: 0.69157284, y: 0.0490216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae9017bcc6bc9b419615759a95ed60e
+      internalID: -1735512094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_5
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 49
+        width: 38
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6972339, y: 0.047536213}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6685ee9f7de5fb749a4fe2a8e9677b79
+      internalID: 1941662082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_6
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 60
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0012796d711a42e4ea9da7db2b7f943f
+      internalID: 1592279667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_7
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 60
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a7311a1c1af4143a87cbb8f8150703
+      internalID: 524310423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 40
+        height: 28
+      alignment: 9
+      pivot: {x: 0.7150618, y: 0.057750244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63eda3bf9271f0409cf96c94ba4f63a
+      internalID: -355241726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1
+        width: 43
+        height: 35
+      alignment: 9
+      pivot: {x: 0.7346537, y: 0.046200193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f789c9cf59dd6b54c8e35b2a6663dba4
+      internalID: -1465230756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_10
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1
+        width: 33
+        height: 44
+      alignment: 9
+      pivot: {x: 0.6489605, y: 0.03381008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985fad795ab5c6a4f8a0b58804aa48ca
+      internalID: 2123440211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1
+        width: 23
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0344044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1aeaa78edd9434382e982892e226a2
+      internalID: -449925700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1
+        width: 23
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.036613896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b49bc332e5931428099039fe27e91c
+      internalID: -265268033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1
+        width: 23
+        height: 47
+      alignment: 9
+      pivot: {x: 0.49483988, y: 0.037876423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804b7aa353ffb5140b8eafdc2b3d9ba8
+      internalID: -2090712889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 33
+        height: 44
+      alignment: 9
+      pivot: {x: 0.65284497, y: 0.033715762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a875ea9fde647469d9fff7fcb0e64b
+      internalID: 1182130685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_15
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1
+        width: 38
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6983197, y: 0.0534057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02086433f1f97cf46bd00e752f6f5d60
+      internalID: -397159501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cabbage-Pult_16
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1
+        width: 12
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac398d156e75664e8a3b334d550645a
+      internalID: -1814278574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DS DSi - Plants vs Zombies - Cabbage-Pult_0: 384358511
+      DS DSi - Plants vs Zombies - Cabbage-Pult_1: -698293864
+      DS DSi - Plants vs Zombies - Cabbage-Pult_10: 2123440211
+      DS DSi - Plants vs Zombies - Cabbage-Pult_11: -449925700
+      DS DSi - Plants vs Zombies - Cabbage-Pult_12: -265268033
+      DS DSi - Plants vs Zombies - Cabbage-Pult_13: -2090712889
+      DS DSi - Plants vs Zombies - Cabbage-Pult_14: 1182130685
+      DS DSi - Plants vs Zombies - Cabbage-Pult_15: -397159501
+      DS DSi - Plants vs Zombies - Cabbage-Pult_16: -1814278574
+      DS DSi - Plants vs Zombies - Cabbage-Pult_2: 493392421
+      DS DSi - Plants vs Zombies - Cabbage-Pult_3: -26953658
+      DS DSi - Plants vs Zombies - Cabbage-Pult_4: -1735512094
+      DS DSi - Plants vs Zombies - Cabbage-Pult_5: 1941662082
+      DS DSi - Plants vs Zombies - Cabbage-Pult_6: 1592279667
+      DS DSi - Plants vs Zombies - Cabbage-Pult_7: 524310423
+      DS DSi - Plants vs Zombies - Cabbage-Pult_8: -355241726
+      DS DSi - Plants vs Zombies - Cabbage-Pult_9: -1465230756
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

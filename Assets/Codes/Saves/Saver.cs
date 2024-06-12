@@ -37,7 +37,7 @@ public class Saver : MonoBehaviour
         string JsonString = SerializeTools.ListToJson<GuanLeiXing>(save.glx);
         //将对象save转化为json字符串
         //上面说了Json是string类型，所以命名string
-        StreamWriter sw = new StreamWriter(Application.dataPath + "/Data.json");
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Data.json");
         //persistentDataPath是隐藏文件的，所以你找不到Data.yj的所在地，
         //而dataPath就不会隐藏，同时文件后缀也可以乱取
         sw.Write(JsonString);
@@ -48,14 +48,14 @@ public class Saver : MonoBehaviour
     public void SaveByJSON(List<Waves> save, string gqs)
     {
         Debug.Log(gqs);
-        if (File.Exists(Application.dataPath + "/GuanQia" + gqs + ".json"))
+        if (File.Exists(Application.persistentDataPath + "/GuanQia" + gqs + ".json"))
         {
-            File.Delete(Application.dataPath + "/GuanQia" + gqs + ".json");
+            File.Delete(Application.persistentDataPath + "/GuanQia" + gqs + ".json");
         }
         string JsonString = SerializeTools.ListToJson<Waves>(save);
         //将对象save转化为json字符串
         //上面说了Json是string类型，所以命名string
-        StreamWriter sw = new StreamWriter(Application.dataPath + "/GuanQia" + gqs + ".json");
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/GuanQia" + gqs + ".json");
         //persistentDataPath是隐藏文件的，所以你找不到Data.yj的所在地，
         //而dataPath就不会隐藏，同时文件后缀也可以乱取
         sw.Write(JsonString);
@@ -65,10 +65,10 @@ public class Saver : MonoBehaviour
     }
     public static void LoadByJSON()
     {
-        if (File.Exists(Application.dataPath + "/Data.json"))
+        if (File.Exists(Application.persistentDataPath + "/Data.json"))
         //判断文件是否创建
         {
-            StreamReader sr = new StreamReader(Application.dataPath + "/Data.json");
+            StreamReader sr = new StreamReader(Application.persistentDataPath + "/Data.json");
             //从流中读取字符串
             string JsonString = sr.ReadToEnd();
             //ReadToEnd()方法可以读取从流当前位置到结尾的所有字符
@@ -91,10 +91,10 @@ public class Saver : MonoBehaviour
 
     public static void LoadByJSON(string gqs)
     {
-        if (File.Exists(Application.dataPath + "/GuanQia" + gqs + ".json") || File.Exists("D:/Datas/GuanQia" + gqs + ".json"))
+        if (File.Exists(Application.persistentDataPath + "/GuanQia" + gqs + ".json") || File.Exists("D:/Datas/GuanQia" + gqs + ".json"))
         //判断文件是否创建
         {
-            StreamReader sr = new StreamReader(Application.dataPath + "/GuanQia" + gqs + ".json");
+            StreamReader sr = new StreamReader(Application.persistentDataPath + "/GuanQia" + gqs + ".json");
             //从流中读取字符串
             string JsonString = sr.ReadToEnd();
             //ReadToEnd()方法可以读取从流当前位置到结尾的所有字符

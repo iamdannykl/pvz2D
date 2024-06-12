@@ -20,15 +20,4 @@ public class UIcard : MonoBehaviour, IPointerClickHandler
             isXuan = true;
         }
     }
-
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

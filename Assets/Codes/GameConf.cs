@@ -11,6 +11,7 @@ public class GameConf : ScriptableObject//��Ϸ����
     public GameObject Sun;
     public GameObject penDan;
     public GameObject SRH;
+    public GameObject cabageBullet;
 
     [Header("Plants")]
     public GameObject SunFlower;
@@ -26,6 +27,7 @@ public class GameConf : ScriptableObject//��Ϸ����
     public GameObject snowPea;
     public GameObject rePeater;
     public GameObject heYe;
+    public GameObject cabage;
 
     [Header("UI")]
     public GameObject ShuTiao;

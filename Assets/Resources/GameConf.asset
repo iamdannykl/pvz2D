@@ -17,6 +17,7 @@ MonoBehaviour:
   Sun: {fileID: 3540838837876446211, guid: 0da122cd34184644abea2d7977afdda0, type: 3}
   penDan: {fileID: 9048724943009664362, guid: 9caf9b911bb746144a41302e006bb826, type: 3}
   SRH: {fileID: 3073936779738827891, guid: 8f7f283b08448fe46b5fe5c9a11d3250, type: 3}
+  cabageBullet: {fileID: 782801280115808343, guid: 44456ec94579ee642b8bfc7cbf7f77d0, type: 3}
   SunFlower: {fileID: 1632018244110585777, guid: f9746edda653fa2459e4644f30d4a018, type: 3}
   PeaShooter: {fileID: 555556852027594510, guid: 5e32697920473944cb1ef83bf5d762d9, type: 3}
   Cherry: {fileID: 3122818824166185096, guid: cfb81ae902b573b4b85cdffd7a0604bc, type: 3}
@@ -30,6 +31,7 @@ MonoBehaviour:
   snowPea: {fileID: 3773373437667440147, guid: 0046a0b377401204984c0472961f6a38, type: 3}
   rePeater: {fileID: 555556852027594510, guid: 6fb9aaa978c965f4fbd82c4e71c33e81, type: 3}
   heYe: {fileID: 2573299202240782445, guid: efbafd95c1196f44a9ace59f7a5c847a, type: 3}
+  cabage: {fileID: 8498433870817661122, guid: e783baaca9886804a8a671b78c239f4e, type: 3}
   ShuTiao: {fileID: 6622202687371277553, guid: 233dc3839e317f24f9cb8c3c160c1099, type: 3}
   HengTiao: {fileID: 1853747703726671904, guid: 60b6b6e69becbcf4295e3dbedb242982, type: 3}
   Shovel: {fileID: 3202535827745462937, guid: 598dd83c906e0be4a99cf0d63acf8da4, type: 3}
