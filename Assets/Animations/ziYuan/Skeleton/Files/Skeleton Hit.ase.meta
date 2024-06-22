@@ -105,6 +105,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +127,7 @@ ScriptedImporter:
     pivot: {x: 0.40909094, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 36
@@ -146,6 +148,7 @@ ScriptedImporter:
     pivot: {x: 0.40909094, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 67
@@ -166,6 +169,7 @@ ScriptedImporter:
     pivot: {x: 0.56521744, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +190,7 @@ ScriptedImporter:
     pivot: {x: 0.625, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +211,7 @@ ScriptedImporter:
     pivot: {x: 0.5217392, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 36
@@ -226,6 +232,7 @@ ScriptedImporter:
     pivot: {x: 0.375, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +253,7 @@ ScriptedImporter:
     pivot: {x: 0.39130437, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 36
@@ -266,6 +274,7 @@ ScriptedImporter:
     pivot: {x: 0.40909094, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 67
@@ -292,6 +301,7 @@ ScriptedImporter:
     cells:
     - name: Skeleton Hit_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
@@ -300,6 +310,7 @@ ScriptedImporter:
       spriteId: 7fb75dbdc1de5a74ab536a90952ca727
     - name: Skeleton Hit_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
@@ -308,6 +319,7 @@ ScriptedImporter:
       spriteId: 5ed584b43a40daa488543f0ec757c26e
     - name: Skeleton Hit_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 0
@@ -316,6 +328,7 @@ ScriptedImporter:
       spriteId: 9b13d54fd3e7a7c478a965fffbf95186
     - name: Skeleton Hit_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -324,6 +337,7 @@ ScriptedImporter:
       spriteId: 8ce71c9f81e30334699db8c8dd6ae299
     - name: Skeleton Hit_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
@@ -332,6 +346,7 @@ ScriptedImporter:
       spriteId: ddbdb1f7e1d98d142a54ba8d06d42295
     - name: Skeleton Hit_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
@@ -340,6 +355,7 @@ ScriptedImporter:
       spriteId: 0bb26f2d309a4b841bf28d9dde98abe7
     - name: Skeleton Hit_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
@@ -348,6 +364,7 @@ ScriptedImporter:
       spriteId: bc49c4335bbb9734ea940082859b17ef
     - name: Skeleton Hit_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0

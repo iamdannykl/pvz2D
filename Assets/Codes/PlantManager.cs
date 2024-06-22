@@ -18,13 +18,15 @@ public enum PlantType
     rePeater,
     SRH,
     heYe,
-    cabage
+    cabage,
+    XianRenZhang
 }
 public enum bulletType
 {
     pea,
     snowPeaBullet,
-    cabageBullet
+    cabageBullet,
+    Spike
 }
 
 public class PlantManager : MonoBehaviour
@@ -44,6 +46,8 @@ public class PlantManager : MonoBehaviour
                 return BossManager.Instance.GameConf.snowPeaBlt;
             case bulletType.cabageBullet:
                 return BossManager.Instance.GameConf.cabageBullet;
+            case bulletType.Spike:
+                return BossManager.Instance.GameConf.Spike;
         }
         return null;
     }
@@ -83,6 +87,8 @@ public class PlantManager : MonoBehaviour
                 return BossManager.Instance.GameConf.heYe;
             case PlantType.cabage:
                 return BossManager.Instance.GameConf.cabage;
+            case PlantType.XianRenZhang:
+                return BossManager.Instance.GameConf.XianRenZhang;
         }
 
         return null;

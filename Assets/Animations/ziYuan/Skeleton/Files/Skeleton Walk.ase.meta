@@ -105,6 +105,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +127,7 @@ ScriptedImporter:
     pivot: {x: 0.5555555, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -146,6 +148,7 @@ ScriptedImporter:
     pivot: {x: 0.5555555, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -166,6 +169,7 @@ ScriptedImporter:
     pivot: {x: 0.5555555, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -186,6 +190,7 @@ ScriptedImporter:
     pivot: {x: 0.55, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -206,6 +211,7 @@ ScriptedImporter:
     pivot: {x: 0.52380955, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +232,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +253,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +274,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +295,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -306,6 +316,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -326,6 +337,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -346,6 +358,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -366,6 +379,7 @@ ScriptedImporter:
     pivot: {x: 0.5294118, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 62
@@ -392,6 +406,7 @@ ScriptedImporter:
     cells:
     - name: Skeleton Walk_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 0
@@ -400,6 +415,7 @@ ScriptedImporter:
       spriteId: 0b5e6a7e0db8ac245930bdfd187ac255
     - name: Skeleton Walk_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 0
@@ -408,6 +424,7 @@ ScriptedImporter:
       spriteId: e5b3a855a5008294d97fad4a00e37ece
     - name: Skeleton Walk_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 0
@@ -416,6 +433,7 @@ ScriptedImporter:
       spriteId: 24919adab7291fa438c09fcd9e5bb1a3
     - name: Skeleton Walk_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -424,6 +442,7 @@ ScriptedImporter:
       spriteId: 599fe4461bf395e4aa89bbd905c3b6b4
     - name: Skeleton Walk_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -432,6 +451,7 @@ ScriptedImporter:
       spriteId: 947c185059fd4ac46973740e00caa508
     - name: Skeleton Walk_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -440,6 +460,7 @@ ScriptedImporter:
       spriteId: 2a061055ab0bba44e9f0a9c0db293178
     - name: Skeleton Walk_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -448,6 +469,7 @@ ScriptedImporter:
       spriteId: 4e7dd405fc0fe384495ccf9b52abb06b
     - name: Skeleton Walk_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -456,6 +478,7 @@ ScriptedImporter:
       spriteId: 7a8071486c2c76940956a6d4a1fde4bc
     - name: Skeleton Walk_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -464,6 +487,7 @@ ScriptedImporter:
       spriteId: 07321d2b39c215041a87897c429b156f
     - name: Skeleton Walk_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -472,6 +496,7 @@ ScriptedImporter:
       spriteId: abfa5506b6a4c174c8595d8647422f3d
     - name: Skeleton Walk_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 0
@@ -480,6 +505,7 @@ ScriptedImporter:
       spriteId: 9c14c2a8398782446b4984a04f5c215b
     - name: Skeleton Walk_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 0
@@ -488,6 +514,7 @@ ScriptedImporter:
       spriteId: 7f56057eb8029044c96a72e1979e318e
     - name: Skeleton Walk_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 0

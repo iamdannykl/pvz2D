@@ -105,6 +105,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +127,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +148,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +169,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +190,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -206,6 +211,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -226,6 +232,7 @@ ScriptedImporter:
     pivot: {x: 0.45454547, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 34
@@ -246,6 +253,7 @@ ScriptedImporter:
     pivot: {x: 0.45454547, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 64
@@ -266,6 +274,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 64
@@ -286,6 +295,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 64
@@ -306,6 +316,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 94
@@ -326,6 +337,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 94
@@ -352,6 +364,7 @@ ScriptedImporter:
     cells:
     - name: Skeleton Idle_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -360,6 +373,7 @@ ScriptedImporter:
       spriteId: fa1d11d5cb4999c46bea7d9c97c77e7c
     - name: Skeleton Idle_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -368,6 +382,7 @@ ScriptedImporter:
       spriteId: 45c3be9cd7b058142b8813e30c8f05ed
     - name: Skeleton Idle_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -376,6 +391,7 @@ ScriptedImporter:
       spriteId: 121b5a5fcfc2e4f4e9a812ae25959bbd
     - name: Skeleton Idle_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -384,6 +400,7 @@ ScriptedImporter:
       spriteId: b4223209f478b0d4d9e075a85c7b3919
     - name: Skeleton Idle_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 0
@@ -392,6 +409,7 @@ ScriptedImporter:
       spriteId: dd8969a408ed78e40836ca77ef34b7a5
     - name: Skeleton Idle_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 0
@@ -400,6 +418,7 @@ ScriptedImporter:
       spriteId: a53962b8c470f744d9d367f3ccaff537
     - name: Skeleton Idle_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 0
@@ -408,6 +427,7 @@ ScriptedImporter:
       spriteId: 2ffc2df6981d8894597a863b2da05ba5
     - name: Skeleton Idle_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 0
@@ -416,6 +436,7 @@ ScriptedImporter:
       spriteId: 7e81e0189a3e9e64a9bec126edf820e9
     - name: Skeleton Idle_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -424,6 +445,7 @@ ScriptedImporter:
       spriteId: 613ff3e5d2db2ae4daa1205f24343e5c
     - name: Skeleton Idle_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -432,6 +454,7 @@ ScriptedImporter:
       spriteId: eecdc676aa7a13c438db3caa9d56c5b7
     - name: Skeleton Idle_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0

@@ -1,0 +1,479 @@
+fileFormatVersion: 2
+guid: 19914044e36ba8c48a38ae7a0e2f48c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2639197015397334218
+    second: DS DSi - Plants vs Zombies - Cactus_0
+  - first:
+      213: -7020533521738759649
+    second: DS DSi - Plants vs Zombies - Cactus_1
+  - first:
+      213: -4421696638882214231
+    second: DS DSi - Plants vs Zombies - Cactus_2
+  - first:
+      213: 3622068544513124495
+    second: DS DSi - Plants vs Zombies - Cactus_3
+  - first:
+      213: 8006153216934198276
+    second: DS DSi - Plants vs Zombies - Cactus_4
+  - first:
+      213: 13252564496960052
+    second: DS DSi - Plants vs Zombies - Cactus_5
+  - first:
+      213: -1332190920044222373
+    second: DS DSi - Plants vs Zombies - Cactus_6
+  - first:
+      213: 1559489274837648381
+    second: DS DSi - Plants vs Zombies - Cactus_7
+  - first:
+      213: 1651796234742292663
+    second: DS DSi - Plants vs Zombies - Cactus_8
+  - first:
+      213: -5174983865680270193
+    second: DS DSi - Plants vs Zombies - Cactus_9
+  - first:
+      213: 3035558821218402138
+    second: DS DSi - Plants vs Zombies - Cactus_10
+  - first:
+      213: 2695369375586290110
+    second: DS DSi - Plants vs Zombies - Cactus_11
+  - first:
+      213: 5344429350799596751
+    second: DS DSi - Plants vs Zombies - Cactus_12
+  - first:
+      213: -1979650492220137844
+    second: DS DSi - Plants vs Zombies - Cactus_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 73
+        width: 39
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63388fc2c40bf5bd0800000000000000
+      internalID: -2639197015397334218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 73
+        width: 39
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f120a0755fd029e90800000000000000
+      internalID: -7020533521738759649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 73
+        width: 37
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae03e6855af2a2c0800000000000000
+      internalID: -4421696638882214231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 73
+        width: 39
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8822d3962c244230800000000000000
+      internalID: 3622068544513124495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 73
+        width: 38
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5463983, y: 0.012244331}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40cb6b0bee19b1f60800000000000000
+      internalID: 8006153216934198276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 73
+        width: 37
+        height: 36
+      alignment: 9
+      pivot: {x: 0.4166078, y: 0.008162605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a443f13251f2000800000000000000
+      internalID: 13252564496960052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_6
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 73
+        width: 12
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5863cd9a6b138de0800000000000000
+      internalID: -1332190920044222373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 39
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3cab1ab3b64a510800000000000000
+      internalID: 1559489274837648381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_8
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1
+        width: 39
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b064258ceb5ce610800000000000000
+      internalID: 1651796234742292663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1
+        width: 39
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cefb7a793ce28b0800000000000000
+      internalID: -5174983865680270193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_10
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1
+        width: 38
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5811976, y: 0.0127763925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5fb6813aa8702a20800000000000000
+      internalID: 3035558821218402138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 38
+        height: 69
+      alignment: 9
+      pivot: {x: 0.32600522, y: 0.006388125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9894a9a20e76520800000000000000
+      internalID: 2695369375586290110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_12
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 50
+        width: 24
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fccd495bd2a3b2a40800000000000000
+      internalID: 5344429350799596751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Plants vs Zombies - Cactus_13
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 50
+        width: 24
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e9acfad5ed684e0800000000000000
+      internalID: -1979650492220137844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ef76e882ad47e714586e127102552d62
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DS DSi - Plants vs Zombies - Cactus_0: -2639197015397334218
+      DS DSi - Plants vs Zombies - Cactus_1: -7020533521738759649
+      DS DSi - Plants vs Zombies - Cactus_10: 3035558821218402138
+      DS DSi - Plants vs Zombies - Cactus_11: 2695369375586290110
+      DS DSi - Plants vs Zombies - Cactus_12: 5344429350799596751
+      DS DSi - Plants vs Zombies - Cactus_13: -1979650492220137844
+      DS DSi - Plants vs Zombies - Cactus_2: -4421696638882214231
+      DS DSi - Plants vs Zombies - Cactus_3: 3622068544513124495
+      DS DSi - Plants vs Zombies - Cactus_4: 8006153216934198276
+      DS DSi - Plants vs Zombies - Cactus_5: 13252564496960052
+      DS DSi - Plants vs Zombies - Cactus_6: -1332190920044222373
+      DS DSi - Plants vs Zombies - Cactus_7: 1559489274837648381
+      DS DSi - Plants vs Zombies - Cactus_8: 1651796234742292663
+      DS DSi - Plants vs Zombies - Cactus_9: -5174983865680270193
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

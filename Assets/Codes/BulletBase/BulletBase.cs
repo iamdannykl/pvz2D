@@ -52,6 +52,8 @@ public class BulletBase : MonoBehaviour
                 {
                     case bulletType.pea:
                         zomtgt.Hp1 -= 1; break;
+                    case bulletType.cabageBullet:
+                        zomtgt.Hp1 -= 2; break;
                     case bulletType.snowPeaBullet:
                         zomtgt.Hp1 -= 1;
                         zomtgt.IsFrozen = true;
@@ -62,12 +64,18 @@ public class BulletBase : MonoBehaviour
                             Debug.Log("sddsdsdsdsdsdsd");
                         }
                         break;
+                    case bulletType.Spike:
+                        zomtgt.Hp1 -= 1; break;
                 }
                 zomtgt.ShanLiang();
-                bulletSd.Play();
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                rb.velocity = new Vector2(coll.gameObject.GetComponent<Rigidbody2D>().velocity.x, -1f);
-                anim.SetBool("isbao", true);
+                if (bulletType != bulletType.cabageBullet && bulletType != bulletType.Spike)
+                {
+                    bulletSd.Play();
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                    rb.velocity = new Vector2(coll.gameObject.GetComponent<Rigidbody2D>().velocity.x, -1f);
+                    anim.SetBool("isbao", true);
+                }
+
                 /*if (additionalSd != null)
                 {
                     additionalSd.Play();

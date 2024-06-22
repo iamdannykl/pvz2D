@@ -431,7 +431,7 @@ public abstract class ZomPos : MonoBehaviour
     }
     public void eatPlt()
     {
-        Debug.Log(downGrid);
+//        Debug.Log(downGrid);
         if (downGrid.nowCTM[downGrid.nowCTM.Count - 1] != null)
         {
             downGrid.nowCTM[downGrid.nowCTM.Count - 1].attacked(atkValue * 0.65f);
