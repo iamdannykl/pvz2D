@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Size.y
-      value: 0.93236524
+      value: 1.0494394
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Offset.x
@@ -102,18 +102,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Offset.y
-      value: 0.2712234
+      value: 0.21268632
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
-      propertyPath: hpJieDuan.Array.data[0]
+      propertyPath: 'hpJieDuan.Array.data[0]'
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
-      propertyPath: hpJieDuan.Array.data[1]
+      propertyPath: 'hpJieDuan.Array.data[1]'
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -132,7 +132,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &696598986825055119
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,6 +146,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1

@@ -19,6 +19,7 @@ public class BossManager : MonoBehaviour
     public List<GameObject> iceRoad = new List<GameObject>();
     public GameObject ys;
     private ZomCardBase currentZCard;
+    public float fangdaScale;
     public ZomCardBase CurrentZCard
     {
         get => currentZCard;

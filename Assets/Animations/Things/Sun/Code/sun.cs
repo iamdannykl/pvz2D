@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class sun : MonoBehaviour
 {
-    
+
     public float speed;
     private Rigidbody2D rb;
     int suiji;
@@ -18,8 +18,9 @@ public class sun : MonoBehaviour
     public SpriteRenderer cl;
     private bool isDianGuo;
     public bool isSunFlowerCrt;
-    
-    
+    public float flyTime;
+
+
 
 
     // Start is called before the first frame update
@@ -27,8 +28,8 @@ public class sun : MonoBehaviour
     {
         isDianGuo = false;
         rb = GetComponent<Rigidbody2D>();
-        suiji=Random.Range(0,5);
-        cl=GetComponent<SpriteRenderer>();
+        suiji = Random.Range(0, 5);
+        cl = GetComponent<SpriteRenderer>();
     }
 
     public void jump()
@@ -36,8 +37,8 @@ public class sun : MonoBehaviour
         int ran = Random.Range(0, 2);
         if (ran == 0) ran = -1;
         if (ran == 1) ran = 1;
-        rb.velocity = new Vector2(2.5f*ran, 10);
-        Invoke("stopYD",1.4f);
+        rb.velocity = new Vector2(2.5f * ran, 10);
+        Invoke("stopYD", 1.4f);
     }
     // Update is called once per frame
     void Update()
@@ -67,7 +68,7 @@ public class sun : MonoBehaviour
         StopAllCoroutines();//取消延迟调用和协程
         isSunFlowerCrt = false;
         //把自己放进缓存池
-        PoolManager.Instance.SetInPool(BossManager.Instance.GameConf.Sun,gameObject);
+        PoolManager.Instance.SetInPool(BossManager.Instance.GameConf.Sun, gameObject);
     }
 
     public bool Yundong
@@ -88,44 +89,44 @@ public class sun : MonoBehaviour
     }
     void downIt()
     {
-        if(isSunFlowerCrt)return;
-        switch(suiji)
+        if (isSunFlowerCrt) return;
+        switch (suiji)
         {
             case 0:
-               if(transform.position.y<BossManager.Instance.er.transform.position.y)
-               {
-               yundong =false;
-               Invoke("huimie",8f);
-               }
-               break;
+                if (transform.position.y < BossManager.Instance.er.transform.position.y)
+                {
+                    yundong = false;
+                    Invoke("huimie", 8f);
+                }
+                break;
             case 1:
-               if(transform.position.y<BossManager.Instance.er.transform.position.y)
-               {
-               yundong =false;
-               Invoke("huimie",8f);
-               }
-               break;
+                if (transform.position.y < BossManager.Instance.er.transform.position.y)
+                {
+                    yundong = false;
+                    Invoke("huimie", 8f);
+                }
+                break;
             case 2:
-               if(transform.position.y<BossManager.Instance.san.transform.position.y)
-               {
-               yundong =false;
-               Invoke("huimie",8f);
-               }
-               break;
+                if (transform.position.y < BossManager.Instance.san.transform.position.y)
+                {
+                    yundong = false;
+                    Invoke("huimie", 8f);
+                }
+                break;
             case 3:
-               if(transform.position.y<BossManager.Instance.si.transform.position.y)
-               {
-               yundong =false;
-               Invoke("huimie",8f);
-               }
-               break;
+                if (transform.position.y < BossManager.Instance.si.transform.position.y)
+                {
+                    yundong = false;
+                    Invoke("huimie", 8f);
+                }
+                break;
             case 4:
-               if(transform.position.y<BossManager.Instance.wu.transform.position.y)
-               {
-               yundong =false;
-               Invoke("huimie",8f);
-               }
-               break;
+                if (transform.position.y < BossManager.Instance.wu.transform.position.y)
+                {
+                    yundong = false;
+                    Invoke("huimie", 8f);
+                }
+                break;
             default:
                 Debug.Log("ERROR");
                 break;
@@ -136,10 +137,10 @@ public class sun : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if(HomeEnter.Instance.isZanTing||(isDianGuo==true))return;
-            BossManager.Instance.SunNum+=50;
-            Vector3 sunNumPos=UImanager.Instance.GetSunNumPosition();
-            sunNumPos=new Vector3(sunNumPos.x,sunNumPos.y,0);
+            if (HomeEnter.Instance.isZanTing || (isDianGuo == true)) return;
+            BossManager.Instance.SunNum += 50;
+            Vector3 sunNumPos = UImanager.Instance.GetSunNumPosition();
+            sunNumPos = new Vector3(sunNumPos.x, sunNumPos.y, 0);
             FlyBack(sunNumPos);
             isDianGuo = true;
         }
@@ -147,10 +148,10 @@ public class sun : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(HomeEnter.Instance.isZanTing||(isDianGuo==true))return;
-        BossManager.Instance.SunNum+=50;
-        Vector3 sunNumPos=UImanager.Instance.GetSunNumPosition();
-        sunNumPos=new Vector3(sunNumPos.x,sunNumPos.y,0);
+        if (HomeEnter.Instance.isZanTing || (isDianGuo == true)) return;
+        BossManager.Instance.SunNum += 50;
+        Vector3 sunNumPos = UImanager.Instance.GetSunNumPosition();
+        sunNumPos = new Vector3(sunNumPos.x, sunNumPos.y, 0);
         FlyBack(sunNumPos);
         isDianGuo = true;
     }
@@ -159,25 +160,22 @@ public class sun : MonoBehaviour
     {
         getsun.Play();
         StartCoroutine(DoFly(pos));
-    }   
+    }
 
     private IEnumerator DoFly(Vector3 pos)
     {
-        Vector3 direction =(pos-transform.position).normalized;
-        while(Vector3.Distance(pos,transform.position)>0.5f)
+        float dis = Vector3.Distance(pos, transform.position);
+        float flySpd = dis / flyTime;
+        while (Vector3.Distance(pos, transform.position) > 0.55f)
         {
-            yield return new WaitForSeconds(0.01f);
-            transform.Translate(direction);
-            
+            yield return new WaitForSeconds(0.016f);
+            transform.Translate(flySpd * 0.016f * (pos - transform.position).normalized);
         }
-        Yundong=false;
-        cl.color=new Color(1f,1f,1f,0f);
-        Invoke("huimie",3f);
-        
-        
-        
+        Yundong = false;
+        cl.color = new Color(1f, 1f, 1f, 0f);
+        Invoke("huimie", 3f);
     }
-    
+
 
     public void toLeft()
     {
@@ -192,5 +190,5 @@ public class sun : MonoBehaviour
         anim.SetBool("isLeft", false);
         anim.SetBool("isRight", false);
     }
-    
+
 }

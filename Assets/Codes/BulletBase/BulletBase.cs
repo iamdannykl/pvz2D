@@ -2,11 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum bltType
+{
+    shoot, thrower
+}
 public class BulletBase : MonoBehaviour
 {
     protected Rigidbody2D rb;
+    public float hight;
+    public float hangGao;
+    public float xJuLi;
+    public float graveIndex = 9.8f;
     protected Animator anim;
     public bulletType bulletType;
+    public bltType bltType;
     bool canDamage;
     public SpriteRenderer spr;
     private List<ZomPos> zomList;
@@ -29,8 +39,19 @@ public class BulletBase : MonoBehaviour
         canDamage = true;
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
-        rb.velocity = new Vector3(10f, 0);//豌豆向右射去
-        rb.constraints = ~RigidbodyConstraints2D.FreezePositionX;
+        if (bltType == bltType.shoot)
+        {
+            rb.velocity = new Vector3(10f, 0);//豌豆向右射去
+            rb.constraints = ~RigidbodyConstraints2D.FreezePositionX;
+        }
+        if (bltType == bltType.thrower)
+        {
+            float vx, vy, timey;
+            vy = (float)System.Math.Sqrt(2 * graveIndex * hight);
+            timey = (float)System.Math.Sqrt(2 * hight / graveIndex);
+            vx = xJuLi / (2 * timey);
+            rb.velocity = new Vector3(vx, vy);
+        }
     }
     // Update is called once per frame
     private void Update()
@@ -39,6 +60,10 @@ public class BulletBase : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (bltType == bltType.thrower && transform.position.y <= hangGao)
+        {
+            huimie();
+        }
     }
     void OnTriggerEnter2D(Collider2D coll)
     {
@@ -46,7 +71,8 @@ public class BulletBase : MonoBehaviour
         {
             if (canDamage)
             {
-                canDamage = false;
+                if (bulletType != bulletType.Spike)
+                    canDamage = false;
                 ZomPos zomtgt = coll.gameObject.GetComponent<ZomPos>();
                 switch (bulletType)
                 {
@@ -68,12 +94,16 @@ public class BulletBase : MonoBehaviour
                         zomtgt.Hp1 -= 1; break;
                 }
                 zomtgt.ShanLiang();
+                bulletSd.Play();
                 if (bulletType != bulletType.cabageBullet && bulletType != bulletType.Spike)
                 {
-                    bulletSd.Play();
                     rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                     rb.velocity = new Vector2(coll.gameObject.GetComponent<Rigidbody2D>().velocity.x, -1f);
                     anim.SetBool("isbao", true);
+                }
+                if (bulletType == bulletType.cabageBullet)
+                {
+                    huimie();
                 }
 
                 /*if (additionalSd != null)

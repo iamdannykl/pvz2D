@@ -15,6 +15,7 @@ public class UIcard : MonoBehaviour, IPointerClickHandler
         {
             transform.GetChild(1).gameObject.SetActive(true);
             GameObject ka = Instantiate(uicard, Vector3.zero, Quaternion.identity, zuocao);
+            ka.transform.localScale = new Vector3(BossManager.Instance.fangdaScale, BossManager.Instance.fangdaScale, 0);
             ka.GetComponent<UIPlantCards>().uicard = this;
             ZuoKaCao.Instance.currentCardNum++;
             isXuan = true;

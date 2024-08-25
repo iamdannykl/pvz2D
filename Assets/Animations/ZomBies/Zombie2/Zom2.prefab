@@ -74,38 +74,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Size.y
-      value: 0.97263134
+      value: 1.2543176
       objectReference: {fileID: 0}
     - target: {fileID: 7730706361985907431, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: m_Offset.y
-      value: 0.24641806
+      value: 0.105574906
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
       propertyPath: hpJieDuan.Array.size
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
-      propertyPath: hpJieDuan.Array.data[0]
+      propertyPath: 'hpJieDuan.Array.data[0]'
       value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
-      propertyPath: hpJieDuan.Array.data[1]
+      propertyPath: 'hpJieDuan.Array.data[1]'
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
-      propertyPath: hpJieDuan.Array.data[2]
+      propertyPath: 'hpJieDuan.Array.data[2]'
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
-      propertyPath: hpJieDuan.Array.data[3]
+      propertyPath: 'hpJieDuan.Array.data[3]'
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
-      propertyPath: hpJieDuan.Array.data[4]
+      propertyPath: 'hpJieDuan.Array.data[4]'
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8245805502821165800, guid: 9dd48f7fab04dea44896c58d832ffc86, type: 3}
-      propertyPath: hpJieDuan.Array.data[5]
+      propertyPath: 'hpJieDuan.Array.data[5]'
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -143,6 +143,7 @@ MonoBehaviour:
   haiTunAppear: {fileID: 0}
   haiTunYueqi: {fileID: 0}
   willDlt: 0
+  isFrozen: 0
   isDong: 0
   canMv: 1
   isTiaoYueZom: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
   HpOrigin: 28
   speed: 5
   anim: {fileID: 0}
+  road: {fileID: 0}
   isBoom: 0
   isEat: 0
   sR: {fileID: 0}
